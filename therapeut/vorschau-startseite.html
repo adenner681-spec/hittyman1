@@ -13,6 +13,7 @@
   --grad:linear-gradient(110deg,#1961a1 0%,#2f86c9 48%,#4bc6a4 100%);
   --grad-soft:linear-gradient(135deg,#e7f1fb 0%,#eaf7f2 100%);
   --r:26px; --wrap:1240px;
+  --gutter:clamp(24px,6.4vw,40px); /* Seitenabstand: mobil mind. 24px, wächst mit der Breite */
   --sans:"Inter","SF Pro Display",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --mono:ui-monospace,"SF Mono","Cascadia Code","Roboto Mono",Menlo,Consolas,monospace;
   width:100vw; position:relative; left:50%; margin-left:-50vw;
@@ -29,7 +30,7 @@
 .rr h1,.rr h2,.rr h3{font-family:var(--sans);text-transform:none;text-shadow:none;background-color:transparent;border:0;padding:0}
 .rr a:hover,.rr a:focus{text-decoration:none}
 .rr ::selection{background:var(--blue);color:#fff}
-.rr-wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px;position:relative;z-index:2}
+.rr-wrap{max-width:calc(var(--wrap) + 2 * var(--gutter));margin:0 auto;padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right));position:relative;z-index:2}
 .rr-sec{padding:120px 0;position:relative}
 .rr-sec--tint{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
 .rr-sec--mint{background:linear-gradient(180deg,var(--bg) 0%,var(--mint-bg) 100%)}
@@ -221,7 +222,7 @@
 .rr-rev__nav button{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink);display:grid;place-items:center;transition:background .3s,color .3s,transform .3s}
 .rr-rev__nav button:hover{background:var(--grad);color:#fff;transform:scale(1.05)}
 .rr-rev__nav svg{width:20px;height:20px}
-.rr-rev__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(340px,31%);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 28px 30px;margin:0 -28px;scrollbar-width:none;cursor:grab}
+.rr-rev__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(340px,31%);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px var(--gutter) 30px;margin:0 calc(-1 * var(--gutter));scroll-padding-inline:var(--gutter);scrollbar-width:none;cursor:grab}
 .rr-rev__track::-webkit-scrollbar{display:none}
 .rr-rev__track.is-drag{cursor:grabbing;scroll-snap-type:none}
 .rr-rev{scroll-snap-align:start;border-radius:var(--r);padding:34px 32px;display:flex;flex-direction:column;margin:0;user-select:none;background:#fff;border:1px solid var(--line)}
@@ -243,7 +244,7 @@
 .rr-map__pin svg{width:30px;height:30px}
 .rr-map__veil strong{display:block;color:var(--ink);font-size:20px;margin-bottom:4px}
 .rr-map__veil p{font-size:14px;color:var(--muted);max-width:420px;margin:10px auto 20px}
-.rr-map__addr{position:absolute;left:28px;bottom:28px;z-index:3;border-radius:20px;padding:16px 22px;font-size:15px;line-height:1.55;color:var(--ink)}
+.rr-map__addr{position:absolute;left:var(--gutter);bottom:var(--gutter);z-index:3;border-radius:20px;padding:16px 22px;font-size:15px;line-height:1.55;color:var(--ink)}
 .rr-map__addr small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
 
 /* ===== Angebotsspektrum (hell) ===== */
@@ -407,9 +408,12 @@
 }
 @media (max-width:640px){
   .rr{font-size:16.5px}
-  .rr-wrap{padding:0 18px}
   .rr-sec{padding:72px 0}
   .rr-hero__cta .rr-btn{width:100%}
+  .rr-lead,.rr-prose p:first-child,.rr-spek__intro p:first-child{font-size:18px;line-height:1.6}
+  .rr-prose,.rr-spek__intro p{font-size:16.5px}
+  .rr-hero__text p:first-child{font-size:17px}
+  .rr-split,.rr-eltern__grid,.rr-appro__grid,.rr-faq__grid,.rr-spek__intro,.rr-intro2{gap:32px}
   .rr-chip{padding:9px 12px;font-size:11.5px}
   .rr-chip strong{font-size:15px}
   .rr-chip--1{left:0;top:6%}.rr-chip--2{right:0}.rr-chip--3{left:0;bottom:2%}
@@ -417,7 +421,7 @@
   .rr-tile,.rr-tile--w3,.rr-tile--w4,.rr-extras{grid-column:span 6}
   .rr-tile,.rr-offer,.rr-cost,.rr-fit__col{padding:28px 22px}
   .rr-tl{grid-template-columns:1fr;gap:6px;padding:24px 22px}
-  .rr-rev__track{grid-auto-columns:86%;padding:10px 18px 30px;margin:0 -18px}
+  .rr-rev__track{grid-auto-columns:86%}
   .rr-termin{padding:44px 22px;border-radius:28px}
   .rr-termin__box{padding:24px}
   .rr-band{padding:36px 24px}
@@ -426,7 +430,7 @@
   .rr-acc__body{padding:0 18px 20px}
   .rr-guide__body{padding:0 22px 26px}
   .rr-map{height:420px}
-  .rr-map__addr{left:18px;right:18px;bottom:18px}
+  .rr-map__addr{right:var(--gutter)}
   .rr-scroll{display:none}
 }
 </style>
