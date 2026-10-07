@@ -129,6 +129,38 @@
       window.addEventListener('pointerup', function () { if (down) { down = false; track.classList.remove('is-drag'); } });
     }
 
+    /* ---------- Sprungmarken (?uid=2#name) zuverlässig anspringen ----------
+       Das CMS lädt bei ?uid=…#… oft die Seite neu oder scrollt selbst, bevor
+       alles fertig aufgebaut ist. Wir übernehmen das für unsere eigenen Anker. */
+    var anchorOf = function (name) {
+      if (!name) return null;
+      return root.querySelector('a.rr-anchor[name="' + name.replace(/"/g, '') + '"]');
+    };
+    var jumpTo = function (target, smooth) {
+      var y = target.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: Math.max(0, y), behavior: smooth && !reduce ? 'smooth' : 'auto' });
+    };
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var m = (a.getAttribute('href') || '').match(/#([a-z0-9-]+)$/i);
+      var target = m && anchorOf(m[1]);
+      if (!target) return;                       /* z. B. #popup-terminanfrage → CMS macht weiter */
+      e.preventDefault();
+      e.stopPropagation();                       /* CMS-eigenes Anker-Scrollen nicht doppelt auslösen */
+      jumpTo(target, true);
+      if (history.replaceState) history.replaceState(null, '', '#' + m[1]);
+    }, true);
+    /* Seite wurde mit #anker aufgerufen: nach dem Aufbau genau hinspringen */
+    var startHash = (location.hash || '').slice(1);
+    var startTarget = anchorOf(startHash);
+    if (startTarget) {
+      var fix = function () { jumpTo(startTarget, false); };
+      setTimeout(fix, 50);
+      window.addEventListener('load', function () { setTimeout(fix, 50); });
+      setTimeout(fix, 800);
+    }
+
     /* ---------- Google Maps erst nach Klick laden ---------- */
     var map = document.getElementById('rr-map');
     var mapBtn = document.getElementById('rr-map-btn');

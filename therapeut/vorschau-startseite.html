@@ -29,6 +29,7 @@
 .rr img{max-width:100%;display:block}
 .rr h1,.rr h2,.rr h3{font-family:var(--sans);text-transform:none;text-shadow:none;background-color:transparent;border:0;padding:0}
 .rr a:hover,.rr a:focus{text-decoration:none}
+.rr .rr-anchor{display:block;height:0;overflow:hidden;position:relative;top:-8px}
 .rr ::selection{background:var(--blue);color:#fff}
 .rr-wrap{max-width:calc(var(--wrap) + 2 * var(--gutter));margin:0 auto;padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right));position:relative;z-index:2}
 .rr-sec{padding:120px 0;position:relative}
@@ -439,7 +440,7 @@
   <div class="rr-progress" id="rr-progress"></div>
 
   <!-- ================= HERO ================= -->
-  <a name="start"></a>
+  <a name="start" id="start" class="rr-anchor"></a>
   <section class="rr-hero rr-grid-bg">
     <div class="rr-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="rr-wrap rr-hero__grid">
@@ -479,7 +480,7 @@
   </section>
 
   <!-- ================= AUF EINEN BLICK ================= -->
-  <a name="angebot"></a>
+  <a name="angebot" id="angebot" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -518,7 +519,7 @@
   </section>
 
   <!-- ================= PRAXIS ================= -->
-  <a name="praxis"></a>
+  <a name="praxis" id="praxis" class="rr-anchor"></a>
   <section class="rr-sec">
     <div class="rr-wrap rr-split">
       <div class="rr-split__head">
@@ -537,7 +538,7 @@
   </section>
 
   <!-- ================= THERAPEUTISCHES ANGEBOT ================= -->
-  <a name="therapeutisches-angebot"></a>
+  <a name="therapeutisches-angebot" id="therapeutisches-angebot" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--tint">
     <div class="rr-wrap">
       <div class="rr-intro2">
@@ -568,7 +569,7 @@
   </section>
 
   <!-- ================= ABLAUF & KOSTEN ================= -->
-  <a name="ablauf-kosten"></a>
+  <a name="ablauf-kosten" id="ablauf-kosten" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -601,7 +602,7 @@
   </section>
 
   <!-- ================= ELTERN / PORTRAIT ================= -->
-  <a name="eltern"></a>
+  <a name="eltern" id="eltern" class="rr-anchor"></a>
   <section class="rr-sec rr-eltern rr-sec--mint">
     <div class="rr-wrap">
       <div class="rr-num">04 / Für Eltern</div>
@@ -626,7 +627,7 @@
   </section>
 
   <!-- ================= TERMINBLOCK ================= -->
-  <a name="termin"></a>
+  <a name="termin" id="termin" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-termin">
@@ -648,7 +649,7 @@
   </section>
 
   <!-- ================= MEHR ALS THERAPIE ================= -->
-  <a name="mehr-als-therapie"></a>
+  <a name="mehr-als-therapie" id="mehr-als-therapie" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--tint">
     <div class="rr-wrap">
       <div class="rr-intro2">
@@ -680,7 +681,7 @@
   </section>
 
   <!-- ================= BEWERTUNGEN ================= -->
-  <a name="erfahrungen"></a>
+  <a name="erfahrungen" id="erfahrungen" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-rev__head">
@@ -719,7 +720,7 @@
   </section>
 
   <!-- ================= GOOGLE MAPS (lädt erst nach Klick) ================= -->
-  <a name="anfahrt"></a>
+  <a name="anfahrt" id="anfahrt" class="rr-anchor"></a>
   <div class="rr-map" id="rr-map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.6316886934655!2d11.57133851564896!3d48.13662577922342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75dc90dbe7f1%3A0x4e197c42ae4d532a!2sPsychotherapeutische%20Praxis%20Rudolf%20Ritzinger!5e0!3m2!1sde!2sde!4v1649425925208!5m2!1sde!2sde">
     <div class="rr-map__veil">
       <div>
@@ -733,7 +734,7 @@
   </div>
 
   <!-- ================= ANGEBOTSSPEKTRUM (hell) ================= -->
-  <a name="angebotsspektrum"></a>
+  <a name="angebotsspektrum" id="angebotsspektrum" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--tint">
     <div class="rr-wrap">
       <div class="rr-spek__intro">
@@ -810,7 +811,7 @@
   </section>
 
   <!-- ================= ZWEITER TERMINBLOCK ================= -->
-  <a name="termin-vereinbaren"></a>
+  <a name="termin-vereinbaren" id="termin-vereinbaren" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white" style="padding-bottom:0">
     <div class="rr-wrap">
       <div class="rr-band rr-glow">
@@ -824,7 +825,7 @@
   </section>
 
   <!-- ================= APPROBATION ================= -->
-  <a name="approbation"></a>
+  <a name="approbation" id="approbation" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white rr-grid-bg">
     <div class="rr-wrap rr-appro__grid">
       <div>
@@ -854,7 +855,7 @@
   </section>
 
   <!-- ================= FAQ ================= -->
-  <a name="faq"></a>
+  <a name="faq" id="faq" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--tint">
     <div class="rr-wrap rr-faq__grid">
       <div class="rr-faq__head">
@@ -877,7 +878,7 @@
   </section>
 
   <!-- ================= RATGEBER (SEO, korrigiert) ================= -->
-  <a name="ratgeber"></a>
+  <a name="ratgeber" id="ratgeber" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -907,7 +908,7 @@
   </section>
 
   <!-- ================= UNTER 12 ================= -->
-  <a name="unter-12"></a>
+  <a name="unter-12" id="unter-12" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white" style="padding-top:0">
     <div class="rr-wrap">
       <div class="rr-ref">
@@ -919,7 +920,7 @@
   </section>
 
   <!-- ================= ABSCHLUSS ================= -->
-  <a name="termin-anfragen"></a>
+  <a name="termin-anfragen" id="termin-anfragen" class="rr-anchor"></a>
   <section class="rr-final rr-grid-bg">
     <div class="rr-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="rr-wrap">
@@ -1279,6 +1280,38 @@
       });
       window.addEventListener('pointermove', function (e) { if (down) track.scrollLeft = startL - (e.clientX - startX); });
       window.addEventListener('pointerup', function () { if (down) { down = false; track.classList.remove('is-drag'); } });
+    }
+
+    /* ---------- Sprungmarken (?uid=2#name) zuverlässig anspringen ----------
+       Das CMS lädt bei ?uid=…#… oft die Seite neu oder scrollt selbst, bevor
+       alles fertig aufgebaut ist. Wir übernehmen das für unsere eigenen Anker. */
+    var anchorOf = function (name) {
+      if (!name) return null;
+      return root.querySelector('a.rr-anchor[name="' + name.replace(/"/g, '') + '"]');
+    };
+    var jumpTo = function (target, smooth) {
+      var y = target.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: Math.max(0, y), behavior: smooth && !reduce ? 'smooth' : 'auto' });
+    };
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var m = (a.getAttribute('href') || '').match(/#([a-z0-9-]+)$/i);
+      var target = m && anchorOf(m[1]);
+      if (!target) return;                       /* z. B. #popup-terminanfrage → CMS macht weiter */
+      e.preventDefault();
+      e.stopPropagation();                       /* CMS-eigenes Anker-Scrollen nicht doppelt auslösen */
+      jumpTo(target, true);
+      if (history.replaceState) history.replaceState(null, '', '#' + m[1]);
+    }, true);
+    /* Seite wurde mit #anker aufgerufen: nach dem Aufbau genau hinspringen */
+    var startHash = (location.hash || '').slice(1);
+    var startTarget = anchorOf(startHash);
+    if (startTarget) {
+      var fix = function () { jumpTo(startTarget, false); };
+      setTimeout(fix, 50);
+      window.addEventListener('load', function () { setTimeout(fix, 50); });
+      setTimeout(fix, 800);
     }
 
     /* ---------- Google Maps erst nach Klick laden ---------- */

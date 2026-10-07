@@ -27,6 +27,7 @@
 .rr img{max-width:100%;display:block}
 .rr h1,.rr h2,.rr h3{font-family:var(--sans);text-transform:none;text-shadow:none;background-color:transparent;border:0;padding:0}
 .rr a:hover,.rr a:focus{text-decoration:none}
+.rr .rr-anchor{display:block;height:0;overflow:hidden;position:relative;top:-8px}
 .rr ::selection{background:var(--blue);color:#fff}
 .rr-wrap{max-width:calc(var(--wrap) + 2 * var(--gutter));margin:0 auto;padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right));position:relative;z-index:2}
 .rr-sec{padding:120px 0;position:relative}

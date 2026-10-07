@@ -28,6 +28,7 @@
 .rr img{max-width:100%;display:block}
 .rr h1,.rr h2,.rr h3{font-family:var(--sans);text-transform:none;text-shadow:none;background-color:transparent;border:0;padding:0}
 .rr a:hover,.rr a:focus{text-decoration:none}
+.rr .rr-anchor{display:block;height:0;overflow:hidden;position:relative;top:-8px}
 .rr ::selection{background:var(--blue);color:#fff}
 .rr-wrap{max-width:calc(var(--wrap) + 2 * var(--gutter));margin:0 auto;padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right));position:relative;z-index:2}
 .rr-sec{padding:120px 0;position:relative}
@@ -438,7 +439,7 @@
   <div class="rr-progress" id="rr-progress"></div>
 
   <!-- ================= HERO ================= -->
-  <a name="start"></a>
+  <a name="start" id="start" class="rr-anchor"></a>
   <section class="rr-hero rr-grid-bg">
     <div class="rr-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="rr-wrap rr-hero__grid">
@@ -476,7 +477,7 @@
   </section>
 
   <!-- ================= KENNEN SIE DAS? ================= -->
-  <a name="ausgangslage"></a>
+  <a name="ausgangslage" id="ausgangslage" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -493,7 +494,7 @@
   </section>
 
   <!-- ================= WAS DAS PROGRAMM BIETET ================= -->
-  <a name="programm"></a>
+  <a name="programm" id="programm" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--tint">
     <div class="rr-wrap">
       <div class="rr-intro2">
@@ -524,7 +525,7 @@
   </section>
 
   <!-- ================= ABLAUF ================= -->
-  <a name="ablauf"></a>
+  <a name="ablauf" id="ablauf" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -543,7 +544,7 @@
   </section>
 
   <!-- ================= FÜR WEN ================= -->
-  <a name="fuer-wen"></a>
+  <a name="fuer-wen" id="fuer-wen" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--mint">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -572,7 +573,7 @@
   </section>
 
   <!-- ================= BEGLEITUNG ================= -->
-  <a name="begleitung"></a>
+  <a name="begleitung" id="begleitung" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap rr-eltern__grid">
       <figure class="rr-portrait">
@@ -602,7 +603,7 @@
   </section>
 
   <!-- ================= INVESTITION & ANFRAGE ================= -->
-  <a name="anfrage"></a>
+  <a name="anfrage" id="anfrage" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--tint">
     <div class="rr-wrap">
       <div class="rr-termin">

@@ -29,6 +29,7 @@
 .rr img{max-width:100%;display:block}
 .rr h1,.rr h2,.rr h3{font-family:var(--sans);text-transform:none;text-shadow:none;background-color:transparent;border:0;padding:0}
 .rr a:hover,.rr a:focus{text-decoration:none}
+.rr .rr-anchor{display:block;height:0;overflow:hidden;position:relative;top:-8px}
 .rr ::selection{background:var(--blue);color:#fff}
 .rr-wrap{max-width:calc(var(--wrap) + 2 * var(--gutter));margin:0 auto;padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right));position:relative;z-index:2}
 .rr-sec{padding:120px 0;position:relative}
@@ -439,7 +440,7 @@
   <div class="rr-progress" id="rr-progress"></div>
 
   <!-- ================= HERO ================= -->
-  <a name="start"></a>
+  <a name="start" id="start" class="rr-anchor"></a>
   <section class="rr-hero rr-grid-bg">
     <div class="rr-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="rr-wrap rr-hero__grid">
@@ -477,7 +478,7 @@
   </section>
 
   <!-- ================= KENNEN SIE DAS? ================= -->
-  <a name="ausgangslage"></a>
+  <a name="ausgangslage" id="ausgangslage" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -494,7 +495,7 @@
   </section>
 
   <!-- ================= WAS DAS PROGRAMM BIETET ================= -->
-  <a name="programm"></a>
+  <a name="programm" id="programm" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--tint">
     <div class="rr-wrap">
       <div class="rr-intro2">
@@ -525,7 +526,7 @@
   </section>
 
   <!-- ================= ABLAUF ================= -->
-  <a name="ablauf"></a>
+  <a name="ablauf" id="ablauf" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -544,7 +545,7 @@
   </section>
 
   <!-- ================= FÜR WEN ================= -->
-  <a name="fuer-wen"></a>
+  <a name="fuer-wen" id="fuer-wen" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--mint">
     <div class="rr-wrap">
       <div class="rr-center">
@@ -573,7 +574,7 @@
   </section>
 
   <!-- ================= BEGLEITUNG ================= -->
-  <a name="begleitung"></a>
+  <a name="begleitung" id="begleitung" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap rr-eltern__grid">
       <figure class="rr-portrait">
@@ -603,7 +604,7 @@
   </section>
 
   <!-- ================= INVESTITION & ANFRAGE ================= -->
-  <a name="anfrage"></a>
+  <a name="anfrage" id="anfrage" class="rr-anchor"></a>
   <section class="rr-sec rr-sec--tint">
     <div class="rr-wrap">
       <div class="rr-termin">
@@ -779,6 +780,38 @@
       });
       window.addEventListener('pointermove', function (e) { if (down) track.scrollLeft = startL - (e.clientX - startX); });
       window.addEventListener('pointerup', function () { if (down) { down = false; track.classList.remove('is-drag'); } });
+    }
+
+    /* ---------- Sprungmarken (?uid=2#name) zuverlässig anspringen ----------
+       Das CMS lädt bei ?uid=…#… oft die Seite neu oder scrollt selbst, bevor
+       alles fertig aufgebaut ist. Wir übernehmen das für unsere eigenen Anker. */
+    var anchorOf = function (name) {
+      if (!name) return null;
+      return root.querySelector('a.rr-anchor[name="' + name.replace(/"/g, '') + '"]');
+    };
+    var jumpTo = function (target, smooth) {
+      var y = target.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: Math.max(0, y), behavior: smooth && !reduce ? 'smooth' : 'auto' });
+    };
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var m = (a.getAttribute('href') || '').match(/#([a-z0-9-]+)$/i);
+      var target = m && anchorOf(m[1]);
+      if (!target) return;                       /* z. B. #popup-terminanfrage → CMS macht weiter */
+      e.preventDefault();
+      e.stopPropagation();                       /* CMS-eigenes Anker-Scrollen nicht doppelt auslösen */
+      jumpTo(target, true);
+      if (history.replaceState) history.replaceState(null, '', '#' + m[1]);
+    }, true);
+    /* Seite wurde mit #anker aufgerufen: nach dem Aufbau genau hinspringen */
+    var startHash = (location.hash || '').slice(1);
+    var startTarget = anchorOf(startHash);
+    if (startTarget) {
+      var fix = function () { jumpTo(startTarget, false); };
+      setTimeout(fix, 50);
+      window.addEventListener('load', function () { setTimeout(fix, 50); });
+      setTimeout(fix, 800);
     }
 
     /* ---------- Google Maps erst nach Klick laden ---------- */
