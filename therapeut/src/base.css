@@ -35,6 +35,13 @@
 .rr-sec--mint{background:linear-gradient(180deg,var(--bg) 0%,var(--mint-bg) 100%)}
 .rr-sec--white{background:#fff}
 .rr-h2{font-size:clamp(30px,3.8vw,50px)}
+.rr .rr-hx{color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.22;margin:0 0 .55em;hyphens:auto;-webkit-hyphens:auto}
+.rr .rr-h2.rr-hx{font-size:clamp(30px,3.8vw,50px);letter-spacing:-.03em;line-height:1.1;max-width:none}
+.rr .rr-final .rr-hx{letter-spacing:-.04em;line-height:1.08}
+.rr-h2--guide{font-size:clamp(26px,3vw,38px);max-width:900px;margin-left:auto !important;margin-right:auto !important}
+.rr-sec--flush-b{padding-bottom:0 !important}
+.rr-sec--flush-t{padding-top:0 !important}
+.rr-sprite{position:absolute;width:0;height:0;overflow:hidden}
 .rr-grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .rr-lead{font-size:20px;color:var(--ink);opacity:.88}
 .rr-center{text-align:center}
@@ -122,7 +129,7 @@
 .rr-glance__item{border-radius:var(--r);padding:30px 28px;background:#fff;border:1px solid var(--line);transition:translate .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
 .rr-glance__item:hover{translate:0 -6px;box-shadow:0 28px 60px -34px rgba(25,97,161,.5)}
 .rr-glance__item:hover .rr-ic{background:var(--grad);color:#fff;transform:rotate(-6deg)}
-.rr-glance__item h3{font-size:19px;margin:22px 0 10px}
+.rr-glance__item .rr-hx{font-size:19px;margin:22px 0 10px}
 .rr-glance__item p{font-size:15.5px;line-height:1.65}
 .rr-glance__item a{font-weight:600}
 .rr-pay{margin-top:22px;display:grid;grid-template-columns:1fr 1fr auto;gap:0;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
@@ -145,7 +152,7 @@
 .rr-step{position:relative}
 .rr-step__n{width:60px;height:60px;border-radius:50%;background:#fff;border:2px solid var(--sky);color:var(--blue);font-weight:700;font-size:20px;display:grid;place-items:center;margin-bottom:20px;position:relative;z-index:1;transition:background .4s,color .4s,border-color .4s,transform .4s}
 .rr-step:hover .rr-step__n{background:var(--grad);color:#fff;border-color:transparent;transform:scale(1.08)}
-.rr-step h3{font-size:19px;margin-bottom:8px}
+.rr-step .rr-hx{font-size:19px;margin-bottom:8px}
 .rr-step p{font-size:15.5px;line-height:1.65}
 .rr-costs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:64px}
 .rr-cost{border-radius:28px;padding:38px 36px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
@@ -217,7 +224,7 @@
 .rr-termin__alt{display:block;text-align:center;margin-top:14px;font-size:14px;color:var(--muted) !important}
 .rr-termin__alt:hover{color:var(--blue) !important}
 .rr-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;padding:50px 56px;border-radius:32px}
-.rr-band h2{font-size:clamp(26px,2.8vw,36px);margin-bottom:8px}
+.rr-band .rr-hx{font-size:clamp(26px,2.8vw,36px);margin-bottom:8px}
 .rr-band p{margin:0;font-size:17px}
 .rr-band p a{font-weight:700;color:var(--ink) !important;white-space:nowrap}
 
@@ -233,7 +240,7 @@
 .rr-rev{scroll-snap-align:start;border-radius:var(--r);padding:34px 32px;display:flex;flex-direction:column;margin:0;user-select:none;background:#fff;border:1px solid var(--line)}
 .rr-stars{display:flex;gap:3px;margin-bottom:18px;color:#ffb301}
 .rr-stars svg{width:17px;height:17px}
-.rr-rev h3{font-size:19px;margin-bottom:12px}
+.rr-rev .rr-hx{font-size:19px;margin-bottom:12px}
 .rr-rev blockquote{margin:0;font-size:16px;line-height:1.7;color:var(--text);font-style:italic}
 
 /* ===== Karte ===== */
@@ -270,7 +277,7 @@
 .rr-badge{display:inline-block;padding:5px 12px;border-radius:999px;background:#fff3d6;color:#8a5a00;font-size:11px;letter-spacing:.08em}
 .rr-tile .rr-link{margin-top:18px}
 .rr-extras{grid-column:span 6;display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:26px 32px}
-.rr-extras h3{font-size:18px;margin:0 16px 0 0}
+.rr-extras .rr-hx{font-size:18px;margin:0 16px 0 0}
 .rr-extras ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
 .rr-extras li{padding:8px 18px;border-radius:999px;font-size:15px;color:var(--ink);background:var(--bg2);border:1px solid var(--line);transition:background .3s,border-color .3s}
 .rr-extras li:hover{background:#e3f6ef;border-color:rgba(75,198,164,.55)}
@@ -323,7 +330,7 @@
 
 /* ===== Abschluss ===== */
 .rr-final{text-align:center;overflow:hidden;padding:140px 0}
-.rr-final h2{font-size:clamp(34px,5vw,66px);letter-spacing:-.04em;max-width:900px;margin:0 auto 24px}
+.rr-final .rr-hx{font-size:clamp(34px,5vw,66px);letter-spacing:-.04em;max-width:900px;margin:0 auto 24px}
 .rr-final p{max-width:660px;margin:0 auto 40px;font-size:19px}
 .rr-final__cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 28px}
 

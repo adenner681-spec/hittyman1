@@ -29,7 +29,7 @@
     mark('.rr-split > :first-child, .rr-intro2 > :first-child, .rr-eltern__grid > :first-child, .rr-spek__intro > :first-child, .rr-appro__grid > :first-child, .rr-faq__grid > :first-child, .rr-fit > :first-child, .rr-costs > :first-child', 'rr-from-left');
     mark('.rr-split > :last-child, .rr-intro2 > :last-child, .rr-eltern__grid > :last-child, .rr-spek__intro > :last-child, .rr-appro__grid > :last-child, .rr-fit > :last-child, .rr-costs > :last-child', 'rr-from-right');
     /* Überschriften von links */
-    mark('.rr-sec h2, .rr-final h2, .rr-num', 'rr-from-left');
+    mark('.rr-sec h2, .rr-final .rr-hx, .rr-num', 'rr-from-left');
     /* Karten, Listen, Absätze von unten */
     mark('.rr-glance__item, .rr-pay, .rr-card, .rr-step, .rr-offer, .rr-rev, .rr-tile, .rr-acc details, .rr-pain, .rr-tl, .rr-note, .rr-ref, .rr-guide, .rr-rev__nav, .rr-lead, .rr-center p, .rr-actions, .rr-final p, .rr-final__cta, .rr-map__veil > div, .rr-disclaimer, .rr-topics li, .rr-qlist li, .rr-claim', 'rr-from-up');
     mark('.rr-quote-big', 'rr-from-zoom');

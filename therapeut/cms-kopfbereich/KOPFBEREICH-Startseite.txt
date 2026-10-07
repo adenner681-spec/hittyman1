@@ -1,0 +1,18 @@
+<!-- In den Seitenkopf (Head) der Startseite einfügen – im CMS dort, wo bisher das JSON-LD stand.
+     Das alte JSON-LD im Kopf bitte löschen, das neue steckt im Sourcecode-Modul. -->
+<link rel="canonical" href="https://www.rudolf-ritzinger.com/">
+<link rel="alternate" hreflang="de" href="https://www.rudolf-ritzinger.com/">
+<link rel="alternate" hreflang="x-default" href="https://www.rudolf-ritzinger.com/">
+<meta name="author" content="Rudolf Ritzinger">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Rudolf Ritzinger – Kinder- und Jugendlichenpsychotherapeut München">
+<meta property="og:title" content="Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger">
+<meta property="og:description" content="Psychotherapie für Jugendliche in München sowie online weltweit. Tiefenpsychologisch fundiert, Eltern werden bei Bedarf einbezogen.">
+<meta property="og:url" content="https://www.rudolf-ritzinger.com/">
+<meta property="og:image" content="https://www.rudolf-ritzinger.com/incms_files/filebrowser/Rudolf-Ritzinger-Jugendspychologe-Munchen.jpg">
+<meta property="og:image:alt" content="Rudolf Ritzinger, Kinder- und Jugendlichenpsychotherapeut in München">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger">
+<meta name="twitter:description" content="Psychotherapie für Jugendliche in München sowie online weltweit. Tiefenpsychologisch fundiert, Eltern werden bei Bedarf einbezogen.">
+<meta name="twitter:image" content="https://www.rudolf-ritzinger.com/incms_files/filebrowser/Rudolf-Ritzinger-Jugendspychologe-Munchen.jpg">

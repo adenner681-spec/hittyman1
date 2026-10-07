@@ -21,11 +21,30 @@ LINK_ONLINE_KURS = "?uid=2#mehr-als-therapie"
 # Anfrage-Ziel auf der Landingpage: absolut, damit es auch auf einer eigenen Domain funktioniert.
 ANFRAGE_LANDING = "https://www.rudolf-ritzinger.com/?uid=2#popup-terminanfrage"
 
+SYMBOLS = {}
+
 def svg(body, w="2", fill="none"):
+    """Icon als Referenz auf ein Sprite-Symbol (spart viel HTML)."""
+    key = "rr-i%d" % (len(SYMBOLS) + 1)
+    for k, v in SYMBOLS.items():
+        if v == (body, w, fill):
+            key = k
+            break
+    SYMBOLS[key] = (body, w, fill)
+    return '<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#%s"/></svg>' % key
+
+def sprite():
+    out = []
+    for key, (body, w, fill) in SYMBOLS.items():
+        out.append('<symbol id="%s" viewBox="0 0 24 24"><g fill="%s" stroke="%s" stroke-width="%s" stroke-linecap="round" stroke-linejoin="round">%s</g></symbol>'
+                   % (key, fill, "none" if fill == "currentColor" else "currentColor", w, body))
+    return '<svg class="rr-sprite" aria-hidden="true" focusable="false">' + "".join(out) + "</svg>"
+
+def _old_svg(body, w="2", fill="none"):
     return ('<svg viewBox="0 0 24 24" fill="%s" stroke="currentColor" stroke-width="%s" '
             'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">%s</svg>' % (fill, w, body))
 
-STAR = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg>'
+STAR = svg('<path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/>', "0", "currentColor")
 ICONS = {
     "arrow": svg('<path d="M5 12h14M13 6l6 6-6 6"/>', "2.2"),
     "arrow-s": svg('<path d="M5 12h14M13 6l6 6-6 6"/>', "2.2"),
@@ -79,7 +98,10 @@ def home_ld(items):
          "description": "Psychotherapie für Jugendliche ab 12 und junge Erwachsene in München und online für deutschsprachige Familien weltweit. Tiefenpsychologisch fundiert, Eltern werden bei Bedarf einbezogen.",
          "inLanguage": "de-DE", "isPartOf": {"@id": SITE + "/#website"}, "about": {"@id": SITE + "/#praxis"},
          "primaryImageOfPage": {"@type": "ImageObject", "url": SITE + "/incms_files/filebrowser/Rudolf-Ritzinger-Jugendspychologe-Munchen.jpg"},
-         "mainEntity": {"@id": SITE + "/#faq"}},
+         "mainEntity": {"@id": SITE + "/#faq"},
+         "author": {"@id": SITE + "/#rudolf-ritzinger"},
+         "reviewedBy": {"@id": SITE + "/#rudolf-ritzinger"},
+         "lastReviewed": "2026-10-07"},
         {"@type": "MedicalBusiness", "@id": SITE + "/#praxis",
          "name": "Psychotherapeutische Praxis Rudolf Ritzinger", "alternateName": "Rudolf Ritzinger",
          "description": "Praxis für Jugendlichenpsychotherapie in München. Tiefenpsychologisch fundierte Psychotherapie für Jugendliche und junge Erwachsene von 12 bis 21 Jahren – in der Praxis und online für deutschsprachige Familien weltweit. Gesetzlich Versicherte: Psychotherapie nach den Psychotherapie-Richtlinien; Selbstzahler: integratives Konzept.",
@@ -119,6 +141,100 @@ def intensiv_ld():
             "provider": {"@id": SITE + "/#praxis"},
             "areaServed": [{"@type": "City", "name": "München"}, {"@type": "Place", "name": "Online"}]}
 
+def minify_css(css):
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    css = re.sub(r"\s+", " ", css)
+    css = re.sub(r"\s*([{};,>])\s*", r"\1", css)
+    css = css.replace(";}", "}")
+    return css.strip() + "\n"
+
+JS_CLASSES = {"rr-js", "rr-reveal", "rr-in", "rr-from-left", "rr-from-right", "rr-from-up", "rr-from-zoom", "is-drag"}
+
+def prune_css(css, page_html):
+    """Entfernt CSS-Regeln, deren Klassen auf der Seite nicht vorkommen (kleinere Datei)."""
+    used = set(JS_CLASSES)
+    for m in re.finditer(r'class="([^"]*)"', page_html):
+        used.update(m.group(1).split())
+    def keep_sel(sel):
+        return all(c in used for c in re.findall(r"\.([A-Za-z0-9_-]+)", sel))
+    def walk(block):
+        out, i = [], 0
+        while i < len(block):
+            j = block.find("{", i)
+            if j < 0:
+                break
+            head = block[i:j].strip()
+            depth, k = 1, j + 1
+            while depth:
+                if block[k] == "{": depth += 1
+                elif block[k] == "}": depth -= 1
+                k += 1
+            body = block[j + 1:k - 1]
+            if head.startswith("@media") or head.startswith("@supports"):
+                inner = walk(body)
+                if inner:
+                    out.append(head + "{" + inner + "}")
+            elif head.startswith("@"):
+                out.append(head + "{" + body + "}")
+            else:
+                sels = [x for x in head.split(",") if keep_sel(x)]
+                if sels:
+                    out.append(",".join(sels) + "{" + body + "}")
+            i = k
+        return "".join(out)
+    return walk(css) + "\n"
+
+def _text(h):
+    t = re.sub(r"<[^>]+>", " ", h)
+    t = html.unescape(re.sub(r"\s+", " ", t)).strip()
+    return t.replace('"', "'")
+
+def enhance(s):
+    """SEO/Barrierefreiheit: title an Links und Bildern, Sektionen als benannte Regionen."""
+    def link(m):
+        tag, inner = m.group(1), m.group(2)
+        if " title=" in tag:
+            return m.group(0)
+        t = _text(inner)
+        if not t:
+            return m.group(0)
+        if 'href="tel:' in tag:
+            t = "Anrufen: " + t
+        return tag[:-1] + ' title="%s">' % html.escape(t, quote=True).replace("&#x27;", "'") + inner + "</a>"
+    s = re.sub(r"(<a\b[^>]*\bhref=[^>]*>)(.*?)</a>", link, s, flags=re.S)
+    def img(m):
+        tag = m.group(0)
+        if " title=" in tag:
+            return tag
+        alt = re.search(r'alt="([^"]*)"', tag)
+        return tag[:-1] + ' title="%s">' % alt.group(1) if alt and alt.group(1) else tag
+    s = re.sub(r"<img\b[^>]*>", img, s)
+    # <section> mit erster h2 verknüpfen → role="region" + aria-labelledby
+    counter = [0]
+    def sec(m):
+        start = m.end()
+        end = s.find("</section>", start)
+        h = re.search(r"<h2\b([^>]*)>", s[start:end])
+        if not h:
+            return m.group(0)
+        counter[0] += 1
+        return m.group(0)[:-1] + ' role="region" aria-labelledby="rr-h-%d">' % counter[0]
+    s2 = re.sub(r"<section\b[^>]*>", sec, s)
+    n = [0]
+    def h2(m):
+        n[0] += 1
+        return '<h2 id="rr-h-%d"' % n[0] + m.group(1)
+    # Reihenfolge der h2 entspricht den Sektionen mit h2
+    out, pos = [], 0
+    for sm in re.finditer(r"<section\b[^>]*aria-labelledby=\"(rr-h-\d+)\"[^>]*>", s2):
+        out.append(s2[pos:sm.end()])
+        rest = s2[sm.end():]
+        hm = re.search(r"<h2\b", rest)
+        out.append(rest[:hm.start()] + '<h2 id="%s"' % sm.group(1))
+        pos = sm.end() + hm.end()
+    out.append(s2[pos:])
+    return "".join(out)
+
 def render(page_src, ld, img, uid):
     s = open(os.path.join(SRC, page_src), encoding="utf-8").read()
     if "{{faq}}" in s:
@@ -131,7 +247,9 @@ def render(page_src, ld, img, uid):
         s = s.replace("{{%s}}" % k, v)
     left = re.findall(r"\{\{[^}]+\}\}", s)
     assert not left, "Unbekannte Platzhalter: %s" % left
-    css = open(os.path.join(SRC, "base.css"), encoding="utf-8").read()
+    s = enhance(s)
+    s = s.replace('<main class="rr"', sprite() + '\n<main class="rr"', 1)
+    css = prune_css(minify_css(open(os.path.join(SRC, "base.css"), encoding="utf-8").read()), s)
     ld_json = json.dumps(ld, ensure_ascii=False, indent=2)
     return "<style>\n" + css + "</style>\n\n" + s + '\n<script type="application/ld+json">\n' + ld_json + "\n</script>\n"
 
