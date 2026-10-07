@@ -155,3 +155,6 @@ print("ok")
 import shutil
 shutil.copy(os.path.join(ROOT, "startseite", "modul-sourcecode.html"), os.path.join(ROOT, "STARTSEITE_1_Sourcecode-Modul.html"))
 shutil.copy(os.path.join(ROOT, "modul-javascript.js"), os.path.join(ROOT, "STARTSEITE_2_JavaScript-Modul.js"))
+# Zusätzlich als .txt, damit der Browser/Viewer nichts drumherum rendert
+shutil.copy(os.path.join(ROOT, "STARTSEITE_1_Sourcecode-Modul.html"), os.path.join(ROOT, "STARTSEITE_1_Sourcecode-Modul.txt"))
+shutil.copy(os.path.join(ROOT, "STARTSEITE_2_JavaScript-Modul.js"), os.path.join(ROOT, "STARTSEITE_2_JavaScript-Modul.txt"))
