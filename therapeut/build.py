@@ -106,9 +106,9 @@ def home_ld(items):
 
 def intensiv_ld():
     return {"@context": "https://schema.org", "@type": "Service",
-            "name": "Vier-Monats-Intensivprozess für Familien",
-            "serviceType": "Intensivprogramm für Eltern und Jugendliche",
-            "description": "Ein intensives Programm, das Eltern und Jugendlichen über vier Monate einen festen Rahmen gibt, um gemeinsam an ihrem Umgang miteinander zu arbeiten – mit Gesprächen, Gruppenformaten und Übungen für den Alltag. Kein Ersatz für eine notwendige Psychotherapie.",
+            "name": "Family Zen Flow Disziplin",
+            "serviceType": "4-Monats-Intensivprogramm für Eltern von Teenagern",
+            "description": "Ein konkret anwendbares 4-Monats-Intensivprogramm für Eltern, das hilft, den eigenen Teenager zu verstehen, sich selbst klar zu sehen und sicher zu handeln – bei Streit, Rückzug, Schule, Handy, Motivation und Grenzen. Klar getrennt von der psychotherapeutischen Praxis; keine Psychotherapie und kein Ersatz für eine notwendige Psychotherapie.",
             "provider": {"@id": SITE + "/#praxis"},
             "areaServed": [{"@type": "City", "name": "München"}, {"@type": "Place", "name": "Online"}]}
 
@@ -136,8 +136,8 @@ PAGES = [
      "Rudolf Ritzinger – approbierter Kinder- und Jugendlichenpsychotherapeut in München. Tiefenpsychologisch fundierte Psychotherapie für Jugendliche und junge Erwachsene von 12 bis 21 Jahren, auch online."),
     # PRÜFEN: uid der Landingpage eintragen, sobald sie im CMS angelegt ist
     ("mehr-als-therapie-intensivprogramm", "intensivprogramm.html", "UID-LANDINGPAGE", intensiv_ld(),
-     "Vier-Monats-Intensivprozess für Familien | Mehr als Therapie | Rudolf Ritzinger",
-     "Intensivprogramm für Eltern und Jugendliche: vier Monate fester Rahmen mit Gesprächen, Gruppenformaten und Übungen für den Alltag – für ein wertschätzendes Familienklima. In München und online."),
+     "Family Zen Flow Disziplin – Intensivprogramm für Eltern von Teenagern | Rudolf Ritzinger",
+     "Family Zen Flow Disziplin: das 4-Monats-Intensivprogramm für Eltern, deren Teenager ihnen Sorgen macht – bei Streit, Rückzug, Schule, Handy, Motivation und Grenzen. Verstehe dein Kind. Verstehe dich selbst. Handle neu."),
 ]
 
 for folder, src, uid, ld, title, desc in PAGES:
@@ -161,3 +161,6 @@ shutil.copy(os.path.join(ROOT, "modul-javascript.js"), os.path.join(ROOT, "START
 # Zusätzlich als .txt, damit der Browser/Viewer nichts drumherum rendert
 shutil.copy(os.path.join(ROOT, "STARTSEITE_1_Sourcecode-Modul.html"), os.path.join(ROOT, "STARTSEITE_1_Sourcecode-Modul.txt"))
 shutil.copy(os.path.join(ROOT, "STARTSEITE_2_JavaScript-Modul.js"), os.path.join(ROOT, "STARTSEITE_2_JavaScript-Modul.txt"))
+# Landingpage Family Zen Flow Disziplin, klar benannt
+shutil.copy(os.path.join(ROOT, "mehr-als-therapie-intensivprogramm", "modul-sourcecode.html"), os.path.join(ROOT, "FAMILY-ZEN-FLOW_1_Sourcecode-Modul.txt"))
+shutil.copy(os.path.join(ROOT, "modul-javascript.js"), os.path.join(ROOT, "FAMILY-ZEN-FLOW_2_JavaScript-Modul.txt"))

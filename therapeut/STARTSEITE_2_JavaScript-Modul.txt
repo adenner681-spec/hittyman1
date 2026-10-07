@@ -31,10 +31,11 @@
     /* Überschriften von links */
     mark('.rr-sec h2, .rr-final h2, .rr-num', 'rr-from-left');
     /* Karten, Listen, Absätze von unten */
-    mark('.rr-glance__item, .rr-pay, .rr-card, .rr-step, .rr-offer, .rr-rev, .rr-tile, .rr-acc details, .rr-pain, .rr-tl, .rr-note, .rr-ref, .rr-guide, .rr-rev__nav, .rr-lead, .rr-center p, .rr-actions, .rr-final p, .rr-final__cta, .rr-map__veil > div', 'rr-from-up');
+    mark('.rr-glance__item, .rr-pay, .rr-card, .rr-step, .rr-offer, .rr-rev, .rr-tile, .rr-acc details, .rr-pain, .rr-tl, .rr-note, .rr-ref, .rr-guide, .rr-rev__nav, .rr-lead, .rr-center p, .rr-actions, .rr-final p, .rr-final__cta, .rr-map__veil > div, .rr-disclaimer, .rr-topics li, .rr-qlist li, .rr-claim', 'rr-from-up');
+    mark('.rr-quote-big', 'rr-from-zoom');
 
     /* gestaffelte Verzögerung für Karten in Rastern */
-    root.querySelectorAll('.rr-glance, .rr-cards, .rr-steps, .rr-offers, .rr-bento, .rr-acc, .rr-pains, .rr-timeline, .rr-rev__track').forEach(function (list) {
+    root.querySelectorAll('.rr-glance, .rr-cards, .rr-steps, .rr-offers, .rr-bento, .rr-acc, .rr-pains, .rr-timeline, .rr-rev__track, .rr-topics, .rr-qlist, .rr-claims').forEach(function (list) {
       Array.prototype.forEach.call(list.children, function (child, i) {
         child.style.setProperty('--d', ((i % 4) * 0.12) + 's');
       });

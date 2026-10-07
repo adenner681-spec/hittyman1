@@ -184,6 +184,12 @@
 .rr-price{font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.03em;line-height:1}
 .rr-price small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0;margin-top:6px}
 .rr-offer .rr-actions{margin-top:auto;padding-top:24px}
+.rr-disclaimer{margin-top:22px;padding:24px 28px;border-radius:22px;background:#fff;border:1px dashed rgba(0,144,138,.45)}
+.rr-disclaimer__head{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--ink);font-size:16px}
+.rr-disclaimer__head svg{width:22px;height:22px;color:var(--teal);flex:none}
+.rr-disclaimer ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.rr-disclaimer li{position:relative;padding-left:20px;font-size:15px;line-height:1.55;color:var(--text)}
+.rr-disclaimer li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--mint)}
 .rr-note{display:flex;gap:14px;align-items:flex-start;margin-top:22px;padding:18px 22px;border-radius:18px;background:#fff;border:1px dashed rgba(0,144,138,.4);font-size:15px;color:var(--text)}
 .rr-note svg{width:22px;height:22px;color:var(--teal);flex:none;margin-top:2px}
 
@@ -342,6 +348,24 @@
 .rr-fit__col--no li svg{color:#b5651d}
 .rr-todo{display:inline-block;padding:2px 8px;border-radius:6px;background:#fff3d6;color:#8a5a00;font-family:var(--mono);font-size:12.5px;font-style:normal}
 
+/* ===== Landingpage Family Zen Flow Disziplin ===== */
+.rr-topics{list-style:none;margin:44px auto 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:900px}
+.rr-topics li{padding:12px 22px;border-radius:999px;background:var(--grad-soft);border:1px solid rgba(47,134,201,.2);color:var(--ink);font-weight:600;font-size:16px}
+.rr-quote-big{text-align:center;margin:64px auto 56px;max-width:860px}
+.rr-quote-big span{display:block;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+.rr-quote-big blockquote{margin:0;font-size:clamp(28px,4.4vw,52px);font-weight:700;letter-spacing:-.035em;line-height:1.12;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rr-qlist{list-style:none;margin:30px auto 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:980px}
+.rr-qlist li{position:relative;padding:20px 24px 20px 58px;border-radius:20px;background:#fff;border:1px solid var(--line);color:var(--ink);font-size:16.5px;font-weight:500;line-height:1.5}
+.rr-qlist li::before{content:"?";position:absolute;left:18px;top:18px;width:26px;height:26px;border-radius:50%;background:var(--grad);color:#fff;font-weight:700;font-size:14px;display:grid;place-items:center}
+.rr-qlist li:last-child{grid-column:1 / -1;text-align:center;padding-left:24px;background:var(--grad-soft);font-weight:700}
+.rr-qlist li:last-child::before{display:none}
+.rr-claims{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.rr-claim{border-radius:28px;padding:38px 34px;background:#fff;border:1px solid var(--line);min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
+.rr-claim__n{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--teal)}
+.rr-claim strong{font-size:clamp(26px,2.8vw,36px);letter-spacing:-.03em;line-height:1.1;color:var(--ink)}
+.rr-claim--accent{background:var(--grad);border-color:transparent}
+.rr-claim--accent strong,.rr-claim--accent .rr-claim__n{color:#fff}
+
 /* ===== Scroll-Fortschritt ===== */
 .rr-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:9999;transform-origin:left;transform:scaleX(0);background:var(--grad);pointer-events:none}
 
@@ -404,6 +428,9 @@
   .rr-pay{grid-template-columns:1fr}
   .rr-pay>div+div{border-left:0;border-top:1px solid var(--line)}
   .rr-pains{grid-template-columns:1fr}
+  .rr-disclaimer ul{grid-template-columns:1fr}
+  .rr-claims{grid-template-columns:1fr}
+  .rr-claim{min-height:0;gap:18px}
   .rr-rev__track{grid-auto-columns:minmax(300px,70%)}
   .rr-termin{padding:56px 38px}
 }
@@ -418,7 +445,8 @@
   .rr-chip{padding:9px 12px;font-size:11.5px}
   .rr-chip strong{font-size:15px}
   .rr-chip--1{left:0;top:6%}.rr-chip--2{right:0}.rr-chip--3{left:0;bottom:2%}
-  .rr-glance,.rr-cards,.rr-steps{grid-template-columns:1fr}
+  .rr-glance,.rr-cards,.rr-steps,.rr-qlist{grid-template-columns:1fr}
+  .rr-topics li{padding:10px 16px;font-size:15px}
   .rr-tile,.rr-tile--w3,.rr-tile--w4,.rr-extras{grid-column:span 6}
   .rr-tile,.rr-offer,.rr-cost,.rr-fit__col{padding:28px 22px}
   .rr-tl{grid-template-columns:1fr;gap:6px;padding:24px 22px}
@@ -657,26 +685,34 @@
           <div class="rr-num">06 / Eltern &amp; Familie</div>
           <h2 class="rr-h2">Mehr als Therapie</h2>
         </div>
-        <p class="rr-lead">Neben der Psychotherapie biete ich Formate an, die Eltern und Familien gezielt im Umgang miteinander stärken. Sie richten sich an Familien, die an ihrem Miteinander arbeiten möchten.</p>
+        <p class="rr-lead">Neben der Psychotherapie biete ich Formate für Eltern an, die ihren Teenager wieder besser verstehen und im Familienalltag sicherer handeln möchten.</p>
       </div>
       <div class="rr-offers">
         <article class="rr-offer rr-offer--main rr-spot">
-          <div class="rr-offer__top"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="rr-offer__badge">4 Monate · Intensiv</span></div>
-          <h3>Vier-Monats-Intensivprozess für Familien</h3>
-          <p>Dieses intensive Programm gibt Eltern und Jugendlichen einen festen Rahmen, um über vier Monate gemeinsam an ihrem Umgang miteinander zu arbeiten – mit Gesprächen, Gruppenformaten und Übungen für den Alltag, um aus Streit, Konflikt und Eskalation in ein positives und wertschätzendes Familienklima zu kommen.</p>
+          <div class="rr-offer__top"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="rr-offer__badge">4 Monate · Intensivprogramm für Eltern</span></div>
+          <h3>Family Zen Flow Disziplin</h3>
+          <p>Ein konkret anwendbares 4-Monats-Intensivprogramm für Eltern, die sich bei Streit, Rückzug, Handy, Schule, Motivation oder Grenzen festgefahren fühlen – um den eigenen Teenager wieder zu verstehen, sich selbst klar zu sehen und sicher zu handeln.</p>
           <!-- PRÜFEN: URL der neuen Landingpage eintragen -->
-          <div class="rr-actions"><a href="/mehr-als-therapie/familien-intensivprogramm/" class="rr-btn rr-btn--p">Zum Intensivprogramm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="rr-actions"><a href="/mehr-als-therapie/familien-intensivprogramm/" class="rr-btn rr-btn--p">Mehr zu Family Zen Flow Disziplin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </article>
         <article class="rr-offer rr-spot">
-          <div class="rr-offer__top"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M10 8.5l4 2-4 2z"/></svg></span><div class="rr-price">499 €<small>einmalig</small></div></div>
+          <div class="rr-offer__top"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M10 8.5l4 2-4 2z"/></svg></span><span class="rr-offer__badge">Online</span></div>
           <h3>Online-Kurs</h3>
           <!-- PRÜFEN: Kurzbeschreibung des Online-Kurses einsetzen -->
           <p><span class="rr-todo">[Kurzbeschreibung Online-Kurs folgt]</span></p>
           <!-- PRÜFEN: URL der neuen Landingpage eintragen -->
-          <div class="rr-actions"><a href="/mehr-als-therapie/online-kurs/" class="rr-btn rr-btn--g">Zum Online-Kurs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="rr-actions"><a href="/mehr-als-therapie/online-kurs/" class="rr-btn rr-btn--g">Mehr zum Online-Kurs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </article>
       </div>
-      <div class="rr-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>Die Angebote unter „Mehr als Therapie“ sind kein Ersatz für eine notwendige Psychotherapie.</span></div>
+      <div class="rr-disclaimer">
+        <div class="rr-disclaimer__head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><strong>Wichtig zur Einordnung</strong></div>
+        <ul>
+          <li>Für Eltern, die sich mit diesen Themen näher beschäftigen möchten – alle Details per Klick auf das jeweilige Angebot.</li>
+          <li>Die Angebote unter „Mehr als Therapie“ sind klar von meiner psychotherapeutischen Praxis getrennt.</li>
+          <li>Sie sind keine Psychotherapie und keine Leistung der Krankenkasse.</li>
+          <li>Sie ersetzen keine notwendige Psychotherapie.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -1184,10 +1220,11 @@
     /* Überschriften von links */
     mark('.rr-sec h2, .rr-final h2, .rr-num', 'rr-from-left');
     /* Karten, Listen, Absätze von unten */
-    mark('.rr-glance__item, .rr-pay, .rr-card, .rr-step, .rr-offer, .rr-rev, .rr-tile, .rr-acc details, .rr-pain, .rr-tl, .rr-note, .rr-ref, .rr-guide, .rr-rev__nav, .rr-lead, .rr-center p, .rr-actions, .rr-final p, .rr-final__cta, .rr-map__veil > div', 'rr-from-up');
+    mark('.rr-glance__item, .rr-pay, .rr-card, .rr-step, .rr-offer, .rr-rev, .rr-tile, .rr-acc details, .rr-pain, .rr-tl, .rr-note, .rr-ref, .rr-guide, .rr-rev__nav, .rr-lead, .rr-center p, .rr-actions, .rr-final p, .rr-final__cta, .rr-map__veil > div, .rr-disclaimer, .rr-topics li, .rr-qlist li, .rr-claim', 'rr-from-up');
+    mark('.rr-quote-big', 'rr-from-zoom');
 
     /* gestaffelte Verzögerung für Karten in Rastern */
-    root.querySelectorAll('.rr-glance, .rr-cards, .rr-steps, .rr-offers, .rr-bento, .rr-acc, .rr-pains, .rr-timeline, .rr-rev__track').forEach(function (list) {
+    root.querySelectorAll('.rr-glance, .rr-cards, .rr-steps, .rr-offers, .rr-bento, .rr-acc, .rr-pains, .rr-timeline, .rr-rev__track, .rr-topics, .rr-qlist, .rr-claims').forEach(function (list) {
       Array.prototype.forEach.call(list.children, function (child, i) {
         child.style.setProperty('--d', ((i % 4) * 0.12) + 's');
       });
