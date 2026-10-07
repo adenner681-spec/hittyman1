@@ -14,6 +14,13 @@ IMG_PREVIEW = SITE + "/incms_files/filebrowser"
 # Jede Anfrage öffnet das CMS-Popup „terminanfrage“ (Auswahl gesetzlich / privat).
 ANFRAGE = "?uid=2#popup-terminanfrage"
 
+# PLATZHALTER – sobald die Landingpages stehen (eigene Domain oder Unterseite), hier eintragen.
+# Bis dahin springen die Buttons auf der Startseite zum Bereich „Mehr als Therapie“.
+LINK_FAMILY_ZEN = "?uid=2#mehr-als-therapie"
+LINK_ONLINE_KURS = "?uid=2#mehr-als-therapie"
+# Anfrage-Ziel auf der Landingpage: absolut, damit es auch auf einer eigenen Domain funktioniert.
+ANFRAGE_LANDING = "https://www.rudolf-ritzinger.com/?uid=2#popup-terminanfrage"
+
 def svg(body, w="2", fill="none"):
     return ('<svg viewBox="0 0 24 24" fill="%s" stroke="currentColor" stroke-width="%s" '
             'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">%s</svg>' % (fill, w, body))
@@ -116,9 +123,10 @@ def render(page_src, ld, img, uid):
     s = open(os.path.join(SRC, page_src), encoding="utf-8").read()
     if "{{faq}}" in s:
         s = s.replace("{{faq}}", faq_html(FAQ))
-    s = s.replace("{{img}}", img).replace("{{anfrage}}", ANFRAGE)
+    s = (s.replace("{{img}}", img).replace("{{anfrage-landing}}", ANFRAGE_LANDING).replace("{{anfrage}}", ANFRAGE)
+           .replace("{{link-family-zen}}", LINK_FAMILY_ZEN).replace("{{link-online-kurs}}", LINK_ONLINE_KURS))
     # Sprunglinks im CMS-Format: ?uid=<Seite>#<Anker> (wegen <base href> im CMS)
-    s = re.sub(r"\{\{anker:([a-z0-9-]+)\}\}", lambda m: "?uid=%s#%s" % (uid, m.group(1)), s)
+    s = re.sub(r"\{\{anker:([a-z0-9-]+)\}\}", lambda m: ("?uid=%s#%s" % (uid, m.group(1))) if uid else "#" + m.group(1), s)
     for k, v in ICONS.items():
         s = s.replace("{{%s}}" % k, v)
     left = re.findall(r"\{\{[^}]+\}\}", s)
@@ -134,8 +142,8 @@ PAGES = [
     ("startseite", "startseite.html", "2", home_ld(FAQ),
      "Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger",
      "Rudolf Ritzinger – approbierter Kinder- und Jugendlichenpsychotherapeut in München. Tiefenpsychologisch fundierte Psychotherapie für Jugendliche und junge Erwachsene von 12 bis 21 Jahren, auch online."),
-    # PRÜFEN: uid der Landingpage eintragen, sobald sie im CMS angelegt ist
-    ("mehr-als-therapie-intensivprogramm", "intensivprogramm.html", "UID-LANDINGPAGE", intensiv_ld(),
+    # Landingpage: Domain/uid noch offen → Sprunglinks als reines #anker (funktioniert überall)
+    ("mehr-als-therapie-intensivprogramm", "intensivprogramm.html", None, intensiv_ld(),
      "Family Zen Flow Disziplin – Intensivprogramm für Eltern von Teenagern | Rudolf Ritzinger",
      "Family Zen Flow Disziplin: das 4-Monats-Intensivprogramm für Eltern, deren Teenager ihnen Sorgen macht – bei Streit, Rückzug, Schule, Handy, Motivation und Grenzen. Verstehe dein Kind. Verstehe dich selbst. Handle neu."),
 ]
@@ -143,7 +151,7 @@ PAGES = [
 for folder, src, uid, ld, title, desc in PAGES:
     os.makedirs(os.path.join(ROOT, folder), exist_ok=True)
     with open(os.path.join(ROOT, folder, "modul-sourcecode.html"), "w", encoding="utf-8") as f:
-        f.write(render(src, ld, IMG_MODULE, uid))
+        f.write(render(src, ld, IMG_MODULE if uid else IMG_PREVIEW, uid))
     preview = render(src, ld, IMG_PREVIEW, uid).replace('href="?uid=', 'href="%s/?uid=' % SITE)
     with open(os.path.join(ROOT, "vorschau-%s.html" % folder), "w", encoding="utf-8") as f:
         f.write('<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'

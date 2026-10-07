@@ -71,3 +71,9 @@ Format wie im CMS üblich: Link `?uid=2#name`, Ziel `<a name="name"></a>`.
 | Abschluss / Termin anfragen | `?uid=2#termin-anfragen` |
 
 Landingpage Intensivprogramm: Anker `start`, `ausgangslage`, `programm`, `ablauf`, `fuer-wen`, `begleitung`, `anfrage`. Sobald die Seite im CMS angelegt ist, ihre uid in `build.py` statt `UID-LANDINGPAGE` eintragen.
+
+## Landingpages „Mehr als Therapie“ (Platzhalter)
+Domain bzw. Unterseite stehen noch nicht fest. Bis dahin:
+- Die Buttons „Mehr zu Family Zen Flow Disziplin“ und „Mehr zum Online-Kurs“ auf der Startseite springen zum Bereich „Mehr als Therapie“. Ziel später in `build.py` bei `LINK_FAMILY_ZEN` / `LINK_ONLINE_KURS` eintragen.
+- Die Landingpage selbst ist domain-unabhängig gebaut: Bilder und Links zur Praxis sind absolut (`https://www.rudolf-ritzinger.com/…`), Sprunglinks innerhalb der Seite sind reine `#anker`.
+- Anfrage-Button der Landingpage: vorerst das Popup der Praxis-Startseite (`ANFRAGE_LANDING` in `build.py`) – PRÜFEN, ob ein eigenes Formular sinnvoller ist.

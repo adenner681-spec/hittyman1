@@ -478,8 +478,8 @@
           <p>Als approbierter Kinder- und Jugendlichenpsychotherapeut helfe ich Eltern, die sich bei Streit, Rückzug, Handy, Schule, Motivation oder Grenzen festgefahren fühlen, ihren Teenager wieder zu verstehen und klar zu wissen, was sie tun können.</p>
         </div>
         <div class="rr-hero__cta">
-          <a href="?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p">Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="?uid=UID-LANDINGPAGE#sorgen" class="rr-btn rr-btn--g">Mehr erfahren</a>
+          <a href="https://www.rudolf-ritzinger.com/?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p">Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#sorgen" class="rr-btn rr-btn--g">Mehr erfahren</a>
         </div>
         <ul class="rr-trust">
           <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>4-Monats-Intensivprogramm</li>
@@ -492,7 +492,7 @@
         <div class="rr-photo__frame">
           <div class="rr-photo__img">
             <!-- PRÜFEN: passendes Bild für das Programm wählen -->
-            <img src="/incms_files/filebrowser/Jugendtherapie-Munchen-Gruppencoaching-Ritzinger.jpg" alt="Family Zen Flow Disziplin – Intensivprogramm für Eltern von Teenagern" width="1000" height="1175" fetchpriority="high">
+            <img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/Jugendtherapie-Munchen-Gruppencoaching-Ritzinger.jpg" alt="Family Zen Flow Disziplin – Intensivprogramm für Eltern von Teenagern" width="1000" height="1175" fetchpriority="high">
           </div>
         </div>
         <div class="rr-chip rr-chip--1 rr-glass"><span class="rr-chip__k">Dauer</span><strong>4 Monate</strong>Intensivprogramm</div>
@@ -560,7 +560,7 @@
       <figure class="rr-portrait">
         <div class="rr-portrait__frame">
           <div class="rr-portrait__img">
-            <img src="/incms_files/filebrowser/cache/Rudolf-Ritzinger-Munchen-Kinderpsychologe-und-Jugentherapeut_39aa931c6ba3121ccd953dc7099be0d7.png" alt="Rudolf Ritzinger" loading="lazy" width="600" height="750">
+            <img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/cache/Rudolf-Ritzinger-Munchen-Kinderpsychologe-und-Jugentherapeut_39aa931c6ba3121ccd953dc7099be0d7.png" alt="Rudolf Ritzinger" loading="lazy" width="600" height="750">
           </div>
         </div>
         <figcaption class="rr-portrait__cap rr-glass"><strong>Dipl. Soz. Päd. Rudolf Ritzinger</strong><span>Approbierter Kinder- und Jugendlichenpsychotherapeut</span></figcaption>
@@ -590,7 +590,7 @@
           <div class="rr-termin__box">
             <small>Telefonisch erreichst du mich unter:</small>
             <a href="tel:+491634663072" class="rr-termin__tel">+49 (0) 163 – 466 30 72</a>
-            <a href="?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p">Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://www.rudolf-ritzinger.com/?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p">Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </div>
@@ -599,7 +599,7 @@
         <ul>
           <li>Family Zen Flow Disziplin ist ein Programm für Eltern und klar von meiner psychotherapeutischen Praxis getrennt.</li>
           <li>Es ist keine Psychotherapie und keine Leistung der Krankenkasse.</li>
-          <li>Es ersetzt keine notwendige Psychotherapie. <a href="?uid=2">Zur Psychotherapie für Jugendliche</a></li>
+          <li>Es ersetzt keine notwendige Psychotherapie. <a href="https://www.rudolf-ritzinger.com/">Zur Psychotherapie für Jugendliche</a></li>
           <li>In akuten Krisen: ärztlicher Bereitschaftsdienst 116 117 oder Notruf 112.</li>
         </ul>
       </div>
