@@ -458,7 +458,10 @@
   .rr-acc__body{padding:0 18px 20px}
   .rr-guide__body{padding:0 22px 26px}
   .rr-map{height:420px}
-  .rr-map__addr{right:var(--gutter)}
+  /* Karte mobil: Adresskarte unter die Karte statt darüber, damit der Button frei bleibt */
+  .rr-map{height:auto;display:flex;flex-direction:column}
+  .rr-map__veil,.rr-map iframe{position:relative;inset:auto;height:360px;flex:none}
+  .rr-map__addr{position:relative;left:auto;right:auto;bottom:auto;margin:16px var(--gutter) 28px}
   .rr-scroll{display:none}
 }
 </style>

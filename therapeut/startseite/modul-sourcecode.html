@@ -458,7 +458,10 @@
   .rr-acc__body{padding:0 18px 20px}
   .rr-guide__body{padding:0 22px 26px}
   .rr-map{height:420px}
-  .rr-map__addr{right:var(--gutter)}
+  /* Karte mobil: Adresskarte unter die Karte statt darüber, damit der Button frei bleibt */
+  .rr-map{height:auto;display:flex;flex-direction:column}
+  .rr-map__veil,.rr-map iframe{position:relative;inset:auto;height:360px;flex:none}
+  .rr-map__addr{position:relative;left:auto;right:auto;bottom:auto;margin:16px var(--gutter) 28px}
   .rr-scroll{display:none}
 }
 </style>
@@ -762,7 +765,7 @@
         <div class="rr-map__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <strong>Rosenstr. 7, 80331 München</strong>
         <p>Mit Klick auf „Karte laden“ wird Google Maps geladen. Dabei werden Daten an Google übertragen.</p>
-        <button type="button" class="rr-btn rr-btn--g" id="rr-map-btn">Karte laden</button>
+        <button type="button" class="rr-btn rr-btn--p" id="rr-map-btn">Karte laden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></button>
       </div>
     </div>
     <div class="rr-map__addr rr-glass"><small>Praxis · Mo–Fr 09:00–20:00</small>Psychotherapeutische Praxis Rudolf Ritzinger<br>Rosenstr. 7, 80331 München</div>
