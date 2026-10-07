@@ -117,8 +117,8 @@
 
 /* ===== Auf einen Blick ===== */
 .rr-glance{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
-.rr-glance__item{border-radius:var(--r);padding:30px 28px;background:#fff;border:1px solid var(--line);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
-.rr-glance__item:hover{transform:translateY(-6px);box-shadow:0 28px 60px -34px rgba(25,97,161,.5)}
+.rr-glance__item{border-radius:var(--r);padding:30px 28px;background:#fff;border:1px solid var(--line);transition:translate .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.rr-glance__item:hover{translate:0 -6px;box-shadow:0 28px 60px -34px rgba(25,97,161,.5)}
 .rr-glance__item:hover .rr-ic{background:var(--grad);color:#fff;transform:rotate(-6deg)}
 .rr-glance__item h3{font-size:19px;margin:22px 0 10px}
 .rr-glance__item p{font-size:15.5px;line-height:1.65}
@@ -157,8 +157,8 @@
 /* ===== Angebotskarten mit Foto ===== */
 .rr-intro2{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:56px}
 .rr-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.rr-card{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:#fff;color:var(--ink) !important;box-shadow:0 20px 50px -34px rgba(16,40,63,.4);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
-.rr-card:hover{transform:translateY(-8px);box-shadow:0 34px 70px -34px rgba(25,97,161,.55)}
+.rr-card{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:#fff;color:var(--ink) !important;box-shadow:0 20px 50px -34px rgba(16,40,63,.4);transition:translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-card:hover{translate:0 -8px;box-shadow:0 34px 70px -34px rgba(25,97,161,.55)}
 .rr-card__img{aspect-ratio:16/11;overflow:hidden;background:var(--grad-soft);position:relative}
 .rr-card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
 .rr-card:hover .rr-card__img img{transform:scale(1.06)}
@@ -170,8 +170,8 @@
 
 /* ===== Mehr als Therapie (Teaser) ===== */
 .rr-offers{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:56px}
-.rr-offer{border-radius:30px;padding:40px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
-.rr-offer:hover{transform:translateY(-6px);box-shadow:0 30px 70px -36px rgba(25,97,161,.5)}
+.rr-offer{border-radius:30px;padding:40px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);transition:translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-offer:hover{translate:0 -6px;box-shadow:0 30px 70px -36px rgba(25,97,161,.5)}
 .rr-offer--main{background:linear-gradient(150deg,#e9f3fc 0%,#ffffff 55%,#eaf8f2 100%);border-color:rgba(47,134,201,.25)}
 .rr-offer__top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
 .rr-offer__badge{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
@@ -249,8 +249,8 @@
 .rr-spek__intro p{font-size:17.5px}
 .rr-spek__intro p:first-child{color:var(--ink);font-size:19.5px;line-height:1.6}
 .rr-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.rr-tile{grid-column:span 2;border-radius:var(--r);padding:32px;background:#fff;border:1px solid var(--line);transition:border-color .4s,transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
-.rr-tile:hover{border-color:rgba(75,198,164,.5);transform:translateY(-4px);box-shadow:0 26px 56px -36px rgba(25,97,161,.45)}
+.rr-tile{grid-column:span 2;border-radius:var(--r);padding:32px;background:#fff;border:1px solid var(--line);transition:border-color .4s,translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-tile:hover{border-color:rgba(75,198,164,.5);translate:0 -4px;box-shadow:0 26px 56px -36px rgba(25,97,161,.45)}
 .rr-tile--w3{grid-column:span 3}
 .rr-tile--w4{grid-column:span 4}
 .rr-tile h3{font-size:22px;margin-bottom:14px}
@@ -341,20 +341,27 @@
 /* ===== Scroll-Fortschritt ===== */
 .rr-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:9999;transform-origin:left;transform:scaleX(0);background:var(--grad);pointer-events:none}
 
-/* ===== Animationen (nur mit JS aktiv) =====
-   Nur opacity + transform → läuft auf der Grafikkarte und bleibt flüssig. */
-.rr.rr-js [data-rv]{opacity:0;transform:translate3d(0,28px,0);transition:opacity .9s cubic-bezier(.25,.1,.25,1),transform 1.1s cubic-bezier(.22,1,.36,1);transition-delay:var(--d,0s);will-change:opacity,transform}
-.rr.rr-js [data-rv="l"]{transform:translate3d(-36px,0,0)}
-.rr.rr-js [data-rv="r"]{transform:translate3d(36px,0,0)}
-.rr.rr-js [data-rv="z"]{transform:scale(.96)}
-.rr.rr-js [data-rv].is-in{opacity:1;transform:none;will-change:auto}
-.rr.rr-js .rr-line{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
-.rr.rr-js .rr-line>span{display:block;transform:translate3d(0,100%,0);transition:transform 1.15s cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--d,0s) + .05s)}
-.rr.rr-js .is-in .rr-line>span,.rr.rr-js .rr-line.is-in>span{transform:none}
-.rr.rr-nojs [data-rv],.rr.rr-nojs .rr-line>span{opacity:1 !important;transform:none !important}
-.rr-hero [data-in]{animation:rr-in 1.1s cubic-bezier(.22,1,.36,1) both;animation-delay:var(--d,0s)}
+/* ===== Animationen =====
+   Hero: reines CSS, läuft immer.
+   Scroll: das JavaScript-Modul hängt die Klasse .rr-reveal an und blendet ein. */
+@keyframes rr-fly-left{from{opacity:0;transform:translate3d(-90px,0,0)}to{opacity:1;transform:none}}
+@keyframes rr-fly-right{from{opacity:0;transform:translate3d(90px,0,0)}to{opacity:1;transform:none}}
+@keyframes rr-fly-up{from{opacity:0;transform:translate3d(0,40px,0)}to{opacity:1;transform:none}}
+@keyframes rr-fade{from{opacity:0}to{opacity:1}}
+.rr .rr-hero .rr-kicker{animation:rr-fly-left .8s .1s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero h1{animation:rr-fly-left 1.05s .15s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero .rr-hero__text{animation:rr-fly-left 1.05s .4s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero .rr-hero__cta{animation:rr-fly-up .9s .7s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero .rr-trust{animation:rr-fly-up .9s .85s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero .rr-photo{animation:rr-fly-right 1.1s .45s cubic-bezier(.16,1,.3,1) both}
 
-@keyframes rr-in{from{opacity:0;transform:translate3d(0,24px,0)}to{opacity:1;transform:none}}
+.rr.rr-js .rr-reveal{opacity:0;transform:var(--from,translate3d(0,40px,0));transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),translate .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .4s;transition-delay:var(--d,0s),var(--d,0s),0s,0s,0s}
+.rr.rr-js .rr-reveal.rr-from-left{--from:translate3d(-80px,0,0)}
+.rr.rr-js .rr-reveal.rr-from-right{--from:translate3d(80px,0,0)}
+.rr.rr-js .rr-reveal.rr-from-up{--from:translate3d(0,44px,0)}
+.rr.rr-js .rr-reveal.rr-from-zoom{--from:scale(.9)}
+.rr.rr-js .rr-reveal.rr-in{opacity:1;transform:none}
+
 @keyframes rr-spin{to{--rr-a:360deg}}
 @keyframes rr-rot{to{transform:rotate(360deg)}}
 @keyframes rr-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -366,8 +373,9 @@
 @keyframes rr-a3{0%,100%{transform:translate(0,0)}50%{transform:translate(10vw,-8vw)}}
 
 @media (prefers-reduced-motion:reduce){
-  .rr *,.rr *::before,.rr *::after{animation:none !important;transition:none !important}
-  .rr.rr-js [data-rv],.rr.rr-js .rr-line>span{opacity:1;transform:none}
+  .rr .rr-hero .rr-kicker,.rr .rr-hero h1,.rr .rr-hero .rr-hero__text,.rr .rr-hero .rr-hero__cta,.rr .rr-hero .rr-trust,.rr .rr-hero .rr-photo{animation:rr-fade .8s both}
+  .rr .rr-aurora i,.rr .rr-photo__ring,.rr .rr-chip,.rr .rr-scroll i::after{animation:none}
+  .rr.rr-js .rr-reveal{transform:none;transition:opacity .8s}
 }
 
 /* ===== Responsive ===== */

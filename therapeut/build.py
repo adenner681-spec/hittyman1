@@ -50,7 +50,7 @@ def faq_html(items):
     out = []
     for i, it in enumerate(items, 1):
         body = "".join("<p>%s</p>" % p for p in it["a"])
-        out.append('        <details data-rv><summary><span class="rr-acc__n">%02d</span><h3>%s</h3><span class="rr-acc__pm"></span></summary>'
+        out.append('        <details><summary><span class="rr-acc__n">%02d</span><h3>%s</h3><span class="rr-acc__pm"></span></summary>'
                    '<div class="rr-acc__body">%s</div></details>' % (i, html.escape(it["q"], quote=False), body))
     return "\n".join(out)
 
@@ -123,11 +123,7 @@ def render(page_src, ld, img):
     assert not left, "Unbekannte Platzhalter: %s" % left
     css = open(os.path.join(SRC, "base.css"), encoding="utf-8").read()
     ld_json = json.dumps(ld, ensure_ascii=False, indent=2)
-    # Animations-Skript direkt im Sourcecode, damit es auch läuft, wenn das CMS
-    # das separate JavaScript-Modul nicht ausführt (doppelter Start ist abgesichert).
-    js = open(os.path.join(SRC, "main.js"), encoding="utf-8").read()
-    return ("<style>\n" + css + "</style>\n\n" + s + '\n<script type="application/ld+json">\n' + ld_json
-            + "\n</script>\n<script>\n" + js + "</script>\n")
+    return "<style>\n" + css + "</style>\n\n" + s + '\n<script type="application/ld+json">\n' + ld_json + "\n</script>\n"
 
 FAQ = json.load(open(os.path.join(SRC, "faq_startseite.json"), encoding="utf-8"))
 JS = open(os.path.join(SRC, "main.js"), encoding="utf-8").read()

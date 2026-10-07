@@ -118,8 +118,8 @@
 
 /* ===== Auf einen Blick ===== */
 .rr-glance{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
-.rr-glance__item{border-radius:var(--r);padding:30px 28px;background:#fff;border:1px solid var(--line);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
-.rr-glance__item:hover{transform:translateY(-6px);box-shadow:0 28px 60px -34px rgba(25,97,161,.5)}
+.rr-glance__item{border-radius:var(--r);padding:30px 28px;background:#fff;border:1px solid var(--line);transition:translate .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.rr-glance__item:hover{translate:0 -6px;box-shadow:0 28px 60px -34px rgba(25,97,161,.5)}
 .rr-glance__item:hover .rr-ic{background:var(--grad);color:#fff;transform:rotate(-6deg)}
 .rr-glance__item h3{font-size:19px;margin:22px 0 10px}
 .rr-glance__item p{font-size:15.5px;line-height:1.65}
@@ -158,8 +158,8 @@
 /* ===== Angebotskarten mit Foto ===== */
 .rr-intro2{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:56px}
 .rr-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.rr-card{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:#fff;color:var(--ink) !important;box-shadow:0 20px 50px -34px rgba(16,40,63,.4);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
-.rr-card:hover{transform:translateY(-8px);box-shadow:0 34px 70px -34px rgba(25,97,161,.55)}
+.rr-card{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:#fff;color:var(--ink) !important;box-shadow:0 20px 50px -34px rgba(16,40,63,.4);transition:translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-card:hover{translate:0 -8px;box-shadow:0 34px 70px -34px rgba(25,97,161,.55)}
 .rr-card__img{aspect-ratio:16/11;overflow:hidden;background:var(--grad-soft);position:relative}
 .rr-card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
 .rr-card:hover .rr-card__img img{transform:scale(1.06)}
@@ -171,8 +171,8 @@
 
 /* ===== Mehr als Therapie (Teaser) ===== */
 .rr-offers{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:56px}
-.rr-offer{border-radius:30px;padding:40px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
-.rr-offer:hover{transform:translateY(-6px);box-shadow:0 30px 70px -36px rgba(25,97,161,.5)}
+.rr-offer{border-radius:30px;padding:40px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);transition:translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-offer:hover{translate:0 -6px;box-shadow:0 30px 70px -36px rgba(25,97,161,.5)}
 .rr-offer--main{background:linear-gradient(150deg,#e9f3fc 0%,#ffffff 55%,#eaf8f2 100%);border-color:rgba(47,134,201,.25)}
 .rr-offer__top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
 .rr-offer__badge{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
@@ -250,8 +250,8 @@
 .rr-spek__intro p{font-size:17.5px}
 .rr-spek__intro p:first-child{color:var(--ink);font-size:19.5px;line-height:1.6}
 .rr-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.rr-tile{grid-column:span 2;border-radius:var(--r);padding:32px;background:#fff;border:1px solid var(--line);transition:border-color .4s,transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
-.rr-tile:hover{border-color:rgba(75,198,164,.5);transform:translateY(-4px);box-shadow:0 26px 56px -36px rgba(25,97,161,.45)}
+.rr-tile{grid-column:span 2;border-radius:var(--r);padding:32px;background:#fff;border:1px solid var(--line);transition:border-color .4s,translate .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-tile:hover{border-color:rgba(75,198,164,.5);translate:0 -4px;box-shadow:0 26px 56px -36px rgba(25,97,161,.45)}
 .rr-tile--w3{grid-column:span 3}
 .rr-tile--w4{grid-column:span 4}
 .rr-tile h3{font-size:22px;margin-bottom:14px}
@@ -342,20 +342,27 @@
 /* ===== Scroll-Fortschritt ===== */
 .rr-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:9999;transform-origin:left;transform:scaleX(0);background:var(--grad);pointer-events:none}
 
-/* ===== Animationen (nur mit JS aktiv) =====
-   Nur opacity + transform → läuft auf der Grafikkarte und bleibt flüssig. */
-.rr.rr-js [data-rv]{opacity:0;transform:translate3d(0,28px,0);transition:opacity .9s cubic-bezier(.25,.1,.25,1),transform 1.1s cubic-bezier(.22,1,.36,1);transition-delay:var(--d,0s);will-change:opacity,transform}
-.rr.rr-js [data-rv="l"]{transform:translate3d(-36px,0,0)}
-.rr.rr-js [data-rv="r"]{transform:translate3d(36px,0,0)}
-.rr.rr-js [data-rv="z"]{transform:scale(.96)}
-.rr.rr-js [data-rv].is-in{opacity:1;transform:none;will-change:auto}
-.rr.rr-js .rr-line{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
-.rr.rr-js .rr-line>span{display:block;transform:translate3d(0,100%,0);transition:transform 1.15s cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--d,0s) + .05s)}
-.rr.rr-js .is-in .rr-line>span,.rr.rr-js .rr-line.is-in>span{transform:none}
-.rr.rr-nojs [data-rv],.rr.rr-nojs .rr-line>span{opacity:1 !important;transform:none !important}
-.rr-hero [data-in]{animation:rr-in 1.1s cubic-bezier(.22,1,.36,1) both;animation-delay:var(--d,0s)}
+/* ===== Animationen =====
+   Hero: reines CSS, läuft immer.
+   Scroll: das JavaScript-Modul hängt die Klasse .rr-reveal an und blendet ein. */
+@keyframes rr-fly-left{from{opacity:0;transform:translate3d(-90px,0,0)}to{opacity:1;transform:none}}
+@keyframes rr-fly-right{from{opacity:0;transform:translate3d(90px,0,0)}to{opacity:1;transform:none}}
+@keyframes rr-fly-up{from{opacity:0;transform:translate3d(0,40px,0)}to{opacity:1;transform:none}}
+@keyframes rr-fade{from{opacity:0}to{opacity:1}}
+.rr .rr-hero .rr-kicker{animation:rr-fly-left .8s .1s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero h1{animation:rr-fly-left 1.05s .15s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero .rr-hero__text{animation:rr-fly-left 1.05s .4s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero .rr-hero__cta{animation:rr-fly-up .9s .7s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero .rr-trust{animation:rr-fly-up .9s .85s cubic-bezier(.16,1,.3,1) both}
+.rr .rr-hero .rr-photo{animation:rr-fly-right 1.1s .45s cubic-bezier(.16,1,.3,1) both}
 
-@keyframes rr-in{from{opacity:0;transform:translate3d(0,24px,0)}to{opacity:1;transform:none}}
+.rr.rr-js .rr-reveal{opacity:0;transform:var(--from,translate3d(0,40px,0));transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),translate .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .4s;transition-delay:var(--d,0s),var(--d,0s),0s,0s,0s}
+.rr.rr-js .rr-reveal.rr-from-left{--from:translate3d(-80px,0,0)}
+.rr.rr-js .rr-reveal.rr-from-right{--from:translate3d(80px,0,0)}
+.rr.rr-js .rr-reveal.rr-from-up{--from:translate3d(0,44px,0)}
+.rr.rr-js .rr-reveal.rr-from-zoom{--from:scale(.9)}
+.rr.rr-js .rr-reveal.rr-in{opacity:1;transform:none}
+
 @keyframes rr-spin{to{--rr-a:360deg}}
 @keyframes rr-rot{to{transform:rotate(360deg)}}
 @keyframes rr-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -367,8 +374,9 @@
 @keyframes rr-a3{0%,100%{transform:translate(0,0)}50%{transform:translate(10vw,-8vw)}}
 
 @media (prefers-reduced-motion:reduce){
-  .rr *,.rr *::before,.rr *::after{animation:none !important;transition:none !important}
-  .rr.rr-js [data-rv],.rr.rr-js .rr-line>span{opacity:1;transform:none}
+  .rr .rr-hero .rr-kicker,.rr .rr-hero h1,.rr .rr-hero .rr-hero__text,.rr .rr-hero .rr-hero__cta,.rr .rr-hero .rr-trust,.rr .rr-hero .rr-photo{animation:rr-fade .8s both}
+  .rr .rr-aurora i,.rr .rr-photo__ring,.rr .rr-chip,.rr .rr-scroll i::after{animation:none}
+  .rr.rr-js .rr-reveal{transform:none;transition:opacity .8s}
 }
 
 /* ===== Responsive ===== */
@@ -423,7 +431,6 @@
 </style>
 
 <div class="rr" lang="de" id="rr-top">
-  <script>(function(r){if(!r||!("IntersectionObserver" in window)||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))return;r.classList.add("rr-js");setTimeout(function(){if(!r.classList.contains("rr-ready"))r.classList.add("rr-nojs")},3000)})(document.currentScript&&document.currentScript.parentNode)</script>
   <div class="rr-progress" id="rr-progress"></div>
 
   <!-- ================= HERO ================= -->
@@ -431,24 +438,24 @@
     <div class="rr-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="rr-wrap rr-hero__grid">
       <div>
-        <p class="rr-kicker rr-glass" data-in style="--d:.05s"><span class="rr-kicker__dot"></span>Mehr als Therapie · Für Eltern und Jugendliche</p>
-        <h1 data-in style="--d:.15s"><span class="rr-grad">Vier-Monats-Intensivprozess</span> für Familien</h1>
-        <div class="rr-hero__text" data-in style="--d:.3s">
+        <p class="rr-kicker rr-glass"><span class="rr-kicker__dot"></span>Mehr als Therapie · Für Eltern und Jugendliche</p>
+        <h1><span class="rr-grad">Vier-Monats-Intensivprozess</span> für Familien</h1>
+        <div class="rr-hero__text">
           <p>Dieses intensive Programm gibt Eltern und Jugendlichen einen festen Rahmen, um über vier Monate gemeinsam an ihrem Umgang miteinander zu arbeiten – mit Gesprächen, Gruppenformaten und Übungen für den Alltag, um aus Streit, Konflikt und Eskalation in ein positives und wertschätzendes Familienklima zu kommen.</p>
           <p>Begleitet wird das Programm von Rudolf Ritzinger, approbierter Kinder- und Jugendlichenpsychotherapeut in München, seit 1997 in der Arbeit mit Jugendlichen, Eltern und Familien tätig.</p>
         </div>
-        <div class="rr-hero__cta" data-in style="--d:.45s">
-          <a href="?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p" data-magnet>Platz unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="#ablauf" class="rr-btn rr-btn--g" data-magnet>Ablauf ansehen</a>
+        <div class="rr-hero__cta">
+          <a href="?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p">Platz unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#ablauf" class="rr-btn rr-btn--g">Ablauf ansehen</a>
         </div>
-        <ul class="rr-trust" data-in style="--d:.6s">
+        <ul class="rr-trust">
           <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>4 Monate fester Rahmen</li>
           <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Gespräche &amp; Gruppenformate</li>
           <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Übungen für den Alltag</li>
           <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>In München &amp; online</li>
         </ul>
       </div>
-      <div class="rr-photo" id="rr-photo" data-in style="--d:.3s">
+      <div class="rr-photo" id="rr-photo">
         <span class="rr-photo__ring" aria-hidden="true"></span>
         <div class="rr-photo__frame">
           <div class="rr-photo__img">
@@ -466,15 +473,15 @@
   <!-- ================= KENNEN SIE DAS? ================= -->
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap">
-      <div class="rr-center" data-rv>
+      <div class="rr-center">
         <div class="rr-num">Ausgangslage</div>
-        <h2 class="rr-h2" data-split data-rv>Wenn Streit den Familienalltag bestimmt</h2>
+        <h2 class="rr-h2">Wenn Streit den Familienalltag bestimmt</h2>
         <p class="rr-lead">Viele Familien erleben Phasen, in denen sich Konflikte zwischen Eltern und Jugendlichen festfahren. Das Programm setzt genau dort an.</p>
       </div>
       <div class="rr-pains">
-        <div class="rr-pain" data-rv style="--d:0s"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></span>Kleine Anlässe führen immer wieder zu großem Streit, und am Ende fühlen sich alle unverstanden.</div>
-        <div class="rr-pain" data-rv style="--d:.1s"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Gespräche zwischen Eltern und Jugendlichen enden in Vorwürfen, Rückzug oder Schweigen.</div>
-        <div class="rr-pain" data-rv style="--d:.2s"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>Sie wünschen sich ein Familienklima, in dem wieder Wertschätzung und Verständnis möglich sind.</div>
+        <div class="rr-pain"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></span>Kleine Anlässe führen immer wieder zu großem Streit, und am Ende fühlen sich alle unverstanden.</div>
+        <div class="rr-pain"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Gespräche zwischen Eltern und Jugendlichen enden in Vorwürfen, Rückzug oder Schweigen.</div>
+        <div class="rr-pain"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>Sie wünschen sich ein Familienklima, in dem wieder Wertschätzung und Verständnis möglich sind.</div>
       </div>
     </div>
   </section>
@@ -484,23 +491,23 @@
     <div class="rr-wrap">
       <div class="rr-intro2">
         <div>
-          <div class="rr-num" data-rv>Das Programm</div>
-          <h2 class="rr-h2" data-split data-rv>Ein fester Rahmen für vier Monate</h2>
+          <div class="rr-num">Das Programm</div>
+          <h2 class="rr-h2">Ein fester Rahmen für vier Monate</h2>
         </div>
-        <p class="rr-lead" data-rv style="--d:.1s">Statt einzelner Termine arbeiten Eltern und Jugendliche über vier Monate kontinuierlich an ihrem Umgang miteinander. Drei Bausteine greifen dabei ineinander.</p>
+        <p class="rr-lead">Statt einzelner Termine arbeiten Eltern und Jugendliche über vier Monate kontinuierlich an ihrem Umgang miteinander. Drei Bausteine greifen dabei ineinander.</p>
       </div>
       <div class="rr-glance" style="grid-template-columns:repeat(3,1fr)">
-        <div class="rr-glance__item" data-rv style="--d:0s">
+        <div class="rr-glance__item">
           <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
           <h3>Gespräche</h3>
           <p><span class="rr-todo">[Kurzbeschreibung folgt: Format, Häufigkeit, wer nimmt teil]</span></p>
         </div>
-        <div class="rr-glance__item" data-rv style="--d:.1s">
+        <div class="rr-glance__item">
           <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
           <h3>Gruppenformate</h3>
           <p><span class="rr-todo">[Kurzbeschreibung folgt: Elterngruppe, Jugendgruppe, online/vor Ort]</span></p>
         </div>
-        <div class="rr-glance__item" data-rv style="--d:.2s">
+        <div class="rr-glance__item">
           <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 9.3l-4.8 3.7 1.7 6-4.9-3.6L7.1 19l1.7-6L4 9.3l6.1-.5z"/></svg></span>
           <h3>Übungen für den Alltag</h3>
           <p><span class="rr-todo">[Kurzbeschreibung folgt: Art der Übungen, Begleitmaterial]</span></p>
@@ -512,17 +519,17 @@
   <!-- ================= ABLAUF ================= -->
   <section class="rr-sec rr-sec--white" id="ablauf">
     <div class="rr-wrap">
-      <div class="rr-center" data-rv>
+      <div class="rr-center">
         <div class="rr-num">Ablauf</div>
-        <h2 class="rr-h2" data-split data-rv>So verlaufen die vier Monate</h2>
+        <h2 class="rr-h2">So verlaufen die vier Monate</h2>
       </div>
       <!-- PRÜFEN: Inhalte je Monat aus der Programmstruktur einsetzen -->
       <div class="rr-timeline">
-        <div class="rr-tl" data-rv><div class="rr-tl__m">Vorgespräch</div><div><h3>Kennenlernen &amp; Klärung</h3><p><span class="rr-todo">[folgt]</span></p></div></div>
-        <div class="rr-tl" data-rv><div class="rr-tl__m">Monat 1</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
-        <div class="rr-tl" data-rv><div class="rr-tl__m">Monat 2</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
-        <div class="rr-tl" data-rv><div class="rr-tl__m">Monat 3</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
-        <div class="rr-tl" data-rv><div class="rr-tl__m">Monat 4</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl"><div class="rr-tl__m">Vorgespräch</div><div><h3>Kennenlernen &amp; Klärung</h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl"><div class="rr-tl__m">Monat 1</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl"><div class="rr-tl__m">Monat 2</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl"><div class="rr-tl__m">Monat 3</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl"><div class="rr-tl__m">Monat 4</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
       </div>
     </div>
   </section>
@@ -530,12 +537,12 @@
   <!-- ================= FÜR WEN ================= -->
   <section class="rr-sec rr-sec--mint">
     <div class="rr-wrap">
-      <div class="rr-center" data-rv>
+      <div class="rr-center">
         <div class="rr-num">Passt das zu uns?</div>
-        <h2 class="rr-h2" data-split data-rv>Für wen das Programm gedacht ist</h2>
+        <h2 class="rr-h2">Für wen das Programm gedacht ist</h2>
       </div>
       <div class="rr-fit">
-        <div class="rr-fit__col rr-fit__col--yes" data-rv="l">
+        <div class="rr-fit__col rr-fit__col--yes">
           <h3>Das Programm passt, wenn …</h3>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>Streit, Konflikte und Eskalationen zwischen Eltern und Jugendlichen den Alltag prägen.</li>
@@ -543,7 +550,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>Sie sich einen festen, verbindlichen Rahmen statt einzelner Termine wünschen.</li>
           </ul>
         </div>
-        <div class="rr-fit__col rr-fit__col--no" data-rv="r">
+        <div class="rr-fit__col rr-fit__col--no">
           <h3>Eine Psychotherapie ist der richtige Weg, wenn …</h3>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>ein Jugendlicher unter einer psychischen Erkrankung leidet, die behandelt werden muss.</li>
@@ -558,7 +565,7 @@
   <!-- ================= BEGLEITUNG ================= -->
   <section class="rr-sec rr-sec--white">
     <div class="rr-wrap rr-eltern__grid">
-      <figure class="rr-portrait" data-rv="l">
+      <figure class="rr-portrait">
         <div class="rr-portrait__frame">
           <div class="rr-portrait__img">
             <img src="/incms_files/filebrowser/cache/Rudolf-Ritzinger-Munchen-Kinderpsychologe-und-Jugentherapeut_39aa931c6ba3121ccd953dc7099be0d7.png" alt="Rudolf Ritzinger" loading="lazy" width="600" height="750">
@@ -566,9 +573,9 @@
         </div>
         <figcaption class="rr-portrait__cap rr-glass"><strong>Dipl. Soz. Päd. Rudolf Ritzinger</strong><span>Approbierter Kinder- und Jugendlichenpsychotherapeut</span></figcaption>
       </figure>
-      <div data-rv style="--d:.15s">
+      <div>
         <div class="rr-num">Ihre Begleitung</div>
-        <h2 class="rr-h2" data-split data-rv>Erfahrung mit Jugendlichen und Familien seit 1997</h2>
+        <h2 class="rr-h2">Erfahrung mit Jugendlichen und Familien seit 1997</h2>
         <div class="rr-prose">
           <p>Seit 1997 begleite ich Jugendliche, junge Erwachsene und Eltern dabei, schwierige Situationen besser zu verstehen und neue Wege im Umgang miteinander zu entwickeln.</p>
           <p>Als approbierter Kinder- und Jugendlichenpsychotherapeut mit familientherapeutischer Erfahrung und Fachpraxis für Feeling Seen® richte ich den Blick nicht nur auf einzelne Konflikte, sondern auf die Beziehungen in der Familie und auf das, was jedes Familienmitglied braucht.</p>
@@ -587,7 +594,7 @@
   <!-- ================= INVESTITION & ANFRAGE ================= -->
   <section class="rr-sec rr-sec--tint" id="anfrage">
     <div class="rr-wrap">
-      <div class="rr-termin" data-rv="z">
+      <div class="rr-termin">
         <div class="rr-termin__grid">
           <div>
             <div class="rr-num">Teilnahme</div>
@@ -599,11 +606,11 @@
           <div class="rr-termin__box">
             <small>Telefonisch erreichen Sie mich unter:</small>
             <a href="tel:+491634663072" class="rr-termin__tel">+49 (0) 163 – 466 30 72</a>
-            <a href="?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p" data-magnet>Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p">Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </div>
-      <div class="rr-note" data-rv><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>Der Vier-Monats-Intensivprozess ist kein Ersatz für eine notwendige Psychotherapie.</span></div>
+      <div class="rr-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>Der Vier-Monats-Intensivprozess ist kein Ersatz für eine notwendige Psychotherapie.</span></div>
     </div>
   </section>
 </div>
@@ -629,178 +636,4 @@
     }
   ]
 }
-</script>
-<script>
-(function () {
-  /* Startet erst, wenn die Seite steht – egal, ob das CMS das Modul im Kopf
-     oder am Ende der Seite einbindet. */
-  function init() {
-    var root = document.querySelector('.rr');
-    if (!root || root.getAttribute('data-rr-init')) return;
-    root.setAttribute('data-rr-init', '1');
-    if (window.console) console.log('[rr] Animationen aktiv');
-
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-    var raf = window.requestAnimationFrame || function (f) { return setTimeout(f, 16); };
-
-    /* Scroll-Fortschritt (max. einmal pro Frame) */
-    var bar = document.getElementById('rr-progress');
-    var ticking = false;
-    function progress() {
-      ticking = false;
-      if (!bar) return;
-      var r = root.getBoundingClientRect();
-      var total = r.height - window.innerHeight;
-      var p = total > 0 ? Math.min(Math.max(-r.top / total, 0), 1) : 0;
-      bar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
-    }
-    function onScroll() { if (!ticking) { ticking = true; raf(progress); } }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    progress();
-
-    if (fine && !reduce) {
-      /* Lichtschein folgt der Maus */
-      root.querySelectorAll('.rr-spot').forEach(function (el) {
-        el.addEventListener('pointermove', function (e) {
-          var r = el.getBoundingClientRect();
-          el.style.setProperty('--x', (e.clientX - r.left) + 'px');
-          el.style.setProperty('--y', (e.clientY - r.top) + 'px');
-        });
-      });
-
-      /* Buttons ziehen sich leicht zur Maus */
-      root.querySelectorAll('[data-magnet]').forEach(function (el) {
-        el.addEventListener('pointermove', function (e) {
-          var r = el.getBoundingClientRect();
-          el.style.setProperty('--mx', ((e.clientX - r.left - r.width / 2) * 0.15) + 'px');
-          el.style.setProperty('--my', ((e.clientY - r.top - r.height / 2) * 0.2) + 'px');
-        });
-        el.addEventListener('pointerleave', function () {
-          el.style.setProperty('--mx', '0px');
-          el.style.setProperty('--my', '0px');
-        });
-      });
-
-      /* Hero-Bild reagiert leicht auf die Maus */
-      var photo = document.getElementById('rr-photo');
-      var hero = root.querySelector('.rr-hero');
-      if (photo && hero) {
-        var px = 0, py = 0, pending = false;
-        hero.addEventListener('pointermove', function (e) {
-          var r = hero.getBoundingClientRect();
-          px = ((e.clientX - r.left) / r.width - 0.5) * 2;
-          py = ((e.clientY - r.top) / r.height - 0.5) * 2;
-          if (!pending) {
-            pending = true;
-            raf(function () {
-              pending = false;
-              photo.style.setProperty('--px', px.toFixed(3));
-              photo.style.setProperty('--py', py.toFixed(3));
-            });
-          }
-        });
-      }
-    }
-
-    /* Bewertungen: Pfeile + Ziehen mit der Maus */
-    var track = document.getElementById('rr-track');
-    var prev = document.getElementById('rr-prev');
-    var next = document.getElementById('rr-next');
-    if (track && prev && next) {
-      function step(dir) {
-        var card = track.querySelector('.rr-rev');
-        track.scrollBy({ left: dir * (card ? card.offsetWidth + 22 : 360), behavior: 'smooth' });
-      }
-      prev.addEventListener('click', function () { step(-1); });
-      next.addEventListener('click', function () { step(1); });
-      var down = false, startX = 0, startL = 0;
-      track.addEventListener('pointerdown', function (e) {
-        if (e.pointerType !== 'mouse') return;
-        down = true; startX = e.clientX; startL = track.scrollLeft;
-        track.classList.add('is-drag');
-      });
-      window.addEventListener('pointermove', function (e) {
-        if (down) track.scrollLeft = startL - (e.clientX - startX);
-      });
-      window.addEventListener('pointerup', function () {
-        if (!down) return;
-        down = false; track.classList.remove('is-drag');
-      });
-    }
-
-    /* Google Maps erst nach Klick laden */
-    var map = document.getElementById('rr-map');
-    var mapBtn = document.getElementById('rr-map-btn');
-    if (map && mapBtn) {
-      mapBtn.addEventListener('click', function () {
-        var f = document.createElement('iframe');
-        f.src = map.getAttribute('data-src');
-        f.title = 'Google Maps: Rosenstr. 7, 80331 München';
-        f.loading = 'lazy';
-        f.referrerPolicy = 'no-referrer-when-downgrade';
-        f.allowFullscreen = true;
-        map.insertBefore(f, map.firstChild);
-        var veil = map.querySelector('.rr-map__veil');
-        if (veil) veil.parentNode.removeChild(veil);
-      });
-    }
-
-    /* FAQ / Ratgeber: weiches Auf- und Zuklappen */
-    root.querySelectorAll('.rr-acc details, .rr-guide details').forEach(function (d) {
-      var sum = d.querySelector('summary');
-      var body = d.querySelector('.rr-acc__body, .rr-guide__body');
-      if (!sum || !body) return;
-      sum.addEventListener('click', function (e) {
-        if (reduce || !body.animate) return;
-        e.preventDefault();
-        if (d.open) {
-          var h = body.offsetHeight;
-          body.animate([{ height: h + 'px', opacity: 1 }, { height: '0px', opacity: 0 }],
-            { duration: 320, easing: 'cubic-bezier(.4,0,.2,1)' }).onfinish = function () { d.open = false; };
-        } else {
-          d.open = true;
-          var h2 = body.offsetHeight;
-          body.animate([{ height: '0px', opacity: 0 }, { height: h2 + 'px', opacity: 1 }],
-            { duration: 420, easing: 'cubic-bezier(.22,1,.36,1)' });
-        }
-      });
-    });
-
-    /* Einblenden beim Scrollen */
-    function showAll() {
-      root.querySelectorAll('[data-rv]').forEach(function (el) { el.classList.add('is-in'); });
-      root.classList.add('rr-ready');
-    }
-    if (reduce || !('IntersectionObserver' in window)) { showAll(); return; }
-
-    root.querySelectorAll('[data-split]').forEach(function (h) {
-      if (h.querySelector('.rr-line')) return;
-      h.innerHTML = '<span class="rr-line"><span>' + h.innerHTML + '</span></span>';
-      h.setAttribute('data-rv', '');
-    });
-
-    var io = new IntersectionObserver(function (entries) {
-      /* Elemente, die gleichzeitig ins Bild kommen, nacheinander einblenden */
-      var batch = entries.filter(function (e) { return e.isIntersecting; })
-        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top || a.boundingClientRect.left - b.boundingClientRect.left; });
-      batch.forEach(function (e, i) {
-        var el = e.target;
-        if (!el.style.getPropertyValue('--d')) el.style.setProperty('--d', Math.min(i * 0.08, 0.4) + 's');
-        el.classList.add('is-in');
-        io.unobserve(el);
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
-
-    /* Erst ab dem nächsten Frame verstecken + beobachten → kein Flackern */
-    raf(function () {
-      root.classList.add('rr-js', 'rr-ready');
-      root.querySelectorAll('[data-rv]').forEach(function (el) { io.observe(el); });
-    });
-  }
-
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
-})();
 </script>

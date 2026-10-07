@@ -1,34 +1,84 @@
+/* JavaScript-Feld (ohne <script>-Tags einfügen):
+   Einflug-Animationen beim Scrollen, Hover-Effekte, Bewertungs-Slider,
+   FAQ-Accordion, Google-Maps-Klick. */
 (function () {
-  /* Startet erst, wenn die Seite steht – egal, ob das CMS das Modul im Kopf
-     oder am Ende der Seite einbindet. */
+  'use strict';
+
+  var MAP_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.6316886934655!2d11.57133851564896!3d48.13662577922342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75dc90dbe7f1%3A0x4e197c42ae4d532a!2sPsychotherapeutische%20Praxis%20Rudolf%20Ritzinger!5e0!3m2!1sde!2sde!4v1649425925208!5m2!1sde!2sde';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   function init() {
     var root = document.querySelector('.rr');
-    if (!root || root.getAttribute('data-rr-init')) return;
-    root.setAttribute('data-rr-init', '1');
-    if (window.console) console.log('[rr] Animationen aktiv');
+    if (!root || root.classList.contains('rr-js')) return;
+    root.classList.add('rr-js');
 
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-    var raf = window.requestAnimationFrame || function (f) { return setTimeout(f, 16); };
-
-    /* Scroll-Fortschritt (max. einmal pro Frame) */
-    var bar = document.getElementById('rr-progress');
-    var ticking = false;
-    function progress() {
-      ticking = false;
-      if (!bar) return;
-      var r = root.getBoundingClientRect();
-      var total = r.height - window.innerHeight;
-      var p = total > 0 ? Math.min(Math.max(-r.top / total, 0), 1) : 0;
-      bar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+    /* ---------- Scroll-Animationen: Elemente fliegen ein ---------- */
+    function mark(selector, dir) {
+      root.querySelectorAll(selector).forEach(function (el) {
+        if (el.closest('.rr-hero')) return;                     /* Hero animiert per CSS */
+        if (el.classList.contains('rr-reveal')) return;        /* erste Regel gewinnt */
+        var p = el.parentElement;                              /* nicht doppelt in schon bewegten Blöcken */
+        while (p && p !== root) { if (p.classList.contains('rr-reveal')) return; p = p.parentElement; }
+        el.classList.add('rr-reveal', dir);
+      });
     }
-    function onScroll() { if (!ticking) { ticking = true; raf(progress); } }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    progress();
+    /* Blöcke, die als Ganzes kommen */
+    mark('.rr-termin, .rr-band', 'rr-from-zoom');
+    /* Zwei-Spalten-Bereiche: links von links, rechts von rechts */
+    mark('.rr-split > :first-child, .rr-intro2 > :first-child, .rr-eltern__grid > :first-child, .rr-spek__intro > :first-child, .rr-appro__grid > :first-child, .rr-faq__grid > :first-child, .rr-fit > :first-child, .rr-costs > :first-child', 'rr-from-left');
+    mark('.rr-split > :last-child, .rr-intro2 > :last-child, .rr-eltern__grid > :last-child, .rr-spek__intro > :last-child, .rr-appro__grid > :last-child, .rr-fit > :last-child, .rr-costs > :last-child', 'rr-from-right');
+    /* Überschriften von links */
+    mark('.rr-sec h2, .rr-final h2, .rr-num', 'rr-from-left');
+    /* Karten, Listen, Absätze von unten */
+    mark('.rr-glance__item, .rr-pay, .rr-card, .rr-step, .rr-offer, .rr-rev, .rr-tile, .rr-acc details, .rr-pain, .rr-tl, .rr-note, .rr-ref, .rr-guide, .rr-rev__nav, .rr-lead, .rr-center p, .rr-actions, .rr-final p, .rr-final__cta, .rr-map__veil > div', 'rr-from-up');
 
+    /* gestaffelte Verzögerung für Karten in Rastern */
+    root.querySelectorAll('.rr-glance, .rr-cards, .rr-steps, .rr-offers, .rr-bento, .rr-acc, .rr-pains, .rr-timeline, .rr-rev__track').forEach(function (list) {
+      Array.prototype.forEach.call(list.children, function (child, i) {
+        child.style.setProperty('--d', ((i % 4) * 0.12) + 's');
+      });
+    });
+
+    var reveals = root.querySelectorAll('.rr-reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('rr-in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('rr-in'); });
+    }
+
+    /* Sicherheitsnetz: Was sichtbar ist, wird nach kurzer Zeit auf jeden Fall eingeblendet */
+    window.setTimeout(function () {
+      root.querySelectorAll('.rr-reveal:not(.rr-in)').forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('rr-in');
+      });
+    }, 2500);
+
+    /* ---------- Scroll-Fortschritt ---------- */
+    var bar = document.getElementById('rr-progress');
+    if (bar) {
+      var ticking = false;
+      var update = function () {
+        ticking = false;
+        var r = root.getBoundingClientRect();
+        var total = r.height - window.innerHeight;
+        var p = total > 0 ? Math.min(Math.max(-r.top / total, 0), 1) : 0;
+        bar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+      };
+      var onScroll = function () { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
+    }
+
+    /* ---------- Hover-Effekte (nur mit Maus) ---------- */
     if (fine && !reduce) {
-      /* Lichtschein folgt der Maus */
       root.querySelectorAll('.rr-spot').forEach(function (el) {
         el.addEventListener('pointermove', function (e) {
           var r = el.getBoundingClientRect();
@@ -36,9 +86,7 @@
           el.style.setProperty('--y', (e.clientY - r.top) + 'px');
         });
       });
-
-      /* Buttons ziehen sich leicht zur Maus */
-      root.querySelectorAll('[data-magnet]').forEach(function (el) {
+      root.querySelectorAll('.rr-btn').forEach(function (el) {
         el.addEventListener('pointermove', function (e) {
           var r = el.getBoundingClientRect();
           el.style.setProperty('--mx', ((e.clientX - r.left - r.width / 2) * 0.15) + 'px');
@@ -49,37 +97,26 @@
           el.style.setProperty('--my', '0px');
         });
       });
-
-      /* Hero-Bild reagiert leicht auf die Maus */
       var photo = document.getElementById('rr-photo');
       var hero = root.querySelector('.rr-hero');
       if (photo && hero) {
-        var px = 0, py = 0, pending = false;
         hero.addEventListener('pointermove', function (e) {
           var r = hero.getBoundingClientRect();
-          px = ((e.clientX - r.left) / r.width - 0.5) * 2;
-          py = ((e.clientY - r.top) / r.height - 0.5) * 2;
-          if (!pending) {
-            pending = true;
-            raf(function () {
-              pending = false;
-              photo.style.setProperty('--px', px.toFixed(3));
-              photo.style.setProperty('--py', py.toFixed(3));
-            });
-          }
+          photo.style.setProperty('--px', (((e.clientX - r.left) / r.width - 0.5) * 2).toFixed(3));
+          photo.style.setProperty('--py', (((e.clientY - r.top) / r.height - 0.5) * 2).toFixed(3));
         });
       }
     }
 
-    /* Bewertungen: Pfeile + Ziehen mit der Maus */
+    /* ---------- Bewertungen: Pfeile + Ziehen mit der Maus ---------- */
     var track = document.getElementById('rr-track');
     var prev = document.getElementById('rr-prev');
     var next = document.getElementById('rr-next');
     if (track && prev && next) {
-      function step(dir) {
+      var step = function (dir) {
         var card = track.querySelector('.rr-rev');
         track.scrollBy({ left: dir * (card ? card.offsetWidth + 22 : 360), behavior: 'smooth' });
-      }
+      };
       prev.addEventListener('click', function () { step(-1); });
       next.addEventListener('click', function () { step(1); });
       var down = false, startX = 0, startL = 0;
@@ -88,22 +125,17 @@
         down = true; startX = e.clientX; startL = track.scrollLeft;
         track.classList.add('is-drag');
       });
-      window.addEventListener('pointermove', function (e) {
-        if (down) track.scrollLeft = startL - (e.clientX - startX);
-      });
-      window.addEventListener('pointerup', function () {
-        if (!down) return;
-        down = false; track.classList.remove('is-drag');
-      });
+      window.addEventListener('pointermove', function (e) { if (down) track.scrollLeft = startL - (e.clientX - startX); });
+      window.addEventListener('pointerup', function () { if (down) { down = false; track.classList.remove('is-drag'); } });
     }
 
-    /* Google Maps erst nach Klick laden */
+    /* ---------- Google Maps erst nach Klick laden ---------- */
     var map = document.getElementById('rr-map');
     var mapBtn = document.getElementById('rr-map-btn');
     if (map && mapBtn) {
       mapBtn.addEventListener('click', function () {
         var f = document.createElement('iframe');
-        f.src = map.getAttribute('data-src');
+        f.src = map.getAttribute('data-src') || MAP_URL;
         f.title = 'Google Maps: Rosenstr. 7, 80331 München';
         f.loading = 'lazy';
         f.referrerPolicy = 'no-referrer-when-downgrade';
@@ -114,7 +146,7 @@
       });
     }
 
-    /* FAQ / Ratgeber: weiches Auf- und Zuklappen */
+    /* ---------- FAQ / Ratgeber: weiches Auf- und Zuklappen ---------- */
     root.querySelectorAll('.rr-acc details, .rr-guide details').forEach(function (d) {
       var sum = d.querySelector('summary');
       var body = d.querySelector('.rr-acc__body, .rr-guide__body');
@@ -134,39 +166,11 @@
         }
       });
     });
-
-    /* Einblenden beim Scrollen */
-    function showAll() {
-      root.querySelectorAll('[data-rv]').forEach(function (el) { el.classList.add('is-in'); });
-      root.classList.add('rr-ready');
-    }
-    if (reduce || !('IntersectionObserver' in window)) { showAll(); return; }
-
-    root.querySelectorAll('[data-split]').forEach(function (h) {
-      if (h.querySelector('.rr-line')) return;
-      h.innerHTML = '<span class="rr-line"><span>' + h.innerHTML + '</span></span>';
-      h.setAttribute('data-rv', '');
-    });
-
-    var io = new IntersectionObserver(function (entries) {
-      /* Elemente, die gleichzeitig ins Bild kommen, nacheinander einblenden */
-      var batch = entries.filter(function (e) { return e.isIntersecting; })
-        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top || a.boundingClientRect.left - b.boundingClientRect.left; });
-      batch.forEach(function (e, i) {
-        var el = e.target;
-        if (!el.style.getPropertyValue('--d')) el.style.setProperty('--d', Math.min(i * 0.08, 0.4) + 's');
-        el.classList.add('is-in');
-        io.unobserve(el);
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
-
-    /* Erst ab dem nächsten Frame verstecken + beobachten → kein Flackern */
-    raf(function () {
-      root.classList.add('rr-js', 'rr-ready');
-      root.querySelectorAll('[data-rv]').forEach(function (el) { io.observe(el); });
-    });
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
