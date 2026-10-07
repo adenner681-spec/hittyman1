@@ -11,6 +11,8 @@ SRC = os.path.join(ROOT, "src")
 SITE = "https://www.rudolf-ritzinger.com"
 IMG_MODULE = "/incms_files/filebrowser"
 IMG_PREVIEW = SITE + "/incms_files/filebrowser"
+# Jede Anfrage öffnet das CMS-Popup „terminanfrage“ (Auswahl gesetzlich / privat).
+ANFRAGE = "?uid=2#popup-terminanfrage"
 
 def svg(body, w="2", fill="none"):
     return ('<svg viewBox="0 0 24 24" fill="%s" stroke="currentColor" stroke-width="%s" '
@@ -114,7 +116,7 @@ def render(page_src, ld, img):
     s = open(os.path.join(SRC, page_src), encoding="utf-8").read()
     if "{{faq}}" in s:
         s = s.replace("{{faq}}", faq_html(FAQ))
-    s = s.replace("{{img}}", img)
+    s = s.replace("{{img}}", img).replace("{{anfrage}}", ANFRAGE)
     for k, v in ICONS.items():
         s = s.replace("{{%s}}" % k, v)
     left = re.findall(r"\{\{[^}]+\}\}", s)

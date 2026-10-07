@@ -11,7 +11,7 @@ Die `vorschau-*.html` dienen nur zum Ansehen im Browser.
 
 ## Startseite im CMS
 1. **Header-Banner (specific_banner) verschlanken:** Logo, Menü und Telefon bleiben. Die alte H1 „Kinder- und Jugendlichenpsychotherapeut“, „Mehr als Therapie…“, die Häkchen-Liste und den Button entfernen – sonst gibt es zwei H1.
-2. **Alle alten Inhaltsblöcke** der Startseite durch die zwei Module ersetzen. **Das Popup-Modul „terminanfrage“ (Gesetzlich / Privat) unbedingt behalten** – alle Buttons „Termin anfragen“ öffnen es über `?uid=2#popup-terminanfrage`.
+2. **Alle alten Inhaltsblöcke** der Startseite durch die zwei Module ersetzen. **Das Popup-Modul „terminanfrage“ (Gesetzlich / Privat) unbedingt behalten.** Jeder Anfrage-Button auf allen Seiten öffnet dieses Popup über `?uid=2#popup-terminanfrage` (zentral in `build.py` als `ANFRAGE` hinterlegt). Auf Unterseiten wie der Landingpage führt der Button zur Startseite und öffnet dort das Popup.
 3. **JSON-LD im Seitenkopf löschen.** Das neue, vollständige JSON-LD (WebSite, WebPage, Praxis, Person, FAQ) steckt im Sourcecode-Modul. Die FAQ darin wird beim Build automatisch aus dem sichtbaren Text erzeugt und ist 1:1 synchron.
 4. **Meta** (Seiteneinstellungen):
    - Title: `Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger`
@@ -44,5 +44,5 @@ Bestehende Seiten **nicht löschen** und ihre URLs nicht ändern (Rankings & int
 - Texte „Ablauf & Kosten“ (Richtlinien / integratives Konzept) und FAQ „Online“ und „Verhaltenstherapie“ fachlich gegenlesen.
 - URLs der neuen Seiten in den Buttons „Zum Intensivprogramm“ und „Zum Online-Kurs“ eintragen.
 - Online-Kurs: Kurzbeschreibung, Landingpage-Struktur.
-- Intensivprogramm: Bausteine, Ablauf je Monat, Preis, Starttermin, Bild, Anfrage-Ziel (eigenes Formular für Ads-Conversion-Tracking empfohlen).
+- Intensivprogramm: Bausteine, Ablauf je Monat, Preis, Starttermin, Bild.
 - „Ergänzende Elemente“ nur behalten, wenn weiterhin angeboten.
