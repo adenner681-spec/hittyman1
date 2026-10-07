@@ -46,3 +46,28 @@ Bestehende Seiten **nicht löschen** und ihre URLs nicht ändern (Rankings & int
 - Online-Kurs: Kurzbeschreibung, Landingpage-Struktur.
 - Intensivprogramm: Bausteine, Ablauf je Monat, Preis, Starttermin, Bild.
 - „Ergänzende Elemente“ nur behalten, wenn weiterhin angeboten.
+
+## Sprungmarken (Anker) auf der Startseite
+Format wie im CMS üblich: Link `?uid=2#name`, Ziel `<a name="name"></a>`.
+
+| Bereich | Link |
+|---|---|
+| Start / Header | `?uid=2#start` |
+| Mein Angebot auf einen Blick | `?uid=2#angebot` |
+| Praxis für Jugendlichenpsychotherapie | `?uid=2#praxis` |
+| Therapeutisches Angebot | `?uid=2#therapeutisches-angebot` |
+| Ablauf und Kosten | `?uid=2#ablauf-kosten` |
+| Für Eltern | `?uid=2#eltern` |
+| Terminblock | `?uid=2#termin` |
+| Mehr als Therapie | `?uid=2#mehr-als-therapie` |
+| Erfahrungen / Bewertungen | `?uid=2#erfahrungen` |
+| Karte / Anfahrt | `?uid=2#anfahrt` |
+| Angebotsspektrum | `?uid=2#angebotsspektrum` |
+| Zweiter Terminblock | `?uid=2#termin-vereinbaren` |
+| Approbation | `?uid=2#approbation` |
+| FAQ | `?uid=2#faq` |
+| Ratgeber | `?uid=2#ratgeber` |
+| Kinder unter 12 | `?uid=2#unter-12` |
+| Abschluss / Termin anfragen | `?uid=2#termin-anfragen` |
+
+Landingpage Intensivprogramm: Anker `start`, `ausgangslage`, `programm`, `ablauf`, `fuer-wen`, `begleitung`, `anfrage`. Sobald die Seite im CMS angelegt ist, ihre uid in `build.py` statt `UID-LANDINGPAGE` eintragen.

@@ -112,11 +112,13 @@ def intensiv_ld():
             "provider": {"@id": SITE + "/#praxis"},
             "areaServed": [{"@type": "City", "name": "München"}, {"@type": "Place", "name": "Online"}]}
 
-def render(page_src, ld, img):
+def render(page_src, ld, img, uid):
     s = open(os.path.join(SRC, page_src), encoding="utf-8").read()
     if "{{faq}}" in s:
         s = s.replace("{{faq}}", faq_html(FAQ))
     s = s.replace("{{img}}", img).replace("{{anfrage}}", ANFRAGE)
+    # Sprunglinks im CMS-Format: ?uid=<Seite>#<Anker> (wegen <base href> im CMS)
+    s = re.sub(r"\{\{anker:([a-z0-9-]+)\}\}", lambda m: "?uid=%s#%s" % (uid, m.group(1)), s)
     for k, v in ICONS.items():
         s = s.replace("{{%s}}" % k, v)
     left = re.findall(r"\{\{[^}]+\}\}", s)
@@ -129,19 +131,20 @@ FAQ = json.load(open(os.path.join(SRC, "faq_startseite.json"), encoding="utf-8")
 JS = open(os.path.join(SRC, "main.js"), encoding="utf-8").read()
 
 PAGES = [
-    ("startseite", "startseite.html", home_ld(FAQ),
+    ("startseite", "startseite.html", "2", home_ld(FAQ),
      "Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger",
      "Rudolf Ritzinger – approbierter Kinder- und Jugendlichenpsychotherapeut in München. Tiefenpsychologisch fundierte Psychotherapie für Jugendliche und junge Erwachsene von 12 bis 21 Jahren, auch online."),
-    ("mehr-als-therapie-intensivprogramm", "intensivprogramm.html", intensiv_ld(),
+    # PRÜFEN: uid der Landingpage eintragen, sobald sie im CMS angelegt ist
+    ("mehr-als-therapie-intensivprogramm", "intensivprogramm.html", "UID-LANDINGPAGE", intensiv_ld(),
      "Vier-Monats-Intensivprozess für Familien | Mehr als Therapie | Rudolf Ritzinger",
      "Intensivprogramm für Eltern und Jugendliche: vier Monate fester Rahmen mit Gesprächen, Gruppenformaten und Übungen für den Alltag – für ein wertschätzendes Familienklima. In München und online."),
 ]
 
-for folder, src, ld, title, desc in PAGES:
+for folder, src, uid, ld, title, desc in PAGES:
     os.makedirs(os.path.join(ROOT, folder), exist_ok=True)
     with open(os.path.join(ROOT, folder, "modul-sourcecode.html"), "w", encoding="utf-8") as f:
-        f.write(render(src, ld, IMG_MODULE))
-    preview = render(src, ld, IMG_PREVIEW).replace('href="?uid=', 'href="%s/?uid=' % SITE)
+        f.write(render(src, ld, IMG_MODULE, uid))
+    preview = render(src, ld, IMG_PREVIEW, uid).replace('href="?uid=', 'href="%s/?uid=' % SITE)
     with open(os.path.join(ROOT, "vorschau-%s.html" % folder), "w", encoding="utf-8") as f:
         f.write('<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
                 "<title>%s</title><meta name=\"description\" content=\"%s\"></head><body style=\"margin:0\">\n%s<script>\n%s</script></body></html>\n"
