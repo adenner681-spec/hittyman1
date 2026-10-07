@@ -41,7 +41,9 @@
 .rr-h2--guide{font-size:clamp(26px,3vw,38px);max-width:900px;margin-left:auto !important;margin-right:auto !important}
 .rr-sec--flush-b{padding-bottom:0 !important}
 .rr-sec--flush-t{padding-top:0 !important}
-.rr-sprite{position:absolute;width:0;height:0;overflow:hidden}
+.rr .rr-sprite{position:absolute !important;top:0;left:0;width:0 !important;height:0 !important;overflow:hidden !important;visibility:hidden}
+/* Nichts darf über den Seitenbereich hinausragen (verhindert leeren Scrollraum unter dem Footer) */
+@supports (overflow:clip){.rr{overflow:clip}}
 .rr-grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .rr-lead{font-size:20px;color:var(--ink);opacity:.88}
 .rr-center{text-align:center}

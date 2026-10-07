@@ -248,7 +248,7 @@ def render(page_src, ld, img, uid):
     left = re.findall(r"\{\{[^}]+\}\}", s)
     assert not left, "Unbekannte Platzhalter: %s" % left
     s = enhance(s)
-    s = s.replace('<main class="rr"', sprite() + '\n<main class="rr"', 1)
+    s = re.sub(r'(<div class="rr"[^>]*>)', lambda m: m.group(1) + "\n  " + sprite(), s, count=1)
     css = prune_css(minify_css(open(os.path.join(SRC, "base.css"), encoding="utf-8").read()), s)
     ld_json = json.dumps(ld, ensure_ascii=False, indent=2)
     return "<style>\n" + css + "</style>\n\n" + s + '\n<script type="application/ld+json">\n' + ld_json + "\n</script>\n"
