@@ -25,6 +25,8 @@
 .rr p:last-child{margin-bottom:0}
 .rr a{color:var(--blue);text-decoration:none}
 .rr img{max-width:100%;display:block}
+.rr h1,.rr h2,.rr h3{font-family:var(--sans);text-transform:none;text-shadow:none;background-color:transparent;border:0;padding:0}
+.rr a:hover,.rr a:focus{text-decoration:none}
 .rr ::selection{background:var(--blue);color:#fff}
 .rr-wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px;position:relative;z-index:2}
 .rr-sec{padding:120px 0;position:relative}
@@ -69,7 +71,7 @@
 .rr-center .rr-actions{justify-content:center}
 
 /* ===== Glas, Spotlight, leuchtender Rand ===== */
-.rr-glass{background:var(--card);border:1px solid var(--glass-b);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 22px 50px -26px rgba(16,40,63,.22)}
+.rr-glass{background:rgba(255,255,255,.9);border:1px solid var(--glass-b);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 22px 50px -26px rgba(16,40,63,.22)}
 .rr-spot{--x:50%;--y:50%;position:relative;overflow:hidden}
 .rr-spot::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--x) var(--y),rgba(75,198,164,.16),transparent 45%);z-index:0}
 .rr-spot:hover::before{opacity:1}
@@ -81,11 +83,11 @@
 
 /* ===== HERO ===== */
 .rr-hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:70px 0 90px;overflow:hidden;background:radial-gradient(ellipse at top,#fff 0%,var(--bg) 60%)}
-.rr-aurora{position:absolute;inset:-20%;z-index:0;pointer-events:none;filter:blur(70px);opacity:.8}
-.rr-aurora i{position:absolute;border-radius:50%}
-.rr-aurora i:nth-child(1){width:44vw;height:44vw;left:50%;top:2%;background:#d3e6f8;animation:rr-a1 22s ease-in-out infinite}
-.rr-aurora i:nth-child(2){width:32vw;height:32vw;left:68%;top:36%;background:#d2f2e7;animation:rr-a2 26s ease-in-out infinite}
-.rr-aurora i:nth-child(3){width:28vw;height:28vw;left:8%;top:58%;background:#e2eefa;animation:rr-a3 30s ease-in-out infinite}
+.rr-aurora{position:absolute;inset:-20%;z-index:0;pointer-events:none;opacity:.9;contain:strict}
+.rr-aurora i{position:absolute;border-radius:50%;will-change:transform}
+.rr-aurora i:nth-child(1){width:44vw;height:44vw;left:50%;top:2%;background:radial-gradient(circle,#d3e6f8 0%,rgba(211,230,248,0) 68%);animation:rr-a1 22s ease-in-out infinite}
+.rr-aurora i:nth-child(2){width:32vw;height:32vw;left:68%;top:36%;background:radial-gradient(circle,#d2f2e7 0%,rgba(210,242,231,0) 68%);animation:rr-a2 26s ease-in-out infinite}
+.rr-aurora i:nth-child(3){width:28vw;height:28vw;left:8%;top:58%;background:radial-gradient(circle,#e2eefa 0%,rgba(226,238,250,0) 68%);animation:rr-a3 30s ease-in-out infinite}
 .rr-hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
 .rr-kicker{display:inline-flex;align-items:center;gap:12px;padding:8px 18px 8px 10px;border-radius:999px;font-size:14px;font-weight:600;color:var(--ink);margin:0 0 22px}
 .rr-kicker__dot{width:22px;height:22px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 0 0 4px rgba(75,198,164,.15);flex:none}
@@ -340,18 +342,20 @@
 /* ===== Scroll-Fortschritt ===== */
 .rr-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:9999;transform-origin:left;transform:scaleX(0);background:var(--grad);pointer-events:none}
 
-/* ===== Animationen (nur mit JS-Modul aktiv) ===== */
-.rr.rr-js [data-rv]{opacity:0;transform:translateY(36px);filter:blur(6px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1),filter 1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
-.rr.rr-js [data-rv="l"]{transform:translateX(-46px)}
-.rr.rr-js [data-rv="r"]{transform:translateX(46px)}
-.rr.rr-js [data-rv="z"]{transform:scale(.94)}
-.rr.rr-js [data-rv].is-in{opacity:1;transform:none;filter:none}
-.rr.rr-js .rr-line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
-.rr.rr-js .rr-line>span{display:block;transform:translateY(105%);transition:transform 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
+/* ===== Animationen (nur mit JS aktiv) =====
+   Nur opacity + transform → läuft auf der Grafikkarte und bleibt flüssig. */
+.rr.rr-js [data-rv]{opacity:0;transform:translate3d(0,28px,0);transition:opacity .9s cubic-bezier(.25,.1,.25,1),transform 1.1s cubic-bezier(.22,1,.36,1);transition-delay:var(--d,0s);will-change:opacity,transform}
+.rr.rr-js [data-rv="l"]{transform:translate3d(-36px,0,0)}
+.rr.rr-js [data-rv="r"]{transform:translate3d(36px,0,0)}
+.rr.rr-js [data-rv="z"]{transform:scale(.96)}
+.rr.rr-js [data-rv].is-in{opacity:1;transform:none;will-change:auto}
+.rr.rr-js .rr-line{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
+.rr.rr-js .rr-line>span{display:block;transform:translate3d(0,100%,0);transition:transform 1.15s cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--d,0s) + .05s)}
 .rr.rr-js .is-in .rr-line>span,.rr.rr-js .rr-line.is-in>span{transform:none}
-.rr-hero [data-in]{animation:rr-in 1.1s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--d,0s)}
+.rr.rr-nojs [data-rv],.rr.rr-nojs .rr-line>span{opacity:1 !important;transform:none !important}
+.rr-hero [data-in]{animation:rr-in 1.1s cubic-bezier(.22,1,.36,1) both;animation-delay:var(--d,0s)}
 
-@keyframes rr-in{from{opacity:0;transform:translateY(30px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+@keyframes rr-in{from{opacity:0;transform:translate3d(0,24px,0)}to{opacity:1;transform:none}}
 @keyframes rr-spin{to{--rr-a:360deg}}
 @keyframes rr-rot{to{transform:rotate(360deg)}}
 @keyframes rr-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -364,7 +368,7 @@
 
 @media (prefers-reduced-motion:reduce){
   .rr *,.rr *::before,.rr *::after{animation:none !important;transition:none !important}
-  .rr.rr-js [data-rv],.rr.rr-js .rr-line>span{opacity:1;transform:none;filter:none}
+  .rr.rr-js [data-rv],.rr.rr-js .rr-line>span{opacity:1;transform:none}
 }
 
 /* ===== Responsive ===== */
@@ -419,6 +423,7 @@
 </style>
 
 <div class="rr" lang="de" id="rr-top">
+  <script>(function(r){if(!r||!("IntersectionObserver" in window)||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches))return;r.classList.add("rr-js");setTimeout(function(){if(!r.classList.contains("rr-ready"))r.classList.add("rr-nojs")},3000)})(document.currentScript&&document.currentScript.parentNode)</script>
   <div class="rr-progress" id="rr-progress"></div>
 
   <!-- ================= HERO ================= -->
@@ -463,7 +468,7 @@
     <div class="rr-wrap">
       <div class="rr-center" data-rv>
         <div class="rr-num">Ausgangslage</div>
-        <h2 class="rr-h2" data-split>Wenn Streit den Familienalltag bestimmt</h2>
+        <h2 class="rr-h2" data-split data-rv>Wenn Streit den Familienalltag bestimmt</h2>
         <p class="rr-lead">Viele Familien erleben Phasen, in denen sich Konflikte zwischen Eltern und Jugendlichen festfahren. Das Programm setzt genau dort an.</p>
       </div>
       <div class="rr-pains">
@@ -480,7 +485,7 @@
       <div class="rr-intro2">
         <div>
           <div class="rr-num" data-rv>Das Programm</div>
-          <h2 class="rr-h2" data-split>Ein fester Rahmen für vier Monate</h2>
+          <h2 class="rr-h2" data-split data-rv>Ein fester Rahmen für vier Monate</h2>
         </div>
         <p class="rr-lead" data-rv style="--d:.1s">Statt einzelner Termine arbeiten Eltern und Jugendliche über vier Monate kontinuierlich an ihrem Umgang miteinander. Drei Bausteine greifen dabei ineinander.</p>
       </div>
@@ -509,7 +514,7 @@
     <div class="rr-wrap">
       <div class="rr-center" data-rv>
         <div class="rr-num">Ablauf</div>
-        <h2 class="rr-h2" data-split>So verlaufen die vier Monate</h2>
+        <h2 class="rr-h2" data-split data-rv>So verlaufen die vier Monate</h2>
       </div>
       <!-- PRÜFEN: Inhalte je Monat aus der Programmstruktur einsetzen -->
       <div class="rr-timeline">
@@ -527,7 +532,7 @@
     <div class="rr-wrap">
       <div class="rr-center" data-rv>
         <div class="rr-num">Passt das zu uns?</div>
-        <h2 class="rr-h2" data-split>Für wen das Programm gedacht ist</h2>
+        <h2 class="rr-h2" data-split data-rv>Für wen das Programm gedacht ist</h2>
       </div>
       <div class="rr-fit">
         <div class="rr-fit__col rr-fit__col--yes" data-rv="l">
@@ -563,7 +568,7 @@
       </figure>
       <div data-rv style="--d:.15s">
         <div class="rr-num">Ihre Begleitung</div>
-        <h2 class="rr-h2" data-split>Erfahrung mit Jugendlichen und Familien seit 1997</h2>
+        <h2 class="rr-h2" data-split data-rv>Erfahrung mit Jugendlichen und Familien seit 1997</h2>
         <div class="rr-prose">
           <p>Seit 1997 begleite ich Jugendliche, junge Erwachsene und Eltern dabei, schwierige Situationen besser zu verstehen und neue Wege im Umgang miteinander zu entwickeln.</p>
           <p>Als approbierter Kinder- und Jugendlichenpsychotherapeut mit familientherapeutischer Erfahrung und Fachpraxis für Feeling Seen® richte ich den Blick nicht nur auf einzelne Konflikte, sondern auf die Beziehungen in der Familie und auf das, was jedes Familienmitglied braucht.</p>
