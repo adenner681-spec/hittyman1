@@ -1,0 +1,1250 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger</title><meta name="description" content="Rudolf Ritzinger – approbierter Kinder- und Jugendlichenpsychotherapeut in München. Tiefenpsychologisch fundierte Psychotherapie für Jugendliche und junge Erwachsene von 12 bis 21 Jahren, auch online."></head><body style="margin:0">
+<style>
+/* =====================================================================
+   Rudolf Ritzinger – gemeinsames Design (hell, modern, freundlich)
+   Alles unter .rr gekapselt, damit nichts mit dem CMS kollidiert.
+   ===================================================================== */
+@property --rr-a{syntax:"<angle>";inherits:false;initial-value:0deg}
+.rr{
+  --bg:#f6fafd; --bg2:#eef6fb; --mint-bg:#eefaf6; --white:#fff;
+  --card:rgba(255,255,255,.78); --glass-b:rgba(255,255,255,.9);
+  --ink:#10283f; --text:#41566b; --muted:#6c7f92; --line:rgba(16,40,63,.09);
+  --blue:#1961a1; --blue-l:#2f86c9; --mint:#4bc6a4; --teal:#00908a; --sky:#dcecf9;
+  --grad:linear-gradient(110deg,#1961a1 0%,#2f86c9 48%,#4bc6a4 100%);
+  --grad-soft:linear-gradient(135deg,#e7f1fb 0%,#eaf7f2 100%);
+  --r:26px; --wrap:1240px;
+  --sans:"Inter","SF Pro Display",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code","Roboto Mono",Menlo,Consolas,monospace;
+  width:100vw; position:relative; left:50%; margin-left:-50vw;
+  background:var(--bg); color:var(--text); font-family:var(--sans); font-size:17.5px; line-height:1.72;
+  overflow-x:clip; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.rr *,.rr *::before,.rr *::after{box-sizing:border-box}
+.rr h1,.rr h2,.rr h3{color:var(--ink);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:0 0 .55em;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.rr h3{letter-spacing:-.015em;line-height:1.28}
+.rr p{margin:0 0 1.1em}
+.rr p:last-child{margin-bottom:0}
+.rr a{color:var(--blue);text-decoration:none}
+.rr img{max-width:100%;display:block}
+.rr ::selection{background:var(--blue);color:#fff}
+.rr-wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px;position:relative;z-index:2}
+.rr-sec{padding:120px 0;position:relative}
+.rr-sec--tint{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
+.rr-sec--mint{background:linear-gradient(180deg,var(--bg) 0%,var(--mint-bg) 100%)}
+.rr-sec--white{background:#fff}
+.rr-h2{font-size:clamp(30px,3.8vw,50px)}
+.rr-grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rr-lead{font-size:20px;color:var(--ink);opacity:.88}
+.rr-center{text-align:center}
+.rr-center .rr-lead{max-width:760px;margin-left:auto;margin-right:auto}
+.rr-num{font-family:var(--mono);font-size:12.5px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.rr-num::after{content:"";height:1px;flex:1;max-width:110px;background:linear-gradient(90deg,var(--mint),transparent)}
+.rr-center .rr-num{justify-content:center}
+.rr-center .rr-num::before{content:"";height:1px;flex:1;max-width:110px;background:linear-gradient(270deg,var(--mint),transparent)}
+.rr-grid-bg::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(25,97,161,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(25,97,161,.06) 1px,transparent 1px);
+  background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 20%,transparent 75%)}
+
+/* ===== Buttons & Links ===== */
+.rr-btn{--mx:0px;--my:0px;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:15.5px;letter-spacing:.01em;border:0;cursor:pointer;isolation:isolate;font-family:inherit;transform:translate(var(--mx),var(--my));transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,background .3s,border-color .3s}
+.rr-btn svg{width:18px;height:18px;transition:transform .35s;flex:none}
+.rr-btn:hover svg{transform:translateX(4px)}
+.rr-btn--p{color:#fff !important;background:var(--grad);box-shadow:0 12px 30px -10px rgba(25,97,161,.55),inset 0 1px 0 rgba(255,255,255,.35)}
+.rr-btn--p::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);background-size:250% 100%;background-position:120% 0;z-index:-1;mix-blend-mode:overlay;transition:background-position .9s ease}
+.rr-btn--p:hover{box-shadow:0 18px 40px -10px rgba(25,97,161,.65),inset 0 1px 0 rgba(255,255,255,.35)}
+.rr-btn--p:hover::after{background-position:-40% 0}
+.rr-btn--g{color:var(--ink) !important;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px -16px rgba(16,40,63,.35)}
+.rr-btn--g:hover{border-color:rgba(75,198,164,.6);box-shadow:0 12px 30px -14px rgba(75,198,164,.6)}
+.rr-btn--sm{padding:12px 20px;font-size:14.5px}
+.rr-phone{display:inline-flex;align-items:center;gap:12px;color:var(--ink) !important;font-weight:600;font-size:17px}
+.rr-phone__i{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);color:var(--blue);position:relative;flex:none}
+.rr-phone__i::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--mint);opacity:0;animation:rr-ring 2.6s ease-out infinite}
+.rr-phone__i svg{width:19px;height:19px}
+.rr-phone small{display:block;font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rr-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--blue) !important;position:relative;padding-bottom:4px}
+.rr-link::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:var(--grad);transform:scaleX(.25);transform-origin:left;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.rr-link:hover::after{transform:scaleX(1)}
+.rr-link svg{width:16px;height:16px;transition:transform .35s}
+.rr-link:hover svg{transform:translateX(4px)}
+.rr-actions{margin-top:34px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.rr-center .rr-actions{justify-content:center}
+
+/* ===== Glas, Spotlight, leuchtender Rand ===== */
+.rr-glass{background:var(--card);border:1px solid var(--glass-b);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 22px 50px -26px rgba(16,40,63,.22)}
+.rr-spot{--x:50%;--y:50%;position:relative;overflow:hidden}
+.rr-spot::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--x) var(--y),rgba(75,198,164,.16),transparent 45%);z-index:0}
+.rr-spot:hover::before{opacity:1}
+.rr-spot>*{position:relative;z-index:1}
+.rr-glow{border:1px solid transparent !important;background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from var(--rr-a),rgba(25,97,161,.12),rgba(25,97,161,.12) 60%,#2f86c9 75%,#4bc6a4 85%,rgba(25,97,161,.12) 95%) border-box !important}
+.rr-glow:hover{animation:rr-spin 3s linear infinite}
+.rr-ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:var(--grad-soft);color:var(--blue);flex:none;transition:background .4s,color .4s,transform .4s}
+.rr-ic svg{width:25px;height:25px}
+
+/* ===== HERO ===== */
+.rr-hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:70px 0 90px;overflow:hidden;background:radial-gradient(ellipse at top,#fff 0%,var(--bg) 60%)}
+.rr-aurora{position:absolute;inset:-20%;z-index:0;pointer-events:none;filter:blur(70px);opacity:.8}
+.rr-aurora i{position:absolute;border-radius:50%}
+.rr-aurora i:nth-child(1){width:44vw;height:44vw;left:50%;top:2%;background:#d3e6f8;animation:rr-a1 22s ease-in-out infinite}
+.rr-aurora i:nth-child(2){width:32vw;height:32vw;left:68%;top:36%;background:#d2f2e7;animation:rr-a2 26s ease-in-out infinite}
+.rr-aurora i:nth-child(3){width:28vw;height:28vw;left:8%;top:58%;background:#e2eefa;animation:rr-a3 30s ease-in-out infinite}
+.rr-hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.rr-kicker{display:inline-flex;align-items:center;gap:12px;padding:8px 18px 8px 10px;border-radius:999px;font-size:14px;font-weight:600;color:var(--ink);margin:0 0 22px}
+.rr-kicker__dot{width:22px;height:22px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 0 0 4px rgba(75,198,164,.15);flex:none}
+.rr-kicker__dot::after{content:"";width:6px;height:6px;border-radius:50%;background:#fff;animation:rr-blink 2s ease-in-out infinite}
+.rr-hero h1{font-size:clamp(34px,4vw,56px);letter-spacing:-.04em;line-height:1.06;margin-bottom:24px}
+.rr-hero__sub{font-size:13px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.rr-hero__text{max-width:640px;font-size:16.5px;line-height:1.68;margin-bottom:30px}
+.rr-hero__text p:first-child{color:var(--ink);font-size:18px}
+.rr-trust{list-style:none;margin:34px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px;max-width:680px}
+.rr-trust li{display:flex;align-items:center;gap:10px;padding:9px 14px 9px 10px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.3}
+.rr-trust svg{width:22px;height:22px;flex:none;padding:4px;border-radius:50%;background:var(--grad);color:#fff}
+.rr-hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.rr-photo{position:relative;width:100%;max-width:500px;margin-left:auto;--px:0;--py:0}
+.rr-photo__frame{position:relative;aspect-ratio:4/4.7;border-radius:240px 240px 34px 34px;padding:10px;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;border:1.5px solid transparent;box-shadow:0 40px 80px -40px rgba(25,97,161,.55);transform:translate(calc(var(--px)*-8px),calc(var(--py)*-8px));transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.rr-photo__img{position:relative;width:100%;height:100%;border-radius:230px 230px 26px 26px;overflow:hidden;background:linear-gradient(160deg,#dcecf9,#cdeee2)}
+.rr-photo__img img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.rr-photo__ring{position:absolute;inset:-7%;border-radius:50%;border:1px dashed rgba(25,97,161,.2);animation:rr-rot 60s linear infinite;pointer-events:none}
+.rr-photo__ring::before{content:"";position:absolute;left:50%;top:-5px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--mint);box-shadow:0 0 16px 4px rgba(75,198,164,.6)}
+.rr-chip{position:absolute;z-index:3;border-radius:18px;padding:13px 17px;font-size:13px;line-height:1.35;color:var(--muted);animation:rr-float 7s ease-in-out infinite}
+.rr-chip strong{display:block;color:var(--ink);font-size:18px;letter-spacing:-.02em}
+.rr-chip__k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:2px}
+.rr-chip--1{left:-12%;top:16%}
+.rr-chip--2{right:-8%;top:52%;animation-delay:-2.5s}
+.rr-chip--3{left:-6%;bottom:6%;animation-delay:-5s}
+.rr-scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted) !important}
+.rr-scroll i{width:1px;height:42px;background:linear-gradient(var(--mint),transparent);position:relative;overflow:hidden}
+.rr-scroll i::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--blue);animation:rr-drop 2s ease-in-out infinite}
+
+/* ===== Auf einen Blick ===== */
+.rr-glance{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
+.rr-glance__item{border-radius:var(--r);padding:30px 28px;background:#fff;border:1px solid var(--line);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.rr-glance__item:hover{transform:translateY(-6px);box-shadow:0 28px 60px -34px rgba(25,97,161,.5)}
+.rr-glance__item:hover .rr-ic{background:var(--grad);color:#fff;transform:rotate(-6deg)}
+.rr-glance__item h3{font-size:19px;margin:22px 0 10px}
+.rr-glance__item p{font-size:15.5px;line-height:1.65}
+.rr-glance__item a{font-weight:600}
+.rr-pay{margin-top:22px;display:grid;grid-template-columns:1fr 1fr auto;gap:0;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.rr-pay>div{padding:24px 30px;display:flex;gap:16px;align-items:center}
+.rr-pay>div+div{border-left:1px solid var(--line)}
+.rr-pay small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.rr-pay strong{color:var(--ink);font-size:16.5px;font-weight:600}
+.rr-pay__go{background:var(--grad-soft)}
+
+/* ===== Split-Layout ===== */
+.rr-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
+.rr-split__head{position:sticky;top:120px}
+.rr-prose{font-size:18px}
+.rr-prose p:first-child{font-size:20.5px;line-height:1.6;color:var(--ink)}
+.rr-split>*,.rr-hero__grid>*,.rr-eltern__grid>*,.rr-appro__grid>*,.rr-faq__grid>*,.rr-spek__intro>*,.rr-intro2>*,.rr-termin__grid>*,.rr-bento>*,.rr-cards>*,.rr-glance>*,.rr-steps>*,.rr-costs>*,.rr-offers>*{min-width:0}
+
+/* ===== Ablauf & Kosten ===== */
+.rr-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:60px;position:relative;counter-reset:st}
+.rr-steps::before{content:"";position:absolute;top:30px;left:6%;right:6%;height:2px;background:repeating-linear-gradient(90deg,rgba(25,97,161,.18) 0 8px,transparent 8px 16px)}
+.rr-step{position:relative}
+.rr-step__n{width:60px;height:60px;border-radius:50%;background:#fff;border:2px solid var(--sky);color:var(--blue);font-weight:700;font-size:20px;display:grid;place-items:center;margin-bottom:20px;position:relative;z-index:1;transition:background .4s,color .4s,border-color .4s,transform .4s}
+.rr-step:hover .rr-step__n{background:var(--grad);color:#fff;border-color:transparent;transform:scale(1.08)}
+.rr-step h3{font-size:19px;margin-bottom:8px}
+.rr-step p{font-size:15.5px;line-height:1.65}
+.rr-costs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:64px}
+.rr-cost{border-radius:28px;padding:38px 36px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.rr-cost--self{background:linear-gradient(160deg,#ffffff 0%,#eefaf6 100%);border-color:rgba(75,198,164,.35)}
+.rr-cost__tag{display:inline-block;align-self:flex-start;padding:6px 14px;border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--sky);color:var(--blue);margin-bottom:18px}
+.rr-cost--self .rr-cost__tag{background:#d2f2e7;color:var(--teal)}
+.rr-cost h3{font-size:24px}
+.rr-cost p{font-size:16.5px}
+.rr-cost .rr-actions{margin-top:auto;padding-top:26px}
+
+/* ===== Angebotskarten mit Foto ===== */
+.rr-intro2{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:56px}
+.rr-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rr-card{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:#fff;color:var(--ink) !important;box-shadow:0 20px 50px -34px rgba(16,40,63,.4);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-card:hover{transform:translateY(-8px);box-shadow:0 34px 70px -34px rgba(25,97,161,.55)}
+.rr-card__img{aspect-ratio:16/11;overflow:hidden;background:var(--grad-soft);position:relative}
+.rr-card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.rr-card:hover .rr-card__img img{transform:scale(1.06)}
+.rr-card__body{padding:26px 28px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.rr-card h3{font-size:23px;margin:0}
+.rr-card__arrow{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--ink);flex:none;transition:background .4s,color .4s,transform .4s,border-color .4s}
+.rr-card__arrow svg{width:17px;height:17px}
+.rr-card:hover .rr-card__arrow{background:var(--grad);color:#fff;border-color:transparent;transform:rotate(-45deg)}
+
+/* ===== Mehr als Therapie (Teaser) ===== */
+.rr-offers{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:56px}
+.rr-offer{border-radius:30px;padding:40px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-offer:hover{transform:translateY(-6px);box-shadow:0 30px 70px -36px rgba(25,97,161,.5)}
+.rr-offer--main{background:linear-gradient(150deg,#e9f3fc 0%,#ffffff 55%,#eaf8f2 100%);border-color:rgba(47,134,201,.25)}
+.rr-offer__top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+.rr-offer__badge{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.rr-offer h3{font-size:26px}
+.rr-offer p{font-size:16.5px}
+.rr-price{font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.03em;line-height:1}
+.rr-price small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0;margin-top:6px}
+.rr-offer .rr-actions{margin-top:auto;padding-top:24px}
+.rr-note{display:flex;gap:14px;align-items:flex-start;margin-top:22px;padding:18px 22px;border-radius:18px;background:#fff;border:1px dashed rgba(0,144,138,.4);font-size:15px;color:var(--text)}
+.rr-note svg{width:22px;height:22px;color:var(--teal);flex:none;margin-top:2px}
+
+/* ===== Eltern / Portrait ===== */
+.rr-eltern__grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:start}
+.rr-portrait{position:sticky;top:110px;margin:0}
+.rr-portrait__frame{border-radius:32px;padding:10px;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;border:1.5px solid transparent;box-shadow:0 40px 80px -44px rgba(25,97,161,.6)}
+.rr-portrait__img{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--grad-soft);display:flex;align-items:flex-end;justify-content:center}
+.rr-portrait__img img{width:100%;height:100%;object-fit:contain;object-position:center bottom;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.rr-portrait:hover .rr-portrait__img img{transform:scale(1.03)}
+.rr-portrait__cap{margin:-44px 22px 0;position:relative;z-index:2;border-radius:20px;padding:16px 22px}
+.rr-portrait__cap strong{display:block;color:var(--ink);font-size:17.5px}
+.rr-portrait__cap span{font-size:14px;color:var(--muted)}
+.rr-eltern .rr-h2{max-width:900px;margin-bottom:56px}
+
+/* ===== Terminblock (hell) ===== */
+.rr-termin{position:relative;border-radius:36px;overflow:hidden;padding:72px 64px;background:var(--grad-soft);isolation:isolate;border:1px solid rgba(47,134,201,.18)}
+.rr-termin::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(520px 340px at 90% 0%,rgba(47,134,201,.22),transparent 60%),radial-gradient(480px 340px at 0% 100%,rgba(75,198,164,.25),transparent 60%)}
+.rr-termin::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(25,97,161,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(25,97,161,.06) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 50%,transparent);mask-image:linear-gradient(90deg,transparent,#000 50%,transparent)}
+.rr-termin__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.rr-termin p{font-size:18px;max-width:600px}
+.rr-termin__box{border-radius:26px;padding:32px;background:rgba(255,255,255,.85);border:1px solid #fff;box-shadow:0 24px 50px -30px rgba(25,97,161,.45)}
+.rr-termin__box small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.rr-termin__tel{display:block;color:var(--ink) !important;font-size:clamp(21px,2.2vw,28px);font-weight:700;letter-spacing:-.02em;margin-bottom:22px;white-space:nowrap}
+.rr-termin__tel:hover{color:var(--blue) !important}
+.rr-termin__box .rr-btn{width:100%}
+.rr-termin__alt{display:block;text-align:center;margin-top:14px;font-size:14px;color:var(--muted) !important}
+.rr-termin__alt:hover{color:var(--blue) !important}
+.rr-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;padding:50px 56px;border-radius:32px}
+.rr-band h2{font-size:clamp(26px,2.8vw,36px);margin-bottom:8px}
+.rr-band p{margin:0;font-size:17px}
+.rr-band p a{font-weight:700;color:var(--ink) !important;white-space:nowrap}
+
+/* ===== Bewertungen ===== */
+.rr-rev__head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px;flex-wrap:wrap}
+.rr-rev__nav{display:flex;gap:10px}
+.rr-rev__nav button{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink);display:grid;place-items:center;transition:background .3s,color .3s,transform .3s}
+.rr-rev__nav button:hover{background:var(--grad);color:#fff;transform:scale(1.05)}
+.rr-rev__nav svg{width:20px;height:20px}
+.rr-rev__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(340px,31%);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 28px 30px;margin:0 -28px;scrollbar-width:none;cursor:grab}
+.rr-rev__track::-webkit-scrollbar{display:none}
+.rr-rev__track.is-drag{cursor:grabbing;scroll-snap-type:none}
+.rr-rev{scroll-snap-align:start;border-radius:var(--r);padding:34px 32px;display:flex;flex-direction:column;margin:0;user-select:none;background:#fff;border:1px solid var(--line)}
+.rr-stars{display:flex;gap:3px;margin-bottom:18px;color:#ffb301}
+.rr-stars svg{width:17px;height:17px}
+.rr-rev h3{font-size:19px;margin-bottom:12px}
+.rr-rev blockquote{margin:0;font-size:16px;line-height:1.7;color:var(--text);font-style:italic}
+
+/* ===== Karte ===== */
+.rr-map{position:relative;height:480px;overflow:hidden;background:#e4eef8}
+.rr-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.rr-map__veil{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:
+  radial-gradient(circle at 50% 50%,rgba(75,198,164,.16),transparent 60%),
+  linear-gradient(rgba(25,97,161,.07) 1px,transparent 1px) 0 0/40px 40px,
+  linear-gradient(90deg,rgba(25,97,161,.07) 1px,transparent 1px) 0 0/40px 40px,#eaf2fa}
+.rr-map__pin{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;position:relative;box-shadow:0 20px 40px -12px rgba(25,97,161,.55)}
+.rr-map__pin::before,.rr-map__pin::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--mint);animation:rr-ring 2.8s ease-out infinite}
+.rr-map__pin::after{animation-delay:1.4s}
+.rr-map__pin svg{width:30px;height:30px}
+.rr-map__veil strong{display:block;color:var(--ink);font-size:20px;margin-bottom:4px}
+.rr-map__veil p{font-size:14px;color:var(--muted);max-width:420px;margin:10px auto 20px}
+.rr-map__addr{position:absolute;left:28px;bottom:28px;z-index:3;border-radius:20px;padding:16px 22px;font-size:15px;line-height:1.55;color:var(--ink)}
+.rr-map__addr small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+
+/* ===== Angebotsspektrum (hell) ===== */
+.rr-spek__intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;margin-bottom:70px}
+.rr-spek__intro p{font-size:17.5px}
+.rr-spek__intro p:first-child{color:var(--ink);font-size:19.5px;line-height:1.6}
+.rr-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.rr-tile{grid-column:span 2;border-radius:var(--r);padding:32px;background:#fff;border:1px solid var(--line);transition:border-color .4s,transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-tile:hover{border-color:rgba(75,198,164,.5);transform:translateY(-4px);box-shadow:0 26px 56px -36px rgba(25,97,161,.45)}
+.rr-tile--w3{grid-column:span 3}
+.rr-tile--w4{grid-column:span 4}
+.rr-tile h3{font-size:22px;margin-bottom:14px}
+.rr-tile p{font-size:15.8px;line-height:1.7}
+.rr-tile__k{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rr-tile--main{background:linear-gradient(150deg,#e6f1fb 0%,#ffffff 70%);border-color:rgba(47,134,201,.3)}
+.rr-tile--main .rr-tile__k{color:var(--blue)}
+.rr-tile--info{background:#fbfdff;border-style:dashed;border-color:rgba(16,40,63,.18)}
+.rr-badge{display:inline-block;padding:5px 12px;border-radius:999px;background:#fff3d6;color:#8a5a00;font-size:11px;letter-spacing:.08em}
+.rr-tile .rr-link{margin-top:18px}
+.rr-extras{grid-column:span 6;display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:26px 32px}
+.rr-extras h3{font-size:18px;margin:0 16px 0 0}
+.rr-extras ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.rr-extras li{padding:8px 18px;border-radius:999px;font-size:15px;color:var(--ink);background:var(--bg2);border:1px solid var(--line);transition:background .3s,border-color .3s}
+.rr-extras li:hover{background:#e3f6ef;border-color:rgba(75,198,164,.55)}
+
+/* ===== Approbation ===== */
+.rr-appro__grid{display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:start}
+.rr-cred{position:sticky;top:120px;border-radius:30px;padding:34px;overflow:hidden}
+.rr-cred::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;border-radius:50%;background:radial-gradient(circle,rgba(75,198,164,.25),transparent 70%)}
+.rr-cred__seal{width:60px;height:60px;border-radius:18px;background:var(--grad);display:grid;place-items:center;color:#fff;margin-bottom:24px;box-shadow:0 16px 30px -12px rgba(25,97,161,.6)}
+.rr-cred__seal svg{width:28px;height:28px}
+.rr-cred dl{margin:0}
+.rr-cred dl div{padding:14px 0;border-top:1px solid var(--line)}
+.rr-cred dt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.rr-cred dd{margin:0;color:var(--ink);font-weight:600;font-size:15.5px;line-height:1.45}
+
+/* ===== FAQ ===== */
+.rr-faq__grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:start}
+.rr-faq__head{position:sticky;top:120px}
+.rr-faq__head .rr-h2{font-size:clamp(28px,3vw,42px)}
+.rr-acc{display:grid;gap:12px}
+.rr-acc details{border-radius:22px;background:#fff;border:1px solid var(--line);transition:border-color .4s,box-shadow .4s}
+.rr-acc details[open]{border-color:rgba(75,198,164,.45);box-shadow:0 24px 50px -32px rgba(25,97,161,.45)}
+.rr-acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:22px 24px}
+.rr-acc summary::-webkit-details-marker{display:none}
+.rr-acc summary h3{font-size:18px;margin:0;flex:1;transition:color .3s}
+.rr-acc summary:hover h3{color:var(--blue)}
+.rr-acc__n{font-family:var(--mono);font-size:12px;color:var(--teal);flex:none}
+.rr-acc__pm{width:34px;height:34px;border-radius:50%;flex:none;position:relative;border:1px solid var(--line);transition:background .4s,border-color .4s,transform .5s}
+.rr-acc__pm::before,.rr-acc__pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;margin:-.75px 0 0 -6px;background:var(--ink);transition:transform .4s,background .4s}
+.rr-acc__pm::after{transform:rotate(90deg)}
+.rr-acc details[open] .rr-acc__pm{background:var(--grad);border-color:transparent;transform:rotate(180deg)}
+.rr-acc details[open] .rr-acc__pm::before,.rr-acc details[open] .rr-acc__pm::after{background:#fff}
+.rr-acc details[open] .rr-acc__pm::after{transform:rotate(0)}
+.rr-acc__body{padding:0 26px 24px 56px;font-size:16.5px;overflow:hidden}
+.rr-acc__body ul{margin:0 0 1em;padding-left:1.2em}
+
+/* ===== Ratgeber (SEO-Text) ===== */
+.rr-guide{max-width:880px;margin:0 auto}
+.rr-guide details{border-radius:26px;background:#fff;border:1px solid var(--line)}
+.rr-guide summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;color:var(--blue)}
+.rr-guide summary::-webkit-details-marker{display:none}
+.rr-guide__body{padding:0 34px 34px;font-size:16.5px}
+.rr-guide__body h3{font-size:21px;margin-top:1.6em}
+.rr-guide__body h3:first-child{margin-top:0}
+
+/* ===== Unter 12 ===== */
+.rr-ref{display:flex;flex-wrap:wrap;align-items:center;gap:20px 30px;padding:30px 34px;border-radius:26px;background:#fff;border:1px solid var(--line)}
+.rr-ref p{margin:0;flex:1;min-width:260px}
+.rr-ref strong{color:var(--ink)}
+
+/* ===== Abschluss ===== */
+.rr-final{text-align:center;overflow:hidden;padding:140px 0}
+.rr-final h2{font-size:clamp(34px,5vw,66px);letter-spacing:-.04em;max-width:900px;margin:0 auto 24px}
+.rr-final p{max-width:660px;margin:0 auto 40px;font-size:19px}
+.rr-final__cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 28px}
+
+/* ===== Landingpage-Bausteine ===== */
+.rr-pains{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+.rr-pain{border-radius:var(--r);padding:30px;background:#fff;border:1px solid var(--line);font-size:16.5px;color:var(--ink)}
+.rr-pain .rr-ic{margin-bottom:18px}
+.rr-timeline{display:grid;gap:16px;margin-top:50px;max-width:900px;margin-left:auto;margin-right:auto}
+.rr-tl{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:start;padding:28px 30px;border-radius:24px;background:#fff;border:1px solid var(--line)}
+.rr-tl__m{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);padding-top:5px}
+.rr-tl h3{font-size:20px;margin-bottom:6px}
+.rr-fit{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:50px}
+.rr-fit__col{border-radius:28px;padding:36px;background:#fff;border:1px solid var(--line)}
+.rr-fit__col--yes{background:linear-gradient(160deg,#fff,#eefaf6);border-color:rgba(75,198,164,.4)}
+.rr-fit__col h3{font-size:22px}
+.rr-fit__col ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.rr-fit__col li{display:flex;gap:12px;font-size:16px;color:var(--ink)}
+.rr-fit__col li svg{width:22px;height:22px;flex:none;margin-top:2px}
+.rr-fit__col--yes li svg{color:var(--teal)}
+.rr-fit__col--no li svg{color:#b5651d}
+.rr-todo{display:inline-block;padding:2px 8px;border-radius:6px;background:#fff3d6;color:#8a5a00;font-family:var(--mono);font-size:12.5px;font-style:normal}
+
+/* ===== Scroll-Fortschritt ===== */
+.rr-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:9999;transform-origin:left;transform:scaleX(0);background:var(--grad);pointer-events:none}
+
+/* ===== Animationen (nur mit JS-Modul aktiv) ===== */
+.rr.rr-js [data-rv]{opacity:0;transform:translateY(36px);filter:blur(6px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1),filter 1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
+.rr.rr-js [data-rv="l"]{transform:translateX(-46px)}
+.rr.rr-js [data-rv="r"]{transform:translateX(46px)}
+.rr.rr-js [data-rv="z"]{transform:scale(.94)}
+.rr.rr-js [data-rv].is-in{opacity:1;transform:none;filter:none}
+.rr.rr-js .rr-line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.rr.rr-js .rr-line>span{display:block;transform:translateY(105%);transition:transform 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
+.rr.rr-js .is-in .rr-line>span,.rr.rr-js .rr-line.is-in>span{transform:none}
+.rr-hero [data-in]{animation:rr-in 1.1s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--d,0s)}
+
+@keyframes rr-in{from{opacity:0;transform:translateY(30px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+@keyframes rr-spin{to{--rr-a:360deg}}
+@keyframes rr-rot{to{transform:rotate(360deg)}}
+@keyframes rr-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes rr-blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes rr-ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+@keyframes rr-drop{to{top:110%}}
+@keyframes rr-a1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-8vw,6vw) scale(1.15)}}
+@keyframes rr-a2{0%,100%{transform:translate(0,0)}50%{transform:translate(-12vw,-6vw)}}
+@keyframes rr-a3{0%,100%{transform:translate(0,0)}50%{transform:translate(10vw,-8vw)}}
+
+@media (prefers-reduced-motion:reduce){
+  .rr *,.rr *::before,.rr *::after{animation:none !important;transition:none !important}
+  .rr.rr-js [data-rv],.rr.rr-js .rr-line>span{opacity:1;transform:none;filter:none}
+}
+
+/* ===== Responsive ===== */
+@media (max-width:1100px){
+  .rr-hero__grid{gap:40px}
+  .rr-split,.rr-eltern__grid,.rr-appro__grid,.rr-faq__grid,.rr-spek__intro,.rr-intro2{gap:50px}
+  .rr-glance{grid-template-columns:1fr 1fr}
+  .rr-tile,.rr-tile--w3,.rr-tile--w4{grid-column:span 3}
+  .rr-extras{grid-column:span 6}
+  .rr-chip--1{left:-4%}.rr-chip--2{right:-3%}.rr-chip--3{left:0}
+}
+@media (max-width:960px){
+  .rr-sec{padding:90px 0}
+  .rr-hero{min-height:auto;padding:60px 0 100px}
+  .rr-hero__grid,.rr-split,.rr-eltern__grid,.rr-appro__grid,.rr-faq__grid,.rr-spek__intro,.rr-intro2,.rr-termin__grid,.rr-costs,.rr-offers,.rr-fit{grid-template-columns:1fr}
+  .rr-photo{max-width:400px;margin:20px auto 0}
+  .rr-split__head,.rr-portrait,.rr-cred,.rr-faq__head{position:static}
+  .rr-portrait{max-width:400px}
+  .rr-cards{grid-template-columns:1fr 1fr}
+  .rr-steps{grid-template-columns:1fr 1fr;gap:36px 22px}
+  .rr-steps::before{display:none}
+  .rr-pay{grid-template-columns:1fr}
+  .rr-pay>div+div{border-left:0;border-top:1px solid var(--line)}
+  .rr-pains{grid-template-columns:1fr}
+  .rr-rev__track{grid-auto-columns:minmax(300px,70%)}
+  .rr-termin{padding:56px 38px}
+}
+@media (max-width:640px){
+  .rr{font-size:16.5px}
+  .rr-wrap{padding:0 18px}
+  .rr-sec{padding:72px 0}
+  .rr-hero__cta .rr-btn{width:100%}
+  .rr-chip{padding:9px 12px;font-size:11.5px}
+  .rr-chip strong{font-size:15px}
+  .rr-chip--1{left:0;top:6%}.rr-chip--2{right:0}.rr-chip--3{left:0;bottom:2%}
+  .rr-glance,.rr-cards,.rr-steps{grid-template-columns:1fr}
+  .rr-tile,.rr-tile--w3,.rr-tile--w4,.rr-extras{grid-column:span 6}
+  .rr-tile,.rr-offer,.rr-cost,.rr-fit__col{padding:28px 22px}
+  .rr-tl{grid-template-columns:1fr;gap:6px;padding:24px 22px}
+  .rr-rev__track{grid-auto-columns:86%;padding:10px 18px 30px;margin:0 -18px}
+  .rr-termin{padding:44px 22px;border-radius:28px}
+  .rr-termin__box{padding:24px}
+  .rr-band{padding:36px 24px}
+  .rr-acc summary{padding:18px 18px;gap:12px}
+  .rr-acc__n{display:none}
+  .rr-acc__body{padding:0 18px 20px}
+  .rr-guide__body{padding:0 22px 26px}
+  .rr-map{height:420px}
+  .rr-map__addr{left:18px;right:18px;bottom:18px}
+  .rr-scroll{display:none}
+}
+</style>
+
+<div class="rr" lang="de" id="rr-top">
+  <div class="rr-progress" id="rr-progress"></div>
+
+  <!-- ================= HERO ================= -->
+  <section class="rr-hero rr-grid-bg">
+    <div class="rr-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="rr-wrap rr-hero__grid">
+      <div>
+        <p class="rr-kicker rr-glass" data-in style="--d:.05s"><span class="rr-kicker__dot"></span>Rudolf Ritzinger · Kinder- und Jugendlichenpsychotherapeut München</p>
+        <h1 data-in style="--d:.15s"><span class="rr-grad">Psychotherapie für Jugendliche</span> in München und online für deutschsprachige Familien weltweit</h1>
+        <div class="rr-hero__text" data-in style="--d:.3s">
+          <p>Wenn sich Jugendliche zurückziehen, Ängste entwickeln oder Konflikte zu Hause immer häufiger eskalieren, betrifft das oft die ganze Familie. In meiner Praxis finden Jugendliche ab 12 Jahren einen geschützten Raum für ihre Themen. Eltern beziehe ich auch enger ein, wenn es für die Behandlung hilfreich ist. Die Psychotherapie richtet sich nach dem individuellen Behandlungsbedarf des Jugendlichen.</p>
+          <p>Ich arbeite <a href="https://www.rudolf-ritzinger.com/?uid=96">tiefenpsychologisch fundiert</a>. Meine familientherapeutische Erfahrung und der Feeling-Seen-Ansatz prägen dabei meinen Blick auf den Jugendlichen und seine Beziehungen.</p>
+        </div>
+        <div class="rr-hero__cta" data-in style="--d:.45s">
+          <a href="https://www.rudolf-ritzinger.com/?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p" data-magnet>Psychotherapie anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#ablauf-kosten" class="rr-btn rr-btn--g" data-magnet>Ablauf und Kosten ansehen</a>
+        </div>
+        <ul class="rr-trust" data-in style="--d:.6s">
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Approbierter Kinder- und Jugendlichenpsychotherapeut</li>
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Tiefenpsychologisch fundiert</li>
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Eltern bei Bedarf einbezogen</li>
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Feeling Seen®</li>
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Kasse &amp; Selbstzahler</li>
+        </ul>
+      </div>
+
+      <div class="rr-photo" id="rr-photo" data-in style="--d:.3s">
+        <span class="rr-photo__ring" aria-hidden="true"></span>
+        <div class="rr-photo__frame">
+          <div class="rr-photo__img">
+            <img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/Rudolf-Ritzinger-Jugendspychologe-Munchen.jpg" alt="Rudolf Ritzinger, Kinder- und Jugendlichenpsychotherapeut in München" width="1000" height="1175" fetchpriority="high">
+          </div>
+        </div>
+        <div class="rr-chip rr-chip--1 rr-glass"><span class="rr-chip__k">Erfahrung</span><strong>seit 1997</strong>therapeutisch tätig</div>
+        <div class="rr-chip rr-chip--2 rr-glass"><span class="rr-chip__k">Schwerpunkt</span><strong>12–21 Jahre</strong>Jugendliche &amp; junge Erwachsene</div>
+        <div class="rr-chip rr-chip--3 rr-glass"><span class="rr-chip__k">Praxis</span><strong>München &amp; online</strong>Rosenstr. 7, Zentrum</div>
+      </div>
+    </div>
+    <a href="#rr-blick" class="rr-scroll">Mehr erfahren<i></i></a>
+  </section>
+
+  <!-- ================= AUF EINEN BLICK ================= -->
+  <section class="rr-sec rr-sec--white" id="rr-blick">
+    <div class="rr-wrap">
+      <div class="rr-center" data-rv>
+        <div class="rr-num">Auf einen Blick</div>
+        <h2 class="rr-h2" data-split>Mein Angebot auf einen Blick</h2>
+        <p class="rr-lead">Psychotherapie für Jugendliche ab 12 und junge Erwachsene. Eltern werden bei Bedarf mit einbezogen.</p>
+      </div>
+      <div class="rr-glance">
+        <div class="rr-glance__item" data-rv style="--d:0s">
+          <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M5 21v-1a7 7 0 0 1 14 0v1"/></svg></span>
+          <h3>Jugendliche &amp; junge Erwachsene</h3>
+          <p>Psychotherapie für Jugendliche ab 12 Jahren und junge Erwachsene bis 21 Jahre. Für jüngere Kinder finden Sie <a href="#unter-12">eine Empfehlung weiter unten</a>.</p>
+        </div>
+        <div class="rr-glance__item" data-rv style="--d:.08s">
+          <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3>Eltern einbezogen</h3>
+          <p>Eltern werden bei Bedarf einbezogen. Familientherapeutische Erfahrung und der Feeling-Seen-Ansatz prägen dabei meinen Blick auf die Beziehungen in der Familie.</p>
+        </div>
+        <div class="rr-glance__item" data-rv style="--d:.16s">
+          <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2z"/></svg></span>
+          <h3>Tiefenpsychologisch fundiert</h3>
+          <p>Meine Psychotherapie steht auf einem tiefenpsychologisch fundierten Fundament. Ich arbeite nicht verhaltenstherapeutisch.</p>
+        </div>
+        <div class="rr-glance__item" data-rv style="--d:.24s">
+          <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>
+          <h3>München &amp; online</h3>
+          <p>Praxis im Zentrum von München, Rosenstr. 7 – und online für deutschsprachige Familien weltweit.</p>
+        </div>
+      </div>
+      <div class="rr-pay" data-rv>
+        <div><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span><small>Gesetzlich versichert</small><strong>Psychotherapie nach den Psychotherapie-Richtlinien</strong></span></div>
+        <div><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 9.3l-4.8 3.7 1.7 6-4.9-3.6L7.1 19l1.7-6L4 9.3l6.1-.5z"/></svg></span><span><small>Privat &amp; Selbstzahler</small><strong>Integratives Konzept möglich</strong></span></div>
+        <div class="rr-pay__go"><a href="#ablauf-kosten" class="rr-link">Ablauf &amp; Kosten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRAXIS ================= -->
+  <section class="rr-sec" id="rr-praxis">
+    <div class="rr-wrap rr-split">
+      <div class="rr-split__head">
+        <div class="rr-num" data-rv>01 / Praxis</div>
+        <h2 class="rr-h2" data-split>Praxis für Jugend&shy;lichen&shy;psycho&shy;therapie in München</h2>
+      </div>
+      <div class="rr-prose" data-rv style="--d:.15s">
+        <p>Jugendliche reagieren häufig sehr sensibel auf Belastungen, Veränderungen und Konflikte. Manche ziehen sich zurück, wirken niedergeschlagen oder entwickeln Ängste. Andere reagieren gereizt oder aggressiv, geraten zunehmend unter Druck oder finden selbst keinen guten Weg mehr, mit ihren Gefühlen und Schwierigkeiten umzugehen.</p>
+        <p>In meiner Praxis biete ich Jugendlichen und jungen Erwachsenen einen geschützten Rahmen, in dem wir gemeinsam verstehen können, was hinter diesen Belastungen steht. Dabei betrachte ich nicht nur einzelne Symptome, sondern den jungen Menschen mit seiner persönlichen Entwicklung, seinen Erfahrungen und seinem familiären und sozialen Umfeld.</p>
+        <p>Als staatlich approbierter Kinder- und Jugendlichenpsychotherapeut arbeite ich auf Grundlage der tiefenpsychologisch fundierten Psychotherapie. Eltern und andere wichtige Bezugspersonen können in die Behandlung einbezogen werden, wenn dies für den therapeutischen Prozess sinnvoll ist.</p>
+        <div class="rr-actions">
+          <a href="https://www.rudolf-ritzinger.com/?uid=70" class="rr-btn rr-btn--g" data-magnet>Mein Werdegang <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THERAPEUTISCHES ANGEBOT ================= -->
+  <section class="rr-sec rr-sec--tint">
+    <div class="rr-wrap">
+      <div class="rr-intro2">
+        <div>
+          <div class="rr-num" data-rv>02 / Angebot</div>
+          <h2 class="rr-h2" data-split>Therapeutisches Angebot</h2>
+        </div>
+        <p class="rr-lead" data-rv style="--d:.1s">In meiner Praxis in München begleite ich Jugendliche und junge Erwachsene bei psychischen und emotionalen Belastungen. Im Mittelpunkt steht die tiefenpsychologisch fundierte Psychotherapie. Ergänzend fließen meine langjährige Erfahrung in der Arbeit mit Jugendlichen, Eltern und Familien sowie unterschiedliche therapeutische Ansätze in meine Arbeit ein.</p>
+      </div>
+      <div class="rr-cards">
+        <a href="https://www.rudolf-ritzinger.com/?uid=83" class="rr-card" data-rv style="--d:0s">
+          <div class="rr-card__img"><img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/Kinderpsychologie-Muenchen-Zentrum-Rudolf-Ritzinger.jpg" alt="Kinderpsychologie München Zentrum – Rudolf Ritzinger" loading="lazy" width="800" height="550"></div>
+          <div class="rr-card__body"><h3>Kinderpsychologie</h3><span class="rr-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+        <a href="https://www.rudolf-ritzinger.com/?uid=77" class="rr-card" data-rv style="--d:.1s">
+          <div class="rr-card__img"><img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/Kinderpsychologie-Jugendpsychologie-Munchen.jpg" alt="Jugendpsychologie und Jugendtherapie in München" loading="lazy" width="800" height="550"></div>
+          <div class="rr-card__body"><h3>Jugendtherapie</h3><span class="rr-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+        <a href="https://www.rudolf-ritzinger.com/?uid=84" class="rr-card" data-rv style="--d:.2s">
+          <div class="rr-card__img"><img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/Jugendtherapie-Munchen-Gruppencoaching-Ritzinger.jpg" alt="Elterncoaching und Gruppencoaching in München – Rudolf Ritzinger" loading="lazy" width="800" height="550"></div>
+          <div class="rr-card__body"><h3>Elterncoaching</h3><span class="rr-card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+      </div>
+      <div class="rr-center rr-actions" data-rv>
+        <a href="https://www.rudolf-ritzinger.com/?uid=75" class="rr-btn rr-btn--g" data-magnet>Therapeutisches Angebot <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABLAUF & KOSTEN ================= -->
+  <section class="rr-sec rr-sec--white" id="ablauf-kosten">
+    <div class="rr-wrap">
+      <div class="rr-center" data-rv>
+        <div class="rr-num">03 / Ablauf &amp; Kosten</div>
+        <h2 class="rr-h2" data-split>Ablauf und Kosten</h2>
+        <p class="rr-lead">So läuft eine psychotherapeutische Behandlung in meiner Praxis ab – und so wird sie finanziert.</p>
+      </div>
+      <div class="rr-steps">
+        <div class="rr-step" data-rv style="--d:0s"><div class="rr-step__n">1</div><h3>Anfrage</h3><p>Sie erreichen mich telefonisch oder über die Terminanfrage. Dort wählen Sie aus, ob Ihr Kind gesetzlich oder privat versichert ist bzw. ob Sie selbst zahlen.</p></div>
+        <div class="rr-step" data-rv style="--d:.1s"><div class="rr-step__n">2</div><h3>Erstgespräch</h3><p>Im Erstgespräch besprechen wir die aktuelle Situation, bestehende Belastungen, die Vorgeschichte und das familiäre Umfeld.</p></div>
+        <div class="rr-step" data-rv style="--d:.2s"><div class="rr-step__n">3</div><h3>Probatorische Sitzungen</h3><p>Sie dienen dem gegenseitigen Kennenlernen, der diagnostischen Einschätzung und der Frage, ob eine Psychotherapie sinnvoll ist.</p></div>
+        <div class="rr-step" data-rv style="--d:.3s"><div class="rr-step__n">4</div><h3>Behandlung</h3><p>Die Sitzungen finden in der Regel regelmäßig statt. Gespräche mit Eltern oder wichtigen Bezugspersonen können Teil der Behandlung sein.</p></div>
+      </div>
+      <!-- PRÜFEN: Texte zu Kosten fachlich gegenlesen -->
+      <div class="rr-costs">
+        <div class="rr-cost" data-rv="l">
+          <span class="rr-cost__tag">Gesetzlich versichert</span>
+          <h3>Psychotherapie nach den Richtlinien</h3>
+          <p>Bei gesetzlich versicherten Patientinnen und Patienten führe ich Psychotherapie nach den Psychotherapie-Richtlinien durch – tiefenpsychologisch fundiert. Die Kosten übernimmt die Krankenkasse, wenn die Voraussetzungen für eine Behandlung erfüllt sind.</p>
+          <div class="rr-actions"><a href="https://www.rudolf-ritzinger.com/?uid=93" class="rr-btn rr-btn--g rr-btn--sm">Anfrage gesetzlich versichert <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+        <div class="rr-cost rr-cost--self" data-rv="r">
+          <span class="rr-cost__tag">Privat versichert &amp; Selbstzahler</span>
+          <h3>Integratives Konzept</h3>
+          <p>Für Selbstzahler kann ich mein integratives Konzept anbieten. Auf der tiefenpsychologisch fundierten Grundlage können dabei ergänzende Ansätze aus meinem Angebotsspektrum einfließen, etwa Feeling Seen, und Eltern enger einbezogen werden. Bei privaten Krankenversicherungen richtet sich die Erstattung nach Vertrag und Tarif.</p>
+          <div class="rr-actions"><a href="https://www.rudolf-ritzinger.com/?uid=92" class="rr-btn rr-btn--p rr-btn--sm">Anfrage privat / Selbstzahler <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ELTERN / PORTRAIT ================= -->
+  <section class="rr-sec rr-eltern rr-sec--mint">
+    <div class="rr-wrap">
+      <div class="rr-num" data-rv>04 / Für Eltern</div>
+      <h2 class="rr-h2" data-split>Wenn Ihr jugendliches Kind Hilfe braucht – und Sie als Eltern Unterstützung suchen</h2>
+      <div class="rr-eltern__grid">
+        <figure class="rr-portrait" data-rv="l">
+          <div class="rr-portrait__frame">
+            <div class="rr-portrait__img">
+              <img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/cache/Rudolf-Ritzinger-Munchen-Kinderpsychologe-und-Jugentherapeut_39aa931c6ba3121ccd953dc7099be0d7.png" alt="Rudolf Ritzinger, Kinderpsychologe und Jugendtherapeut in München" loading="lazy" width="600" height="750">
+            </div>
+          </div>
+          <figcaption class="rr-portrait__cap rr-glass"><strong>Dipl. Soz. Päd. Rudolf Ritzinger</strong><span>Approbierter Kinder- und Jugendlichenpsychotherapeut</span></figcaption>
+        </figure>
+        <div class="rr-prose" data-rv style="--d:.15s">
+          <p>Ich weiß aus meiner langjährigen Arbeit mit Jugendlichen und Familien, wie belastend es für Eltern sein kann, wenn Ängste, Aggressionen, Rückzug, Geschwisterkonflikte oder immer wiederkehrende Auseinandersetzungen plötzlich den Familienalltag bestimmen. Häufig entsteht dabei eine große Unsicherheit: Was braucht mein Kind gerade? Wie viel Unterstützung ist richtig? Wann sollte ich Grenzen setzen – und wann braucht es vor allem Verständnis?</p>
+          <p>Seit 1997 begleite ich Jugendliche, junge Erwachsene und Eltern dabei, solche Situationen besser zu verstehen und neue Wege im Umgang miteinander zu entwickeln. Dabei geht es nicht darum, einen Schuldigen für bestehende Probleme zu finden. Entscheidend ist vielmehr, die Hintergründe zu verstehen und herauszufinden, was dem Jugendlichen und seiner Familie in der jeweiligen Situation tatsächlich weiterhelfen kann.</p>
+          <p>Meine psychotherapeutische Ausbildung und meine langjährige therapeutische und familientherapeutische Erfahrung bilden dafür die fachliche Grundlage. In der Arbeit mit Jugendlichen verbinde ich tiefenpsychologisch fundierte Psychotherapie mit einem Blick auf die Beziehungen und Lebensumstände, in denen sich ein junger Mensch entwickelt.</p>
+          <p>Auch Eltern können dabei Unterstützung erhalten. Denn gerade wenn Konflikte schon länger bestehen, fällt es innerhalb der Familie oft schwer, die Situation noch mit Abstand zu betrachten. Neue Perspektiven und ein besseres Verständnis füreinander können helfen, wieder anders miteinander ins Gespräch zu kommen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TERMINBLOCK ================= -->
+  <section class="rr-sec rr-sec--white">
+    <div class="rr-wrap">
+      <div class="rr-termin" data-rv="z">
+        <div class="rr-termin__grid">
+          <div>
+            <div class="rr-num">05 / Termin</div>
+            <h2 class="rr-h2">Vereinbaren Sie einen Termin</h2>
+            <p>Wenn Sie sich Sorgen um Ihr Kind machen oder klären möchten, ob eine psychotherapeutische Behandlung sinnvoll sein könnte, können Sie gerne Kontakt mit mir aufnehmen.</p>
+          </div>
+          <div class="rr-termin__box">
+            <small>Telefonisch erreichen Sie mich unter:</small>
+            <a href="tel:+491634663072" class="rr-termin__tel">+49 (0) 163 – 466 30 72</a>
+            <a href="https://www.rudolf-ritzinger.com/?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p" data-magnet>Termin anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://www.doctolib.de/kinder-und-jugendlichenpsychotherapeut/muenchen/rudolf-ritzinger" class="rr-termin__alt" target="_blank" rel="noopener">oder Termin online über Doctolib buchen ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MEHR ALS THERAPIE ================= -->
+  <section class="rr-sec rr-sec--tint" id="mehr-als-therapie">
+    <div class="rr-wrap">
+      <div class="rr-intro2">
+        <div>
+          <div class="rr-num" data-rv>06 / Eltern &amp; Familie</div>
+          <h2 class="rr-h2" data-split>Mehr als Therapie</h2>
+        </div>
+        <p class="rr-lead" data-rv style="--d:.1s">Neben der Psychotherapie biete ich Formate an, die Eltern und Familien gezielt im Umgang miteinander stärken. Sie richten sich an Familien, die an ihrem Miteinander arbeiten möchten.</p>
+      </div>
+      <div class="rr-offers">
+        <article class="rr-offer rr-offer--main rr-spot" data-rv>
+          <div class="rr-offer__top"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="rr-offer__badge">4 Monate · Intensiv</span></div>
+          <h3>Vier-Monats-Intensivprozess für Familien</h3>
+          <p>Dieses intensive Programm gibt Eltern und Jugendlichen einen festen Rahmen, um über vier Monate gemeinsam an ihrem Umgang miteinander zu arbeiten – mit Gesprächen, Gruppenformaten und Übungen für den Alltag, um aus Streit, Konflikt und Eskalation in ein positives und wertschätzendes Familienklima zu kommen.</p>
+          <!-- PRÜFEN: URL der neuen Landingpage eintragen -->
+          <div class="rr-actions"><a href="/mehr-als-therapie/familien-intensivprogramm/" class="rr-btn rr-btn--p" data-magnet>Zum Intensivprogramm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </article>
+        <article class="rr-offer rr-spot" data-rv style="--d:.1s">
+          <div class="rr-offer__top"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M10 8.5l4 2-4 2z"/></svg></span><div class="rr-price">499 €<small>einmalig</small></div></div>
+          <h3>Online-Kurs</h3>
+          <!-- PRÜFEN: Kurzbeschreibung des Online-Kurses einsetzen -->
+          <p><span class="rr-todo">[Kurzbeschreibung Online-Kurs folgt]</span></p>
+          <!-- PRÜFEN: URL der neuen Landingpage eintragen -->
+          <div class="rr-actions"><a href="/mehr-als-therapie/online-kurs/" class="rr-btn rr-btn--g" data-magnet>Zum Online-Kurs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </article>
+      </div>
+      <div class="rr-note" data-rv><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>Die Angebote unter „Mehr als Therapie“ sind kein Ersatz für eine notwendige Psychotherapie.</span></div>
+    </div>
+  </section>
+
+  <!-- ================= BEWERTUNGEN ================= -->
+  <section class="rr-sec rr-sec--white">
+    <div class="rr-wrap">
+      <div class="rr-rev__head">
+        <div>
+          <div class="rr-num" data-rv>07 / Erfahrungen</div>
+          <h2 class="rr-h2" data-split>Erfahrungen mit meiner Praxis</h2>
+        </div>
+        <div class="rr-rev__nav" data-rv>
+          <button type="button" id="rr-prev" aria-label="Vorherige Bewertung"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" id="rr-next" aria-label="Nächste Bewertung"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="rr-rev__track" id="rr-track" data-rv style="--d:.1s">
+        <figure class="rr-rev"><div class="rr-stars" aria-label="5 von 5 Sternen"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg></div>
+          <h3>Hr. Ritzinger ist ein sehr engagierter und kompetenter Therapeut.</h3>
+          <blockquote>"Hr. Ritzinger hat unserer Tochter (17 J.) sehr geholfen, wieder mit mehr Selbstbewusstsein durch das Leben zu gehen. Mit seiner sehr positiven Art hat er ihr neue Sichtweisen und Denkanstöße gegeben, wie sie verschiedene Herausforderungen meistern kann. Wir können Hr. Ritzinger sehr weiterempfehlen."</blockquote>
+        </figure>
+        <figure class="rr-rev"><div class="rr-stars" aria-label="5 von 5 Sternen"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg></div>
+          <h3>Kompetent, offen und ehrlich</h3>
+          <blockquote>"Hat mir in einen "Crashkurs" neue Wege und Möglichkeiten aufgezeigt, wie ich mit meinen Kindern (beginnende Pupertät bzw. mittendrin) kommunizieren kann, ohne dass es wirkt wie "ich Chef du Angestellter ". Die meisten Sitzungen haben mir persönlich wieder neue Impulse gegeben, auch Themen anzugreifen, die ich sonst auf die lange Bank geschoben hätte. Ich persönlich kann Herren Ritzinger sehr empfehlen, also hingehen, vielleicht nicht nur einmal, dann sieht man gleich ob's passt oder nicht."</blockquote>
+        </figure>
+        <figure class="rr-rev"><div class="rr-stars" aria-label="5 von 5 Sternen"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg></div>
+          <h3>Sehr empathisch und professionell</h3>
+          <blockquote>"Herr Ritzinger ist ein sehr empathischer und professioneller Gesprächspartner, bei dem man sich jederzeit gut aufgehoben fühlt. Er geht auf die individuellen Themen sehr gut ein und bietet praktikable Lösungsansätze. Man spürt seinen breiten Erfahrungsschatz. Die angebotenen Lösungen konnten wir sehr gut in unseren Alltag integrieren und habe tolle Ergebnisse erzielt. Wir können Herrn Ritzinger besten Gewissens weiterempfehlen."</blockquote>
+        </figure>
+        <figure class="rr-rev"><div class="rr-stars" aria-label="5 von 5 Sternen"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg></div>
+          <h3>Beeindruckendes Einfühlungsvermögen</h3>
+          <blockquote>"Herr Ritzinger hat es durch sein beeindruckendes Einfühlungsvermögen und seine professionelle Vorgehensweise in kürzester Zeit geschafft, den Kern der Probleme unserer Tochter zu erfassen und gibt funktionierende Techniken an die Hand. Die ganze Familie geht mit hilfreichen Strategien aus jeder Therapiestunde gestärkt, motiviert und zuversichtlich in den Alltag. Dieses positive Gefühl wird durch die sympathische und humorvolle Art von Herrn Ritzinger noch verstärkt."</blockquote>
+        </figure>
+        <figure class="rr-rev"><div class="rr-stars" aria-label="5 von 5 Sternen"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg></div>
+          <h3>Engagiert und interessiert</h3>
+          <blockquote>"Sehr herzlicher, engagierter &amp; interessierter Therapeut, dem das Wohl seiner Patient*innen am Herzen liegt."</blockquote>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GOOGLE MAPS (lädt erst nach Klick) ================= -->
+  <div class="rr-map" id="rr-map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.6316886934655!2d11.57133851564896!3d48.13662577922342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75dc90dbe7f1%3A0x4e197c42ae4d532a!2sPsychotherapeutische%20Praxis%20Rudolf%20Ritzinger!5e0!3m2!1sde!2sde!4v1649425925208!5m2!1sde!2sde">
+    <div class="rr-map__veil">
+      <div>
+        <div class="rr-map__pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <strong>Rosenstr. 7, 80331 München</strong>
+        <p>Mit Klick auf „Karte laden“ wird Google Maps geladen. Dabei werden Daten an Google übertragen.</p>
+        <button type="button" class="rr-btn rr-btn--g" id="rr-map-btn">Karte laden</button>
+      </div>
+    </div>
+    <div class="rr-map__addr rr-glass"><small>Praxis · Mo–Fr 09:00–20:00</small>Psychotherapeutische Praxis Rudolf Ritzinger<br>Rosenstr. 7, 80331 München</div>
+  </div>
+
+  <!-- ================= ANGEBOTSSPEKTRUM (hell) ================= -->
+  <section class="rr-sec rr-sec--tint">
+    <div class="rr-wrap">
+      <div class="rr-spek__intro">
+        <div>
+          <div class="rr-num" data-rv>08 / Spektrum</div>
+          <h2 class="rr-h2" data-split>Angebots&shy;spektrum</h2>
+        </div>
+        <div data-rv style="--d:.1s">
+          <p>Jugendliche und junge Erwachsene können im Laufe ihrer Entwicklung mit sehr unterschiedlichen psychischen und emotionalen Belastungen konfrontiert sein. Dazu gehören beispielsweise Ängste, soziale Anpassungsstörungen, depressive Entwicklungen, pubertäre Krisen, Zwangsstörungen, starke Schüchternheit und Unsicherheit, Suchtproblematiken sowie Schwierigkeiten im Zusammenhang mit ADS oder ADHS.</p>
+          <p>Nicht jedes dieser Probleme macht automatisch eine Psychotherapie notwendig. Wenn Belastungen jedoch über längere Zeit bestehen, stärker werden oder den Alltag, die Schule, Freundschaften oder das Familienleben zunehmend beeinträchtigen, kann eine professionelle psychotherapeutische Einschätzung und Unterstützung sinnvoll sein.</p>
+          <p>Im Folgenden finden Sie einen Überblick über mein therapeutisches Angebot und ergänzende Ansätze, die – abhängig von der individuellen Situation – in meine Arbeit einfließen können.</p>
+        </div>
+      </div>
+      <div class="rr-bento">
+        <article class="rr-tile rr-tile--w4 rr-tile--main rr-spot" data-rv>
+          <div class="rr-tile__k"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2z"/></svg></span>Verfahren der Praxis</div>
+          <h3>Psychotherapie</h3>
+          <p>Psychotherapie dient der Behandlung und Linderung psychischer Erkrankungen und seelischer Belastungen.</p>
+          <p>Als approbierter Kinder- und Jugendlichenpsychotherapeut arbeite ich in meiner Praxis auf Grundlage der tiefenpsychologisch fundierten Psychotherapie. Dabei geht es nicht allein darum, Symptome zu verändern. Ebenso wichtig ist die Frage, welche inneren Konflikte, Erfahrungen, Beziehungen und aktuellen Belastungen hinter ihnen stehen können.</p>
+          <a href="https://www.rudolf-ritzinger.com/?uid=95" class="rr-link">Psychotherapie <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="rr-tile rr-spot" data-rv style="--d:.1s">
+          <div class="rr-tile__k"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>Fachpraxis</div>
+          <h3>Feeling Seen®</h3>
+          <p>Meine Praxis ist eine Fachpraxis für Feeling Seen®. Der Ansatz wurde aus der Pesso-Therapie heraus entwickelt und richtet den Blick besonders auf die Gefühle und Bedürfnisse des Kindes oder Jugendlichen.</p>
+          <p>Im therapeutischen Prozess kann dadurch verständlicher werden, was hinter bestimmten Reaktionen und Verhaltensweisen steht. Werden Eltern einbezogen, können sie die innere Situation ihres Kindes häufig aus einer neuen Perspektive wahrnehmen. Gerade bei festgefahrenen Konflikten kann dieses gegenseitige Verständnis dabei helfen, wieder anders miteinander in Kontakt zu kommen.</p>
+          <a href="https://www.feeling-seen.de/" class="rr-link" target="_blank" rel="nofollow noopener">Feeling Seen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="rr-tile rr-tile--w3 rr-spot" data-rv>
+          <div class="rr-tile__k"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Ergänzend</div>
+          <h3>Prozess- und Embodimentfokussierte Psychologie (PEP)</h3>
+          <p>Interventionen aus der Prozess- und Embodimentfokussierten Psychologie können ergänzend in die therapeutische Arbeit einfließen. Dabei werden unter anderem körperorientierte Interventionen mit psychodynamischem Verständnis verbunden. Sie können beispielsweise bei belastenden Emotionen wie Ängsten, Wut oder Aggression eingesetzt werden.</p>
+        </article>
+        <article class="rr-tile rr-tile--w3 rr-spot" data-rv style="--d:.1s">
+          <div class="rr-tile__k"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4l-1.5-2.5a1.7 1.7 0 0 0-3 0L9 17H5a2 2 0 0 1-2-2z"/><circle cx="8" cy="11" r="1.5"/><circle cx="16" cy="11" r="1.5"/></svg></span>Ergänzend</div>
+          <h3>Virtual Reality</h3>
+          <p>Meine Praxis verfügt über ein modernes Virtual-Reality-System, das bei geeigneter Indikation ergänzend in eine laufende Therapie integriert werden kann. Virtuelle Situationen ermöglichen es beispielsweise bei bestimmten Ängsten, belastende Situationen in einem geschützten Rahmen zu erleben und therapeutisch zu bearbeiten.</p>
+        </article>
+        <article class="rr-tile rr-spot" data-rv>
+          <div class="rr-tile__k"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2.5"/><path d="M8 9l2 2-2 2M12 13h4"/></svg></span>Ergänzend</div>
+          <h3>Neurofeedback Gaming</h3>
+          <p>Spielerische Anwendungen auf dem iPad können ergänzend genutzt werden, um Fähigkeiten wie Konzentration, Zielfokussierung, Frustrationstoleranz und Entspannung zu fördern.</p>
+        </article>
+        <article class="rr-tile rr-spot" data-rv style="--d:.1s">
+          <div class="rr-tile__k"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></span>Ergänzend</div>
+          <h3>Impacttherapie</h3>
+          <p>Die Impacttherapie arbeitet mit ungewöhnlichen, anschaulichen und erlebnisorientierten Interventionen. Gerade für Jugendliche können abstrakte Themen dadurch konkreter und leichter zugänglich werden.</p>
+        </article>
+        <article class="rr-tile rr-spot" data-rv style="--d:.2s">
+          <div class="rr-tile__k"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.8 7.2L6.2 15.8M13.2 7.2l4.6 8.6M7.5 18h9"/></svg></span>Ergänzend</div>
+          <h3>Systemische Therapie</h3>
+          <p>Systemische Ansätze richten den Blick auf Beziehungen und Wechselwirkungen innerhalb eines sozialen Systems. Gerade bei Jugendlichen kann es hilfreich sein, nicht nur den Einzelnen, sondern auch wichtige Beziehungen und familiäre Zusammenhänge zu betrachten.</p>
+          <p>Meine familientherapeutische Erfahrung fließt deshalb auch in mein Verständnis der Situation eines Jugendlichen und seiner Familie ein.</p>
+          <a href="https://de.wikipedia.org/wiki/Systemische_Therapie" class="rr-link" target="_blank" rel="nofollow noopener">Systemische Therapie <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="rr-tile rr-tile--w4 rr-tile--info rr-spot" data-rv>
+          <div class="rr-tile__k"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span><span class="rr-badge">Zur Information – kein Verfahren der Praxis</span></div>
+          <h3>Verhaltenstherapie</h3>
+          <p>Die Verhaltenstherapie ist ein anerkanntes psychotherapeutisches Verfahren, bei dem insbesondere aktuelle Denk-, Erlebens- und Verhaltensmuster und deren Veränderung im Mittelpunkt stehen.</p>
+          <p>Da sich Eltern und Jugendliche häufig über unterschiedliche Formen der Psychotherapie informieren, finden Sie auf meiner Website auch Informationen zur Verhaltenstherapie und ihrer Abgrenzung zu anderen Verfahren.</p>
+          <p><strong>Meine psychotherapeutische Behandlung erfolgt auf Grundlage der tiefenpsychologisch fundierten Psychotherapie.</strong></p>
+          <a href="https://www.rudolf-ritzinger.com/?uid=86" class="rr-link">Informationen zur Verhaltenstherapie <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <!-- PRÜFEN: nur behalten, wenn diese Elemente weiterhin Teil des Angebots sind -->
+        <div class="rr-tile rr-extras rr-spot" data-rv style="--d:.1s">
+          <h3>Ergänzende Elemente</h3>
+          <ul><li>Achtsamkeit</li><li>Entspannung</li><li>Meditation</li><li>Sport</li><li>Musik</li><li>Teaching und Coaching</li></ul>
+        </div>
+      </div>
+      <div class="rr-center rr-actions" data-rv>
+        <a href="https://www.rudolf-ritzinger.com/?uid=75" class="rr-link">Mehr zu meinem therapeutischen Angebot <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ZWEITER TERMINBLOCK ================= -->
+  <section class="rr-sec rr-sec--white" style="padding-bottom:0">
+    <div class="rr-wrap">
+      <div class="rr-band rr-glow" data-rv="z">
+        <div>
+          <h2>Einen Termin vereinbaren</h2>
+          <p>Wenn Sie Fragen haben oder einen Termin anfragen möchten, erreichen Sie mich telefonisch unter: <a href="tel:+491634663072">+49 (0) 163 – 466 30 72</a></p>
+        </div>
+        <a href="https://www.rudolf-ritzinger.com/?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p" data-magnet>Jetzt anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPROBATION ================= -->
+  <section class="rr-sec rr-sec--white rr-grid-bg">
+    <div class="rr-wrap rr-appro__grid">
+      <div>
+        <div class="rr-num" data-rv>09 / Approbation</div>
+        <h2 class="rr-h2" data-split>Approbierter Kinder- und Jugendlichen&shy;psycho&shy;therapeut in München</h2>
+        <div class="rr-prose" data-rv style="--d:.1s">
+          <p>Als Kinder- und Jugendlichenpsychotherapeut in München besitze ich die Approbation der Regierung von Oberbayern. In meiner Praxis habe ich einen geschützten und wertschätzenden Rahmen geschaffen, in dem ich Jugendliche und junge Erwachsene tiefenpsychologisch fundiert behandle.</p>
+          <p>Der Schwerpunkt meiner Praxis liegt auf Jugendlichen und jungen Erwachsenen im Alter von 12 bis 21 Jahren. Unter bestimmten Voraussetzungen kann eine bereits zuvor begonnene Kinder- und Jugendlichenpsychotherapie auch über das 21. Lebensjahr hinaus fortgeführt werden.</p>
+          <p>Mein Verständnis der tiefenpsychologisch fundierten Psychotherapie basiert auf einem ganzheitlichen Menschenbild. Psychische Schwierigkeiten und Verhaltensprobleme betrachte ich deshalb nicht isoliert, sondern im Zusammenhang mit der persönlichen Entwicklung, wichtigen Beziehungen und dem jeweiligen bio-psycho-sozialen Kontext.</p>
+          <p>Mir ist wichtig, jeden Jugendlichen individuell wahrzunehmen. Nicht allein die Diagnose steht im Mittelpunkt, sondern der junge Mensch mit seiner Geschichte, seiner aktuellen Lebenssituation und seinen persönlichen Möglichkeiten.</p>
+          <div class="rr-actions"><a href="https://www.rudolf-ritzinger.com/?uid=75" class="rr-link">Mehr zu meinem therapeutischen Angebot <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+      </div>
+      <aside class="rr-cred rr-glass" data-rv="r" style="--d:.2s">
+        <div class="rr-cred__seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <dl>
+          <div><dt>Berufsbezeichnung</dt><dd>Kinder- und Jugendlichenpsychotherapeut</dd></div>
+          <div><dt>Approbation</dt><dd>Regierung von Oberbayern</dd></div>
+          <div><dt>Verfahren</dt><dd>Tiefenpsychologisch fundierte Psychotherapie</dd></div>
+          <div><dt>Altersschwerpunkt</dt><dd>12 bis 21 Jahre</dd></div>
+          <div><dt>Therapeutisch tätig</dt><dd>seit 1997</dd></div>
+          <div><dt>Praxis</dt><dd>Rosenstr. 7, 80331 München · und online</dd></div>
+          <div><dt>Sprechzeiten</dt><dd>Mo–Fr 09:00–20:00 Uhr</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="rr-sec rr-sec--tint" id="faq">
+    <div class="rr-wrap rr-faq__grid">
+      <div class="rr-faq__head">
+        <div class="rr-num" data-rv>10 / FAQ</div>
+        <h2 class="rr-h2" data-split>Häufige Fragen zu Kinderpsychologie und Jugendlichen&shy;psycho&shy;therapie in München</h2>
+      </div>
+      <div class="rr-acc" id="rr-acc">
+        <details data-rv><summary><span class="rr-acc__n">01</span><h3>Was ist ein Kinderpsychologe und wie unterscheidet er sich von einem Kinder- und Jugendlichenpsychotherapeuten?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Der Begriff „Kinderpsychologe“ wird umgangssprachlich häufig für Fachleute verwendet, die Kinder und Jugendliche bei seelischen oder psychischen Schwierigkeiten unterstützen. Er bezeichnet jedoch nicht automatisch einen approbierten Psychotherapeuten.</p><p>Ein approbierter Kinder- und Jugendlichenpsychotherapeut verfügt über eine staatliche Zulassung zur Durchführung von Psychotherapie und zur Behandlung psychischer Erkrankungen bei Kindern und Jugendlichen.</p><p>Kinder- und Jugendpsychiater sind dagegen Ärztinnen und Ärzte mit entsprechender fachärztlicher Weiterbildung. Sie können neben der medizinischen Diagnostik auch Medikamente verordnen.</p><p>Ich selbst arbeite als approbierter Kinder- und Jugendlichenpsychotherapeut.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">02</span><h3>Welche Aufgaben übernimmt ein Kinderpsychologe in München?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Je nach Qualifikation und Tätigkeit können psychologische Fachkräfte Kinder, Jugendliche und Familien unter anderem durch Diagnostik, Beratung oder therapeutische Angebote unterstützen.</p><p>Für eine Psychotherapie psychischer Erkrankungen ist die entsprechende psychotherapeutische Qualifikation entscheidend.</p><p>In meiner Praxis in München arbeite ich als approbierter Kinder- und Jugendlichenpsychotherapeut mit Jugendlichen und jungen Erwachsenen. Meine psychotherapeutische Behandlung erfolgt tiefenpsychologisch fundiert. Eltern und wichtige Bezugspersonen können in den therapeutischen Prozess einbezogen werden.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">03</span><h3>Ab welchem Alter sollten Eltern einen Kinderpsychologen oder Psychotherapeuten aufsuchen?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Professionelle Unterstützung kann sinnvoll sein, wenn deutliche Veränderungen im Verhalten oder emotionalen Befinden auftreten, Ängste oder Niedergeschlagenheit länger anhalten, Konflikte immer stärker werden oder Schule, Freundschaften und Familienleben zunehmend beeinträchtigt sind.</p><p>Der Schwerpunkt meiner Praxis liegt auf Jugendlichen ab 12 Jahren und jungen Erwachsenen bis 21 Jahre.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">04</span><h3>Wie läuft eine psychotherapeutische Behandlung ab?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Am Anfang steht ein Erstgespräch, in dem die aktuelle Situation, bestehende Belastungen, die Vorgeschichte und das familiäre Umfeld besprochen werden.</p><p>Danach folgen probatorische Sitzungen. Sie dienen dem gegenseitigen Kennenlernen, der diagnostischen Einschätzung und der Frage, ob eine Psychotherapie sinnvoll und die tiefenpsychologisch fundierte Psychotherapie für die jeweilige Situation geeignet ist.</p><p>Wenn eine Behandlung begonnen wird, finden die psychotherapeutischen Sitzungen in der Regel regelmäßig statt. Je nach Alter und individueller Situation können auch Gespräche mit Eltern oder anderen wichtigen Bezugspersonen Bestandteil der Behandlung sein.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">05</span><h3>Arbeiten Sie verhaltenstherapeutisch?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Nein. Meine psychotherapeutische Behandlung erfolgt auf Grundlage der tiefenpsychologisch fundierten Psychotherapie.</p><p>Da sich viele Eltern und Jugendliche über unterschiedliche Verfahren informieren möchten, finden Sie auf meiner Website auch Informationen zur Verhaltenstherapie. Sie dienen der Orientierung und beschreiben kein Verfahren, das ich in meiner Praxis anbiete.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">06</span><h3>Wie finde ich einen passenden Kinderpsychologen in München?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Bei der Suche nach professioneller Unterstützung sollten Eltern zunächst auf die fachliche Qualifikation achten. Wenn eine Psychotherapie notwendig sein könnte, ist insbesondere die Approbation als Kinder- und Jugendlichenpsychotherapeut oder eine entsprechende ärztliche Qualifikation relevant.</p><p>Darüber hinaus spielen der therapeutische Schwerpunkt und nicht zuletzt der persönliche Eindruck eine wichtige Rolle. Gerade bei Jugendlichen ist entscheidend, dass im Erstgespräch eine Grundlage für Vertrauen entstehen kann.</p><p>Meine Praxis in München ist auf die psychotherapeutische Arbeit mit Jugendlichen ab 12 Jahren und jungen Erwachsenen spezialisiert. Ich arbeite als approbierter Kinder- und Jugendlichenpsychotherapeut auf Grundlage der tiefenpsychologisch fundierten Psychotherapie.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">07</span><h3>Übernimmt die Krankenkasse die Kosten der Kinder- und Jugendlichenpsychotherapie?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Gesetzliche Krankenkassen übernehmen die Kosten einer Richtlinienpsychotherapie bei approbierten Kinder- und Jugendlichenpsychotherapeuten grundsätzlich, wenn die entsprechenden Voraussetzungen für eine Behandlung erfüllt sind. Bei gesetzlich versicherten Patientinnen und Patienten führe ich Psychotherapie nach den Psychotherapie-Richtlinien durch.</p><p>Bei privaten Krankenversicherungen richtet sich die Erstattung nach dem jeweiligen Vertrag und Tarif. Privat Versicherte sollten deshalb vor Beginn der Behandlung klären, welche psychotherapeutischen Leistungen übernommen werden.</p><p>Für Selbstzahler kann ich mein integratives Konzept anbieten.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">08</span><h3>Ist eine Psychotherapie auch online möglich?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Neben meiner Praxis in München biete ich Psychotherapie auch online an. Das richtet sich besonders an deutschsprachige Jugendliche und Familien, die im Ausland leben oder aus anderen Gründen nicht regelmäßig nach München kommen können.</p><p>Ob eine Behandlung online sinnvoll ist und in welchem Rahmen sie stattfinden kann, besprechen wir im Erstgespräch.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">09</span><h3>Wann ist eine kinder- und jugendpsychiatrische Behandlung sinnvoll?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Eine kinder- und jugendpsychiatrische Abklärung kann insbesondere dann sinnvoll sein, wenn zusätzlich eine medizinische Diagnostik erforderlich ist oder geprüft werden soll, ob eine medikamentöse Behandlung infrage kommt.</p><p>Kinder- und Jugendpsychiater sind Ärztinnen und Ärzte und können deshalb – anders als psychologische Psychotherapeuten – Medikamente verordnen.</p><p>Je nach Situation kann eine Zusammenarbeit verschiedener Fachrichtungen sinnvoll sein.</p></div></details>
+        <details data-rv><summary><span class="rr-acc__n">10</span><h3>In welchen Stadtteilen von München ist die Praxis gut erreichbar?</h3><span class="rr-acc__pm"></span></summary><div class="rr-acc__body"><p>Meine Praxis befindet sich zentral in München in der Rosenstraße 7, 80331 München und ist mit öffentlichen Verkehrsmitteln aus vielen Teilen der Stadt gut erreichbar.</p><p>Zu meinen Patientinnen und Patienten gehören Jugendliche und Familien aus dem gesamten Münchner Stadtgebiet sowie aus dem südlichen Münchner Umland, unter anderem aus Altstadt-Lehel, Bogenhausen, Schwabing, Nymphenburg, Harlaching, Solln, <a href="https://www.rudolf-ritzinger.com/?uid=97">Grünwald</a>, Maxvorstadt und Haidhausen.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RATGEBER (SEO, korrigiert) ================= -->
+  <section class="rr-sec rr-sec--white">
+    <div class="rr-wrap">
+      <div class="rr-center" data-rv>
+        <div class="rr-num">Ratgeber</div>
+        <h2 class="rr-h2" style="font-size:clamp(26px,3vw,38px);max-width:900px;margin-left:auto;margin-right:auto">Kinderpsychologe München gesucht? Warum Eltern mit Therapiebedarf bei einem Kinder- und Jugendlichen&shy;psycho&shy;therapeuten richtig sind</h2>
+      </div>
+      <div class="rr-guide" data-rv>
+        <details>
+          <summary>Hier klicken und mehr lesen <span class="rr-acc__pm"></span></summary>
+          <div class="rr-guide__body">
+            <h3>Kinderpsychologe oder Kinder- und Jugendlichenpsychotherapeut?</h3>
+            <p>Viele Eltern suchen zunächst nach „Kinderpsychologe München“, wenn ihr Kind seelisch belastet ist. Fachlich ist der Unterschied wichtig: Psychologinnen und Psychologen mit Schwerpunkt auf Kindern und Jugendlichen arbeiten häufig in Diagnostik und Beratung. Ein approbierter Kinder- und Jugendlichenpsychotherapeut ist dagegen staatlich dazu berechtigt, psychische Erkrankungen bei Kindern und Jugendlichen psychotherapeutisch zu behandeln. Wenn Sie für Ihr jugendliches Kind eine Psychotherapie suchen, ist diese Qualifikation entscheidend.</p>
+            <h3>Wann eine Psychotherapie sinnvoll sein kann</h3>
+            <p>Eltern melden sich häufig, wenn Ängste, anhaltende Niedergeschlagenheit, Rückzug, Wut, Schulstress, soziale Unsicherheit oder Konflikte in der Familie über längere Zeit bestehen und den Alltag zunehmend bestimmen. Im Erstgespräch klären wir gemeinsam, ob eine Psychotherapie angezeigt ist oder ob eine andere Form der Unterstützung besser passt.</p>
+            <h3>Tiefenpsychologisch fundiert – was bedeutet das?</h3>
+            <p>In der <a href="https://www.rudolf-ritzinger.com/?uid=96">tiefenpsychologisch fundierten Psychotherapie</a> geht es darum zu verstehen, welche inneren Konflikte, Erfahrungen und Beziehungsmuster hinter aktuellen Schwierigkeiten stehen. Veränderung entsteht dabei nicht allein durch das Trainieren neuer Verhaltensweisen, sondern durch ein besseres Verständnis dessen, was einen jungen Menschen bewegt. Auf dieser Grundlage arbeite ich mit Jugendlichen und jungen Erwachsenen. Wer sich zusätzlich über andere Verfahren informieren möchte, findet auf meiner Website auch <a href="https://www.rudolf-ritzinger.com/?uid=86">Informationen zur Verhaltenstherapie</a>.</p>
+            <h3>Eltern als Teil des Prozesses</h3>
+            <p>Gerade bei Jugendlichen spielen die Beziehungen in der Familie eine wichtige Rolle. Wenn es für die Behandlung hilfreich ist, beziehe ich Eltern deshalb enger ein. Meine familientherapeutische Erfahrung und der Feeling-Seen-Ansatz helfen dabei, dass Eltern die innere Situation ihres Kindes besser verstehen und wieder anders miteinander ins Gespräch kommen können.</p>
+            <h3>Kosten: Krankenkasse, private Versicherung oder Selbstzahler</h3>
+            <p>Viele Eltern fragen nach den Kosten. Bei gesetzlich versicherten Jugendlichen führe ich Psychotherapie nach den Psychotherapie-Richtlinien durch; die Krankenkasse übernimmt die Kosten, wenn die Voraussetzungen für eine Behandlung erfüllt sind. Bei privaten Versicherungen richtet sich die Erstattung nach Vertrag und Tarif. Für Selbstzahler kann ich mein integratives Konzept anbieten.</p>
+            <h3>Praxis in München und Termine online</h3>
+            <p>Meine Praxis liegt zentral in der Rosenstraße 7 in München und ist aus der ganzen Stadt sowie aus dem südlichen Umland, etwa aus <a href="https://www.rudolf-ritzinger.com/?uid=97">Grünwald</a>, gut erreichbar. Für deutschsprachige Familien, die im Ausland leben oder nicht regelmäßig nach München kommen können, biete ich Psychotherapie auch online an.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UNTER 12 ================= -->
+  <section class="rr-sec rr-sec--white" id="unter-12" style="padding-top:0">
+    <div class="rr-wrap">
+      <div class="rr-ref" data-rv>
+        <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+        <p>Falls Ihr Kind jünger als 12 Jahre ist, dann finden Sie hier empfohlene Kolleg*innen aus München: <strong>Dr. Niko Hüllemann</strong> – Psychotherapeutische Fachpraxis für Kinder im Münchner Norden.</p>
+        <a href="https://www.kompetenzentfaltung.de/" class="rr-link" target="_blank" rel="noopener">www.kompetenzentfaltung.de <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABSCHLUSS ================= -->
+  <section class="rr-final rr-grid-bg">
+    <div class="rr-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="rr-wrap">
+      <h2 data-split>Sie möchten einen <span class="rr-grad">Termin anfragen?</span></h2>
+      <p data-rv style="--d:.15s">Wenn Sie sich Sorgen um Ihr Kind machen oder klären möchten, ob eine psychotherapeutische Behandlung sinnvoll sein könnte, können Sie gerne Kontakt mit mir aufnehmen.</p>
+      <div class="rr-final__cta" data-rv style="--d:.25s">
+        <a href="https://www.rudolf-ritzinger.com/?uid=2#popup-terminanfrage" class="rr-btn rr-btn--p" data-magnet>Termin anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:+491634663072" class="rr-phone"><span class="rr-phone__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Telefon</small>+49 (0) 163 – 466 30 72</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.rudolf-ritzinger.com/#website",
+      "url": "https://www.rudolf-ritzinger.com/",
+      "name": "Rudolf Ritzinger – Kinder- und Jugendlichenpsychotherapeut München",
+      "inLanguage": "de-DE",
+      "publisher": {
+        "@id": "https://www.rudolf-ritzinger.com/#praxis"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.rudolf-ritzinger.com/#webpage",
+      "url": "https://www.rudolf-ritzinger.com/",
+      "name": "Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger",
+      "description": "Psychotherapie für Jugendliche ab 12 und junge Erwachsene in München und online für deutschsprachige Familien weltweit. Tiefenpsychologisch fundiert, Eltern werden bei Bedarf einbezogen.",
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://www.rudolf-ritzinger.com/#website"
+      },
+      "about": {
+        "@id": "https://www.rudolf-ritzinger.com/#praxis"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.rudolf-ritzinger.com/incms_files/filebrowser/Rudolf-Ritzinger-Jugendspychologe-Munchen.jpg"
+      },
+      "mainEntity": {
+        "@id": "https://www.rudolf-ritzinger.com/#faq"
+      }
+    },
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://www.rudolf-ritzinger.com/#praxis",
+      "name": "Psychotherapeutische Praxis Rudolf Ritzinger",
+      "alternateName": "Rudolf Ritzinger",
+      "description": "Praxis für Jugendlichenpsychotherapie in München. Tiefenpsychologisch fundierte Psychotherapie für Jugendliche und junge Erwachsene von 12 bis 21 Jahren – in der Praxis und online für deutschsprachige Familien weltweit. Gesetzlich Versicherte: Psychotherapie nach den Psychotherapie-Richtlinien; Selbstzahler: integratives Konzept.",
+      "url": "https://www.rudolf-ritzinger.com/",
+      "image": "https://www.rudolf-ritzinger.com/incms_files/filebrowser/cache/Kinderpsychologe-Jugendpsychologe-Munchen-Ritzinger_ecc5974d1d42cc16d2be6ed51aa32b3a.png",
+      "logo": "https://www.rudolf-ritzinger.com/incms_files/filebrowser/cache/Kinderpsychologe-Jugendpsychologe-Munchen-Ritzinger_ecc5974d1d42cc16d2be6ed51aa32b3a.png",
+      "telephone": "+491634663072",
+      "priceRange": "$$$-$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rosenstr. 7",
+        "addressLocality": "München",
+        "postalCode": "80331",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1366759,
+        "longitude": 11.5733421
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "20:00"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "München"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Landkreis München"
+        },
+        {
+          "@type": "Place",
+          "name": "Online – deutschsprachige Familien weltweit"
+        }
+      ],
+      "knowsAbout": [
+        "Tiefenpsychologisch fundierte Psychotherapie",
+        "Jugendpsychotherapie",
+        "Elternarbeit",
+        "Feeling Seen"
+      ],
+      "employee": {
+        "@id": "https://www.rudolf-ritzinger.com/#rudolf-ritzinger"
+      },
+      "sameAs": [
+        "https://www.facebook.com/RudolfRitzinger.de/",
+        "https://www.doctolib.de/kinder-und-jugendlichenpsychotherapeut/muenchen/rudolf-ritzinger"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.rudolf-ritzinger.com/#rudolf-ritzinger",
+      "name": "Rudolf Ritzinger",
+      "honorificPrefix": "Dipl. Soz. Päd.",
+      "jobTitle": "Kinder- und Jugendlichenpsychotherapeut",
+      "image": "https://www.rudolf-ritzinger.com/incms_files/filebrowser/cache/Rudolf-Ritzinger-Munchen-Kinderpsychologe-und-Jugentherapeut_39aa931c6ba3121ccd953dc7099be0d7.png",
+      "url": "https://www.rudolf-ritzinger.com/",
+      "worksFor": {
+        "@id": "https://www.rudolf-ritzinger.com/#praxis"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Approbation als Kinder- und Jugendlichenpsychotherapeut",
+        "credentialCategory": "Approbation",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Regierung von Oberbayern"
+        }
+      },
+      "knowsAbout": [
+        "Tiefenpsychologisch fundierte Psychotherapie",
+        "Jugendpsychotherapie",
+        "Elternarbeit",
+        "Feeling Seen"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.rudolf-ritzinger.com/#faq",
+      "inLanguage": "de-DE",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was ist ein Kinderpsychologe und wie unterscheidet er sich von einem Kinder- und Jugendlichenpsychotherapeuten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Der Begriff „Kinderpsychologe“ wird umgangssprachlich häufig für Fachleute verwendet, die Kinder und Jugendliche bei seelischen oder psychischen Schwierigkeiten unterstützen. Er bezeichnet jedoch nicht automatisch einen approbierten Psychotherapeuten.</p><p>Ein approbierter Kinder- und Jugendlichenpsychotherapeut verfügt über eine staatliche Zulassung zur Durchführung von Psychotherapie und zur Behandlung psychischer Erkrankungen bei Kindern und Jugendlichen.</p><p>Kinder- und Jugendpsychiater sind dagegen Ärztinnen und Ärzte mit entsprechender fachärztlicher Weiterbildung. Sie können neben der medizinischen Diagnostik auch Medikamente verordnen.</p><p>Ich selbst arbeite als approbierter Kinder- und Jugendlichenpsychotherapeut.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Aufgaben übernimmt ein Kinderpsychologe in München?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Je nach Qualifikation und Tätigkeit können psychologische Fachkräfte Kinder, Jugendliche und Familien unter anderem durch Diagnostik, Beratung oder therapeutische Angebote unterstützen.</p><p>Für eine Psychotherapie psychischer Erkrankungen ist die entsprechende psychotherapeutische Qualifikation entscheidend.</p><p>In meiner Praxis in München arbeite ich als approbierter Kinder- und Jugendlichenpsychotherapeut mit Jugendlichen und jungen Erwachsenen. Meine psychotherapeutische Behandlung erfolgt tiefenpsychologisch fundiert. Eltern und wichtige Bezugspersonen können in den therapeutischen Prozess einbezogen werden.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ab welchem Alter sollten Eltern einen Kinderpsychologen oder Psychotherapeuten aufsuchen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Professionelle Unterstützung kann sinnvoll sein, wenn deutliche Veränderungen im Verhalten oder emotionalen Befinden auftreten, Ängste oder Niedergeschlagenheit länger anhalten, Konflikte immer stärker werden oder Schule, Freundschaften und Familienleben zunehmend beeinträchtigt sind.</p><p>Der Schwerpunkt meiner Praxis liegt auf Jugendlichen ab 12 Jahren und jungen Erwachsenen bis 21 Jahre.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie läuft eine psychotherapeutische Behandlung ab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Am Anfang steht ein Erstgespräch, in dem die aktuelle Situation, bestehende Belastungen, die Vorgeschichte und das familiäre Umfeld besprochen werden.</p><p>Danach folgen probatorische Sitzungen. Sie dienen dem gegenseitigen Kennenlernen, der diagnostischen Einschätzung und der Frage, ob eine Psychotherapie sinnvoll und die tiefenpsychologisch fundierte Psychotherapie für die jeweilige Situation geeignet ist.</p><p>Wenn eine Behandlung begonnen wird, finden die psychotherapeutischen Sitzungen in der Regel regelmäßig statt. Je nach Alter und individueller Situation können auch Gespräche mit Eltern oder anderen wichtigen Bezugspersonen Bestandteil der Behandlung sein.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Arbeiten Sie verhaltenstherapeutisch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Nein. Meine psychotherapeutische Behandlung erfolgt auf Grundlage der tiefenpsychologisch fundierten Psychotherapie.</p><p>Da sich viele Eltern und Jugendliche über unterschiedliche Verfahren informieren möchten, finden Sie auf meiner Website auch Informationen zur Verhaltenstherapie. Sie dienen der Orientierung und beschreiben kein Verfahren, das ich in meiner Praxis anbiete.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie finde ich einen passenden Kinderpsychologen in München?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Bei der Suche nach professioneller Unterstützung sollten Eltern zunächst auf die fachliche Qualifikation achten. Wenn eine Psychotherapie notwendig sein könnte, ist insbesondere die Approbation als Kinder- und Jugendlichenpsychotherapeut oder eine entsprechende ärztliche Qualifikation relevant.</p><p>Darüber hinaus spielen der therapeutische Schwerpunkt und nicht zuletzt der persönliche Eindruck eine wichtige Rolle. Gerade bei Jugendlichen ist entscheidend, dass im Erstgespräch eine Grundlage für Vertrauen entstehen kann.</p><p>Meine Praxis in München ist auf die psychotherapeutische Arbeit mit Jugendlichen ab 12 Jahren und jungen Erwachsenen spezialisiert. Ich arbeite als approbierter Kinder- und Jugendlichenpsychotherapeut auf Grundlage der tiefenpsychologisch fundierten Psychotherapie.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Übernimmt die Krankenkasse die Kosten der Kinder- und Jugendlichenpsychotherapie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Gesetzliche Krankenkassen übernehmen die Kosten einer Richtlinienpsychotherapie bei approbierten Kinder- und Jugendlichenpsychotherapeuten grundsätzlich, wenn die entsprechenden Voraussetzungen für eine Behandlung erfüllt sind. Bei gesetzlich versicherten Patientinnen und Patienten führe ich Psychotherapie nach den Psychotherapie-Richtlinien durch.</p><p>Bei privaten Krankenversicherungen richtet sich die Erstattung nach dem jeweiligen Vertrag und Tarif. Privat Versicherte sollten deshalb vor Beginn der Behandlung klären, welche psychotherapeutischen Leistungen übernommen werden.</p><p>Für Selbstzahler kann ich mein integratives Konzept anbieten.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist eine Psychotherapie auch online möglich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Neben meiner Praxis in München biete ich Psychotherapie auch online an. Das richtet sich besonders an deutschsprachige Jugendliche und Familien, die im Ausland leben oder aus anderen Gründen nicht regelmäßig nach München kommen können.</p><p>Ob eine Behandlung online sinnvoll ist und in welchem Rahmen sie stattfinden kann, besprechen wir im Erstgespräch.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wann ist eine kinder- und jugendpsychiatrische Behandlung sinnvoll?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Eine kinder- und jugendpsychiatrische Abklärung kann insbesondere dann sinnvoll sein, wenn zusätzlich eine medizinische Diagnostik erforderlich ist oder geprüft werden soll, ob eine medikamentöse Behandlung infrage kommt.</p><p>Kinder- und Jugendpsychiater sind Ärztinnen und Ärzte und können deshalb – anders als psychologische Psychotherapeuten – Medikamente verordnen.</p><p>Je nach Situation kann eine Zusammenarbeit verschiedener Fachrichtungen sinnvoll sein.</p>"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In welchen Stadtteilen von München ist die Praxis gut erreichbar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "<p>Meine Praxis befindet sich zentral in München in der Rosenstraße 7, 80331 München und ist mit öffentlichen Verkehrsmitteln aus vielen Teilen der Stadt gut erreichbar.</p><p>Zu meinen Patientinnen und Patienten gehören Jugendliche und Familien aus dem gesamten Münchner Stadtgebiet sowie aus dem südlichen Münchner Umland, unter anderem aus Altstadt-Lehel, Bogenhausen, Schwabing, Nymphenburg, Harlaching, Solln, <a href=\"https://www.rudolf-ritzinger.com/gruenwald/\">Grünwald</a>, Maxvorstadt und Haidhausen.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script>
+(function () {
+  var root = document.querySelector('.rr');
+  if (!root) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  /* Scroll-Fortschritt */
+  var bar = document.getElementById('rr-progress');
+  function progress() {
+    if (!bar) return;
+    var r = root.getBoundingClientRect();
+    var total = r.height - window.innerHeight;
+    var p = total > 0 ? Math.min(Math.max(-r.top / total, 0), 1) : 0;
+    bar.style.transform = 'scaleX(' + p + ')';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  window.addEventListener('resize', progress);
+  progress();
+
+  /* Spotlight, das dem Mauszeiger folgt */
+  root.querySelectorAll('.rr-spot').forEach(function (el) {
+    el.addEventListener('pointermove', function (e) {
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--x', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    });
+  });
+
+  /* Magnetische Buttons */
+  if (fine && !reduce) {
+    root.querySelectorAll('[data-magnet]').forEach(function (el) {
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', ((e.clientX - r.left - r.width / 2) * 0.18) + 'px');
+        el.style.setProperty('--my', ((e.clientY - r.top - r.height / 2) * 0.25) + 'px');
+      });
+      el.addEventListener('pointerleave', function () {
+        el.style.setProperty('--mx', '0px');
+        el.style.setProperty('--my', '0px');
+      });
+    });
+
+    /* Hero-Bild reagiert leicht auf die Maus */
+    var orb = document.getElementById('rr-photo');
+    var hero = root.querySelector('.rr-hero');
+    if (orb && hero) {
+      hero.addEventListener('pointermove', function (e) {
+        var r = hero.getBoundingClientRect();
+        orb.style.setProperty('--px', ((e.clientX - r.left) / r.width - 0.5) * 2);
+        orb.style.setProperty('--py', ((e.clientY - r.top) / r.height - 0.5) * 2);
+      });
+    }
+  }
+
+  /* Bewertungen: Pfeile + Ziehen mit der Maus */
+  var track = document.getElementById('rr-track');
+  if (track && document.getElementById('rr-prev')) {
+    function step(dir) {
+      var card = track.querySelector('.rr-rev');
+      track.scrollBy({ left: dir * (card ? card.offsetWidth + 22 : 360), behavior: 'smooth' });
+    }
+    document.getElementById('rr-prev').addEventListener('click', function () { step(-1); });
+    document.getElementById('rr-next').addEventListener('click', function () { step(1); });
+    var down = false, startX = 0, startL = 0;
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      down = true; startX = e.clientX; startL = track.scrollLeft;
+      track.classList.add('is-drag');
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (down) track.scrollLeft = startL - (e.clientX - startX);
+    });
+    window.addEventListener('pointerup', function () {
+      if (!down) return;
+      down = false; track.classList.remove('is-drag');
+    });
+  }
+
+  /* Google Maps erst nach Klick laden */
+  var map = document.getElementById('rr-map');
+  var mapBtn = document.getElementById('rr-map-btn');
+  if (map && mapBtn) {
+    mapBtn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = map.getAttribute('data-src');
+      f.title = 'Google Maps: Rosenstr. 7, 80331 München';
+      f.loading = 'lazy';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      f.allowFullscreen = true;
+      map.insertBefore(f, map.firstChild);
+      map.querySelector('.rr-map__veil').remove();
+    });
+  }
+
+  /* FAQ: weiches Auf- und Zuklappen */
+  root.querySelectorAll('.rr-acc details, .rr-guide details').forEach(function (d) {
+    var sum = d.querySelector('summary');
+    var body = d.querySelector('.rr-acc__body, .rr-guide__body');
+    if (!sum || !body) return;
+    sum.addEventListener('click', function (e) {
+      if (reduce || !body.animate) return;
+      e.preventDefault();
+      if (d.open) {
+        var h = body.offsetHeight;
+        body.animate([{ height: h + 'px', opacity: 1 }, { height: '0px', opacity: 0 }], { duration: 380, easing: 'cubic-bezier(.16,1,.3,1)' })
+          .onfinish = function () { d.open = false; };
+      } else {
+        d.open = true;
+        var h2 = body.offsetHeight;
+        body.animate([{ height: '0px', opacity: 0 }, { height: h2 + 'px', opacity: 1 }], { duration: 520, easing: 'cubic-bezier(.16,1,.3,1)' });
+      }
+    });
+  });
+
+  /* Scroll-Animationen */
+  if (reduce || !('IntersectionObserver' in window)) return;
+  root.querySelectorAll('[data-split]').forEach(function (h) {
+    h.innerHTML = '<span class="rr-line"><span>' + h.innerHTML + '</span></span>';
+    h.setAttribute('data-rv', '');
+  });
+  root.classList.add('rr-js');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  root.querySelectorAll('[data-rv]').forEach(function (el) { io.observe(el); });
+})();
+</script></body></html>

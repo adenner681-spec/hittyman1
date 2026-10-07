@@ -1,20 +1,48 @@
-# Einbau Startseite Rudolf Ritzinger
+# Einbau – Rudolf Ritzinger
 
-## Module
-- **Sourcecode-Modul:** kompletter Inhalt von `modul-sourcecode.html` (beginnt mit `<style>`, enthält auch das JSON-LD).
-- **JavaScript-Modul:** Inhalt von `modul-javascript.js` (reines JS, ohne `<script>`-Tags).
-- `vorschau.html` dient nur zur Ansicht im Browser.
+Quelltexte liegen in `src/`, gebaut wird mit `python3 build.py`. Ins CMS kommen nur die fertigen Dateien:
 
-## Meta (im CMS unter „Einstellungen“ der Seite eintragen)
-- **Title:** Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger
-- **Meta Description:** Rudolf Ritzinger – approbierter Kinder- und Jugendlichenpsychotherapeut in München. Tiefenpsychologisch fundierte Psychotherapie für Jugendliche und junge Erwachsene von 12 bis 21 Jahren.
+| Seite | Modul „Sourcecode“ | Modul „JavaScript“ |
+|---|---|---|
+| Startseite | `startseite/modul-sourcecode.html` | `modul-javascript.js` |
+| Mehr als Therapie – Intensivprogramm | `mehr-als-therapie-intensivprogramm/modul-sourcecode.html` | `modul-javascript.js` |
 
-## Vor dem Livegang prüfen (im Code mit „PRÜFEN“ markiert)
-1. Bewertungen 2–5: Originalzitate wortwörtlich von der alten Seite einsetzen, danach Klasse `rr-rev--todo` entfernen.
-2. Sternezahl je Bewertung (aktuell jeweils 5).
-3. Portrait-URL einsetzen.
-4. Unsichere Links abgleichen: `/elterncoaching/`, `/dienstleistungen/psychotherapie/`, Feeling-Seen-Link, `/dienstleistungen/psychotherapie/systemische-therapie/`, Jugendtherapie-Karte (`/jugendpsychologie/` oder `/dienstleistungen/jugendpsychologie/`).
-5. Google-Maps: ggf. bisherige Embed-URL in `data-src` einsetzen.
-6. Ergänzende Elemente nur behalten, wenn weiterhin angeboten.
-7. Bestehendes JSON-LD der alten Seite: alte FAQ-Daten entfernen, damit keine zweite, abweichende FAQPage existiert.
-8. Falls das CMS den Seitentitel schon als H1 ausgibt, diese H1 ausblenden – es darf nur eine H1 geben.
+Die `vorschau-*.html` dienen nur zum Ansehen im Browser.
+
+## Startseite im CMS
+1. **Header-Banner (specific_banner) verschlanken:** Logo, Menü und Telefon bleiben. Die alte H1 „Kinder- und Jugendlichenpsychotherapeut“, „Mehr als Therapie…“, die Häkchen-Liste und den Button entfernen – sonst gibt es zwei H1.
+2. **Alle alten Inhaltsblöcke** der Startseite durch die zwei Module ersetzen. **Das Popup-Modul „terminanfrage“ (Gesetzlich / Privat) unbedingt behalten** – alle Buttons „Termin anfragen“ öffnen es über `?uid=2#popup-terminanfrage`.
+3. **JSON-LD im Seitenkopf löschen.** Das neue, vollständige JSON-LD (WebSite, WebPage, Praxis, Person, FAQ) steckt im Sourcecode-Modul. Die FAQ darin wird beim Build automatisch aus dem sichtbaren Text erzeugt und ist 1:1 synchron.
+4. **Meta** (Seiteneinstellungen):
+   - Title: `Kinder- und Jugendlichenpsychotherapeut München | Rudolf Ritzinger`
+   - Description: `Rudolf Ritzinger – approbierter Kinder- und Jugendlichenpsychotherapeut in München. Tiefenpsychologisch fundierte Psychotherapie für Jugendliche und junge Erwachsene von 12 bis 21 Jahren, auch online.`
+5. Im eingefügten Seitenquelltext stand `<meta name="robots" content="noindex">` und als Canonical `…/?uid=2`. Auf der Live-Domain muss die Startseite **indexierbar** sein und als Canonical `https://www.rudolf-ritzinger.com/` haben.
+
+## Neue Menüstruktur (im CMS anlegen)
+Bestehende Seiten **nicht löschen** und ihre URLs nicht ändern (Rankings & interne Links).
+
+- **Startseite** – `?uid=2`
+- **Psychotherapie** – `?uid=95`
+  - Psychotherapie für Jugendliche – `?uid=77` (Jugendpsychologie)
+  - Elternarbeit & Feeling Seen – *neu* (oder vorerst `?uid=84` Elterncoaching)
+  - Online-Psychotherapie – *neu*
+  - Tiefenpsychologisch fundierte Therapie – `?uid=96`
+  - Kinderpsychologie – `?uid=83` (+ Entwicklungsstufen `?uid=85`)
+  - Verhaltenstherapie (Information) – `?uid=86`
+- **Ablauf & Kosten** – *neu* (bis dahin Anker `#ablauf-kosten` auf der Startseite)
+  - Gesetzlich versichert – `?uid=93`
+  - Privat / Selbstzahler – `?uid=92`
+- **Über mich** – `?uid=70`
+- **Mehr als Therapie** (Eltern & Familie) – *neu*
+  - Vier-Monats-Intensivprozess für Familien – *neu*, Vorschlag `/mehr-als-therapie/familien-intensivprogramm/`
+  - Online-Kurs (499 €) – *neu*, Vorschlag `/mehr-als-therapie/online-kurs/`
+- **Kontakt** – `?uid=72`
+
+„Dienstleistungen“ (`?uid=75`) bleibt als Seite bestehen (Buttons „Therapeutisches Angebot“ verlinken darauf), muss aber nicht mehr im Hauptmenü stehen.
+
+## Offene Punkte (im Code mit „PRÜFEN“ markiert)
+- Texte „Ablauf & Kosten“ (Richtlinien / integratives Konzept) und FAQ „Online“ und „Verhaltenstherapie“ fachlich gegenlesen.
+- URLs der neuen Seiten in den Buttons „Zum Intensivprogramm“ und „Zum Online-Kurs“ eintragen.
+- Online-Kurs: Kurzbeschreibung, Landingpage-Struktur.
+- Intensivprogramm: Bausteine, Ablauf je Monat, Preis, Starttermin, Bild, Anfrage-Ziel (eigenes Formular für Ads-Conversion-Tracking empfohlen).
+- „Ergänzende Elemente“ nur behalten, wenn weiterhin angeboten.

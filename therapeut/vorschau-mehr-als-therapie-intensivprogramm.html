@@ -1,0 +1,761 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vier-Monats-Intensivprozess für Familien | Mehr als Therapie | Rudolf Ritzinger</title><meta name="description" content="Intensivprogramm für Eltern und Jugendliche: vier Monate fester Rahmen mit Gesprächen, Gruppenformaten und Übungen für den Alltag – für ein wertschätzendes Familienklima. In München und online."></head><body style="margin:0">
+<style>
+/* =====================================================================
+   Rudolf Ritzinger – gemeinsames Design (hell, modern, freundlich)
+   Alles unter .rr gekapselt, damit nichts mit dem CMS kollidiert.
+   ===================================================================== */
+@property --rr-a{syntax:"<angle>";inherits:false;initial-value:0deg}
+.rr{
+  --bg:#f6fafd; --bg2:#eef6fb; --mint-bg:#eefaf6; --white:#fff;
+  --card:rgba(255,255,255,.78); --glass-b:rgba(255,255,255,.9);
+  --ink:#10283f; --text:#41566b; --muted:#6c7f92; --line:rgba(16,40,63,.09);
+  --blue:#1961a1; --blue-l:#2f86c9; --mint:#4bc6a4; --teal:#00908a; --sky:#dcecf9;
+  --grad:linear-gradient(110deg,#1961a1 0%,#2f86c9 48%,#4bc6a4 100%);
+  --grad-soft:linear-gradient(135deg,#e7f1fb 0%,#eaf7f2 100%);
+  --r:26px; --wrap:1240px;
+  --sans:"Inter","SF Pro Display",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code","Roboto Mono",Menlo,Consolas,monospace;
+  width:100vw; position:relative; left:50%; margin-left:-50vw;
+  background:var(--bg); color:var(--text); font-family:var(--sans); font-size:17.5px; line-height:1.72;
+  overflow-x:clip; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.rr *,.rr *::before,.rr *::after{box-sizing:border-box}
+.rr h1,.rr h2,.rr h3{color:var(--ink);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:0 0 .55em;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.rr h3{letter-spacing:-.015em;line-height:1.28}
+.rr p{margin:0 0 1.1em}
+.rr p:last-child{margin-bottom:0}
+.rr a{color:var(--blue);text-decoration:none}
+.rr img{max-width:100%;display:block}
+.rr ::selection{background:var(--blue);color:#fff}
+.rr-wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px;position:relative;z-index:2}
+.rr-sec{padding:120px 0;position:relative}
+.rr-sec--tint{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
+.rr-sec--mint{background:linear-gradient(180deg,var(--bg) 0%,var(--mint-bg) 100%)}
+.rr-sec--white{background:#fff}
+.rr-h2{font-size:clamp(30px,3.8vw,50px)}
+.rr-grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rr-lead{font-size:20px;color:var(--ink);opacity:.88}
+.rr-center{text-align:center}
+.rr-center .rr-lead{max-width:760px;margin-left:auto;margin-right:auto}
+.rr-num{font-family:var(--mono);font-size:12.5px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.rr-num::after{content:"";height:1px;flex:1;max-width:110px;background:linear-gradient(90deg,var(--mint),transparent)}
+.rr-center .rr-num{justify-content:center}
+.rr-center .rr-num::before{content:"";height:1px;flex:1;max-width:110px;background:linear-gradient(270deg,var(--mint),transparent)}
+.rr-grid-bg::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(25,97,161,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(25,97,161,.06) 1px,transparent 1px);
+  background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 20%,transparent 75%)}
+
+/* ===== Buttons & Links ===== */
+.rr-btn{--mx:0px;--my:0px;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:15.5px;letter-spacing:.01em;border:0;cursor:pointer;isolation:isolate;font-family:inherit;transform:translate(var(--mx),var(--my));transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,background .3s,border-color .3s}
+.rr-btn svg{width:18px;height:18px;transition:transform .35s;flex:none}
+.rr-btn:hover svg{transform:translateX(4px)}
+.rr-btn--p{color:#fff !important;background:var(--grad);box-shadow:0 12px 30px -10px rgba(25,97,161,.55),inset 0 1px 0 rgba(255,255,255,.35)}
+.rr-btn--p::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);background-size:250% 100%;background-position:120% 0;z-index:-1;mix-blend-mode:overlay;transition:background-position .9s ease}
+.rr-btn--p:hover{box-shadow:0 18px 40px -10px rgba(25,97,161,.65),inset 0 1px 0 rgba(255,255,255,.35)}
+.rr-btn--p:hover::after{background-position:-40% 0}
+.rr-btn--g{color:var(--ink) !important;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px -16px rgba(16,40,63,.35)}
+.rr-btn--g:hover{border-color:rgba(75,198,164,.6);box-shadow:0 12px 30px -14px rgba(75,198,164,.6)}
+.rr-btn--sm{padding:12px 20px;font-size:14.5px}
+.rr-phone{display:inline-flex;align-items:center;gap:12px;color:var(--ink) !important;font-weight:600;font-size:17px}
+.rr-phone__i{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);color:var(--blue);position:relative;flex:none}
+.rr-phone__i::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--mint);opacity:0;animation:rr-ring 2.6s ease-out infinite}
+.rr-phone__i svg{width:19px;height:19px}
+.rr-phone small{display:block;font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rr-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--blue) !important;position:relative;padding-bottom:4px}
+.rr-link::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:var(--grad);transform:scaleX(.25);transform-origin:left;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.rr-link:hover::after{transform:scaleX(1)}
+.rr-link svg{width:16px;height:16px;transition:transform .35s}
+.rr-link:hover svg{transform:translateX(4px)}
+.rr-actions{margin-top:34px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.rr-center .rr-actions{justify-content:center}
+
+/* ===== Glas, Spotlight, leuchtender Rand ===== */
+.rr-glass{background:var(--card);border:1px solid var(--glass-b);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 22px 50px -26px rgba(16,40,63,.22)}
+.rr-spot{--x:50%;--y:50%;position:relative;overflow:hidden}
+.rr-spot::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--x) var(--y),rgba(75,198,164,.16),transparent 45%);z-index:0}
+.rr-spot:hover::before{opacity:1}
+.rr-spot>*{position:relative;z-index:1}
+.rr-glow{border:1px solid transparent !important;background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from var(--rr-a),rgba(25,97,161,.12),rgba(25,97,161,.12) 60%,#2f86c9 75%,#4bc6a4 85%,rgba(25,97,161,.12) 95%) border-box !important}
+.rr-glow:hover{animation:rr-spin 3s linear infinite}
+.rr-ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:var(--grad-soft);color:var(--blue);flex:none;transition:background .4s,color .4s,transform .4s}
+.rr-ic svg{width:25px;height:25px}
+
+/* ===== HERO ===== */
+.rr-hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:70px 0 90px;overflow:hidden;background:radial-gradient(ellipse at top,#fff 0%,var(--bg) 60%)}
+.rr-aurora{position:absolute;inset:-20%;z-index:0;pointer-events:none;filter:blur(70px);opacity:.8}
+.rr-aurora i{position:absolute;border-radius:50%}
+.rr-aurora i:nth-child(1){width:44vw;height:44vw;left:50%;top:2%;background:#d3e6f8;animation:rr-a1 22s ease-in-out infinite}
+.rr-aurora i:nth-child(2){width:32vw;height:32vw;left:68%;top:36%;background:#d2f2e7;animation:rr-a2 26s ease-in-out infinite}
+.rr-aurora i:nth-child(3){width:28vw;height:28vw;left:8%;top:58%;background:#e2eefa;animation:rr-a3 30s ease-in-out infinite}
+.rr-hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.rr-kicker{display:inline-flex;align-items:center;gap:12px;padding:8px 18px 8px 10px;border-radius:999px;font-size:14px;font-weight:600;color:var(--ink);margin:0 0 22px}
+.rr-kicker__dot{width:22px;height:22px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 0 0 4px rgba(75,198,164,.15);flex:none}
+.rr-kicker__dot::after{content:"";width:6px;height:6px;border-radius:50%;background:#fff;animation:rr-blink 2s ease-in-out infinite}
+.rr-hero h1{font-size:clamp(34px,4vw,56px);letter-spacing:-.04em;line-height:1.06;margin-bottom:24px}
+.rr-hero__sub{font-size:13px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.rr-hero__text{max-width:640px;font-size:16.5px;line-height:1.68;margin-bottom:30px}
+.rr-hero__text p:first-child{color:var(--ink);font-size:18px}
+.rr-trust{list-style:none;margin:34px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px;max-width:680px}
+.rr-trust li{display:flex;align-items:center;gap:10px;padding:9px 14px 9px 10px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.3}
+.rr-trust svg{width:22px;height:22px;flex:none;padding:4px;border-radius:50%;background:var(--grad);color:#fff}
+.rr-hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.rr-photo{position:relative;width:100%;max-width:500px;margin-left:auto;--px:0;--py:0}
+.rr-photo__frame{position:relative;aspect-ratio:4/4.7;border-radius:240px 240px 34px 34px;padding:10px;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;border:1.5px solid transparent;box-shadow:0 40px 80px -40px rgba(25,97,161,.55);transform:translate(calc(var(--px)*-8px),calc(var(--py)*-8px));transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.rr-photo__img{position:relative;width:100%;height:100%;border-radius:230px 230px 26px 26px;overflow:hidden;background:linear-gradient(160deg,#dcecf9,#cdeee2)}
+.rr-photo__img img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.rr-photo__ring{position:absolute;inset:-7%;border-radius:50%;border:1px dashed rgba(25,97,161,.2);animation:rr-rot 60s linear infinite;pointer-events:none}
+.rr-photo__ring::before{content:"";position:absolute;left:50%;top:-5px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--mint);box-shadow:0 0 16px 4px rgba(75,198,164,.6)}
+.rr-chip{position:absolute;z-index:3;border-radius:18px;padding:13px 17px;font-size:13px;line-height:1.35;color:var(--muted);animation:rr-float 7s ease-in-out infinite}
+.rr-chip strong{display:block;color:var(--ink);font-size:18px;letter-spacing:-.02em}
+.rr-chip__k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:2px}
+.rr-chip--1{left:-12%;top:16%}
+.rr-chip--2{right:-8%;top:52%;animation-delay:-2.5s}
+.rr-chip--3{left:-6%;bottom:6%;animation-delay:-5s}
+.rr-scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted) !important}
+.rr-scroll i{width:1px;height:42px;background:linear-gradient(var(--mint),transparent);position:relative;overflow:hidden}
+.rr-scroll i::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--blue);animation:rr-drop 2s ease-in-out infinite}
+
+/* ===== Auf einen Blick ===== */
+.rr-glance{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px}
+.rr-glance__item{border-radius:var(--r);padding:30px 28px;background:#fff;border:1px solid var(--line);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.rr-glance__item:hover{transform:translateY(-6px);box-shadow:0 28px 60px -34px rgba(25,97,161,.5)}
+.rr-glance__item:hover .rr-ic{background:var(--grad);color:#fff;transform:rotate(-6deg)}
+.rr-glance__item h3{font-size:19px;margin:22px 0 10px}
+.rr-glance__item p{font-size:15.5px;line-height:1.65}
+.rr-glance__item a{font-weight:600}
+.rr-pay{margin-top:22px;display:grid;grid-template-columns:1fr 1fr auto;gap:0;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.rr-pay>div{padding:24px 30px;display:flex;gap:16px;align-items:center}
+.rr-pay>div+div{border-left:1px solid var(--line)}
+.rr-pay small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.rr-pay strong{color:var(--ink);font-size:16.5px;font-weight:600}
+.rr-pay__go{background:var(--grad-soft)}
+
+/* ===== Split-Layout ===== */
+.rr-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
+.rr-split__head{position:sticky;top:120px}
+.rr-prose{font-size:18px}
+.rr-prose p:first-child{font-size:20.5px;line-height:1.6;color:var(--ink)}
+.rr-split>*,.rr-hero__grid>*,.rr-eltern__grid>*,.rr-appro__grid>*,.rr-faq__grid>*,.rr-spek__intro>*,.rr-intro2>*,.rr-termin__grid>*,.rr-bento>*,.rr-cards>*,.rr-glance>*,.rr-steps>*,.rr-costs>*,.rr-offers>*{min-width:0}
+
+/* ===== Ablauf & Kosten ===== */
+.rr-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:60px;position:relative;counter-reset:st}
+.rr-steps::before{content:"";position:absolute;top:30px;left:6%;right:6%;height:2px;background:repeating-linear-gradient(90deg,rgba(25,97,161,.18) 0 8px,transparent 8px 16px)}
+.rr-step{position:relative}
+.rr-step__n{width:60px;height:60px;border-radius:50%;background:#fff;border:2px solid var(--sky);color:var(--blue);font-weight:700;font-size:20px;display:grid;place-items:center;margin-bottom:20px;position:relative;z-index:1;transition:background .4s,color .4s,border-color .4s,transform .4s}
+.rr-step:hover .rr-step__n{background:var(--grad);color:#fff;border-color:transparent;transform:scale(1.08)}
+.rr-step h3{font-size:19px;margin-bottom:8px}
+.rr-step p{font-size:15.5px;line-height:1.65}
+.rr-costs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:64px}
+.rr-cost{border-radius:28px;padding:38px 36px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.rr-cost--self{background:linear-gradient(160deg,#ffffff 0%,#eefaf6 100%);border-color:rgba(75,198,164,.35)}
+.rr-cost__tag{display:inline-block;align-self:flex-start;padding:6px 14px;border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--sky);color:var(--blue);margin-bottom:18px}
+.rr-cost--self .rr-cost__tag{background:#d2f2e7;color:var(--teal)}
+.rr-cost h3{font-size:24px}
+.rr-cost p{font-size:16.5px}
+.rr-cost .rr-actions{margin-top:auto;padding-top:26px}
+
+/* ===== Angebotskarten mit Foto ===== */
+.rr-intro2{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:56px}
+.rr-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rr-card{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:#fff;color:var(--ink) !important;box-shadow:0 20px 50px -34px rgba(16,40,63,.4);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-card:hover{transform:translateY(-8px);box-shadow:0 34px 70px -34px rgba(25,97,161,.55)}
+.rr-card__img{aspect-ratio:16/11;overflow:hidden;background:var(--grad-soft);position:relative}
+.rr-card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.rr-card:hover .rr-card__img img{transform:scale(1.06)}
+.rr-card__body{padding:26px 28px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.rr-card h3{font-size:23px;margin:0}
+.rr-card__arrow{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--ink);flex:none;transition:background .4s,color .4s,transform .4s,border-color .4s}
+.rr-card__arrow svg{width:17px;height:17px}
+.rr-card:hover .rr-card__arrow{background:var(--grad);color:#fff;border-color:transparent;transform:rotate(-45deg)}
+
+/* ===== Mehr als Therapie (Teaser) ===== */
+.rr-offers{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:56px}
+.rr-offer{border-radius:30px;padding:40px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-offer:hover{transform:translateY(-6px);box-shadow:0 30px 70px -36px rgba(25,97,161,.5)}
+.rr-offer--main{background:linear-gradient(150deg,#e9f3fc 0%,#ffffff 55%,#eaf8f2 100%);border-color:rgba(47,134,201,.25)}
+.rr-offer__top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+.rr-offer__badge{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.rr-offer h3{font-size:26px}
+.rr-offer p{font-size:16.5px}
+.rr-price{font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.03em;line-height:1}
+.rr-price small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0;margin-top:6px}
+.rr-offer .rr-actions{margin-top:auto;padding-top:24px}
+.rr-note{display:flex;gap:14px;align-items:flex-start;margin-top:22px;padding:18px 22px;border-radius:18px;background:#fff;border:1px dashed rgba(0,144,138,.4);font-size:15px;color:var(--text)}
+.rr-note svg{width:22px;height:22px;color:var(--teal);flex:none;margin-top:2px}
+
+/* ===== Eltern / Portrait ===== */
+.rr-eltern__grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:start}
+.rr-portrait{position:sticky;top:110px;margin:0}
+.rr-portrait__frame{border-radius:32px;padding:10px;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;border:1.5px solid transparent;box-shadow:0 40px 80px -44px rgba(25,97,161,.6)}
+.rr-portrait__img{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--grad-soft);display:flex;align-items:flex-end;justify-content:center}
+.rr-portrait__img img{width:100%;height:100%;object-fit:contain;object-position:center bottom;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.rr-portrait:hover .rr-portrait__img img{transform:scale(1.03)}
+.rr-portrait__cap{margin:-44px 22px 0;position:relative;z-index:2;border-radius:20px;padding:16px 22px}
+.rr-portrait__cap strong{display:block;color:var(--ink);font-size:17.5px}
+.rr-portrait__cap span{font-size:14px;color:var(--muted)}
+.rr-eltern .rr-h2{max-width:900px;margin-bottom:56px}
+
+/* ===== Terminblock (hell) ===== */
+.rr-termin{position:relative;border-radius:36px;overflow:hidden;padding:72px 64px;background:var(--grad-soft);isolation:isolate;border:1px solid rgba(47,134,201,.18)}
+.rr-termin::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(520px 340px at 90% 0%,rgba(47,134,201,.22),transparent 60%),radial-gradient(480px 340px at 0% 100%,rgba(75,198,164,.25),transparent 60%)}
+.rr-termin::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(25,97,161,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(25,97,161,.06) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 50%,transparent);mask-image:linear-gradient(90deg,transparent,#000 50%,transparent)}
+.rr-termin__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.rr-termin p{font-size:18px;max-width:600px}
+.rr-termin__box{border-radius:26px;padding:32px;background:rgba(255,255,255,.85);border:1px solid #fff;box-shadow:0 24px 50px -30px rgba(25,97,161,.45)}
+.rr-termin__box small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.rr-termin__tel{display:block;color:var(--ink) !important;font-size:clamp(21px,2.2vw,28px);font-weight:700;letter-spacing:-.02em;margin-bottom:22px;white-space:nowrap}
+.rr-termin__tel:hover{color:var(--blue) !important}
+.rr-termin__box .rr-btn{width:100%}
+.rr-termin__alt{display:block;text-align:center;margin-top:14px;font-size:14px;color:var(--muted) !important}
+.rr-termin__alt:hover{color:var(--blue) !important}
+.rr-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;padding:50px 56px;border-radius:32px}
+.rr-band h2{font-size:clamp(26px,2.8vw,36px);margin-bottom:8px}
+.rr-band p{margin:0;font-size:17px}
+.rr-band p a{font-weight:700;color:var(--ink) !important;white-space:nowrap}
+
+/* ===== Bewertungen ===== */
+.rr-rev__head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px;flex-wrap:wrap}
+.rr-rev__nav{display:flex;gap:10px}
+.rr-rev__nav button{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink);display:grid;place-items:center;transition:background .3s,color .3s,transform .3s}
+.rr-rev__nav button:hover{background:var(--grad);color:#fff;transform:scale(1.05)}
+.rr-rev__nav svg{width:20px;height:20px}
+.rr-rev__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(340px,31%);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 28px 30px;margin:0 -28px;scrollbar-width:none;cursor:grab}
+.rr-rev__track::-webkit-scrollbar{display:none}
+.rr-rev__track.is-drag{cursor:grabbing;scroll-snap-type:none}
+.rr-rev{scroll-snap-align:start;border-radius:var(--r);padding:34px 32px;display:flex;flex-direction:column;margin:0;user-select:none;background:#fff;border:1px solid var(--line)}
+.rr-stars{display:flex;gap:3px;margin-bottom:18px;color:#ffb301}
+.rr-stars svg{width:17px;height:17px}
+.rr-rev h3{font-size:19px;margin-bottom:12px}
+.rr-rev blockquote{margin:0;font-size:16px;line-height:1.7;color:var(--text);font-style:italic}
+
+/* ===== Karte ===== */
+.rr-map{position:relative;height:480px;overflow:hidden;background:#e4eef8}
+.rr-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.rr-map__veil{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:
+  radial-gradient(circle at 50% 50%,rgba(75,198,164,.16),transparent 60%),
+  linear-gradient(rgba(25,97,161,.07) 1px,transparent 1px) 0 0/40px 40px,
+  linear-gradient(90deg,rgba(25,97,161,.07) 1px,transparent 1px) 0 0/40px 40px,#eaf2fa}
+.rr-map__pin{width:70px;height:70px;margin:0 auto 20px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;position:relative;box-shadow:0 20px 40px -12px rgba(25,97,161,.55)}
+.rr-map__pin::before,.rr-map__pin::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--mint);animation:rr-ring 2.8s ease-out infinite}
+.rr-map__pin::after{animation-delay:1.4s}
+.rr-map__pin svg{width:30px;height:30px}
+.rr-map__veil strong{display:block;color:var(--ink);font-size:20px;margin-bottom:4px}
+.rr-map__veil p{font-size:14px;color:var(--muted);max-width:420px;margin:10px auto 20px}
+.rr-map__addr{position:absolute;left:28px;bottom:28px;z-index:3;border-radius:20px;padding:16px 22px;font-size:15px;line-height:1.55;color:var(--ink)}
+.rr-map__addr small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+
+/* ===== Angebotsspektrum (hell) ===== */
+.rr-spek__intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;margin-bottom:70px}
+.rr-spek__intro p{font-size:17.5px}
+.rr-spek__intro p:first-child{color:var(--ink);font-size:19.5px;line-height:1.6}
+.rr-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.rr-tile{grid-column:span 2;border-radius:var(--r);padding:32px;background:#fff;border:1px solid var(--line);transition:border-color .4s,transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.rr-tile:hover{border-color:rgba(75,198,164,.5);transform:translateY(-4px);box-shadow:0 26px 56px -36px rgba(25,97,161,.45)}
+.rr-tile--w3{grid-column:span 3}
+.rr-tile--w4{grid-column:span 4}
+.rr-tile h3{font-size:22px;margin-bottom:14px}
+.rr-tile p{font-size:15.8px;line-height:1.7}
+.rr-tile__k{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rr-tile--main{background:linear-gradient(150deg,#e6f1fb 0%,#ffffff 70%);border-color:rgba(47,134,201,.3)}
+.rr-tile--main .rr-tile__k{color:var(--blue)}
+.rr-tile--info{background:#fbfdff;border-style:dashed;border-color:rgba(16,40,63,.18)}
+.rr-badge{display:inline-block;padding:5px 12px;border-radius:999px;background:#fff3d6;color:#8a5a00;font-size:11px;letter-spacing:.08em}
+.rr-tile .rr-link{margin-top:18px}
+.rr-extras{grid-column:span 6;display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:26px 32px}
+.rr-extras h3{font-size:18px;margin:0 16px 0 0}
+.rr-extras ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.rr-extras li{padding:8px 18px;border-radius:999px;font-size:15px;color:var(--ink);background:var(--bg2);border:1px solid var(--line);transition:background .3s,border-color .3s}
+.rr-extras li:hover{background:#e3f6ef;border-color:rgba(75,198,164,.55)}
+
+/* ===== Approbation ===== */
+.rr-appro__grid{display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:start}
+.rr-cred{position:sticky;top:120px;border-radius:30px;padding:34px;overflow:hidden}
+.rr-cred::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;border-radius:50%;background:radial-gradient(circle,rgba(75,198,164,.25),transparent 70%)}
+.rr-cred__seal{width:60px;height:60px;border-radius:18px;background:var(--grad);display:grid;place-items:center;color:#fff;margin-bottom:24px;box-shadow:0 16px 30px -12px rgba(25,97,161,.6)}
+.rr-cred__seal svg{width:28px;height:28px}
+.rr-cred dl{margin:0}
+.rr-cred dl div{padding:14px 0;border-top:1px solid var(--line)}
+.rr-cred dt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.rr-cred dd{margin:0;color:var(--ink);font-weight:600;font-size:15.5px;line-height:1.45}
+
+/* ===== FAQ ===== */
+.rr-faq__grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px;align-items:start}
+.rr-faq__head{position:sticky;top:120px}
+.rr-faq__head .rr-h2{font-size:clamp(28px,3vw,42px)}
+.rr-acc{display:grid;gap:12px}
+.rr-acc details{border-radius:22px;background:#fff;border:1px solid var(--line);transition:border-color .4s,box-shadow .4s}
+.rr-acc details[open]{border-color:rgba(75,198,164,.45);box-shadow:0 24px 50px -32px rgba(25,97,161,.45)}
+.rr-acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:22px 24px}
+.rr-acc summary::-webkit-details-marker{display:none}
+.rr-acc summary h3{font-size:18px;margin:0;flex:1;transition:color .3s}
+.rr-acc summary:hover h3{color:var(--blue)}
+.rr-acc__n{font-family:var(--mono);font-size:12px;color:var(--teal);flex:none}
+.rr-acc__pm{width:34px;height:34px;border-radius:50%;flex:none;position:relative;border:1px solid var(--line);transition:background .4s,border-color .4s,transform .5s}
+.rr-acc__pm::before,.rr-acc__pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;margin:-.75px 0 0 -6px;background:var(--ink);transition:transform .4s,background .4s}
+.rr-acc__pm::after{transform:rotate(90deg)}
+.rr-acc details[open] .rr-acc__pm{background:var(--grad);border-color:transparent;transform:rotate(180deg)}
+.rr-acc details[open] .rr-acc__pm::before,.rr-acc details[open] .rr-acc__pm::after{background:#fff}
+.rr-acc details[open] .rr-acc__pm::after{transform:rotate(0)}
+.rr-acc__body{padding:0 26px 24px 56px;font-size:16.5px;overflow:hidden}
+.rr-acc__body ul{margin:0 0 1em;padding-left:1.2em}
+
+/* ===== Ratgeber (SEO-Text) ===== */
+.rr-guide{max-width:880px;margin:0 auto}
+.rr-guide details{border-radius:26px;background:#fff;border:1px solid var(--line)}
+.rr-guide summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;color:var(--blue)}
+.rr-guide summary::-webkit-details-marker{display:none}
+.rr-guide__body{padding:0 34px 34px;font-size:16.5px}
+.rr-guide__body h3{font-size:21px;margin-top:1.6em}
+.rr-guide__body h3:first-child{margin-top:0}
+
+/* ===== Unter 12 ===== */
+.rr-ref{display:flex;flex-wrap:wrap;align-items:center;gap:20px 30px;padding:30px 34px;border-radius:26px;background:#fff;border:1px solid var(--line)}
+.rr-ref p{margin:0;flex:1;min-width:260px}
+.rr-ref strong{color:var(--ink)}
+
+/* ===== Abschluss ===== */
+.rr-final{text-align:center;overflow:hidden;padding:140px 0}
+.rr-final h2{font-size:clamp(34px,5vw,66px);letter-spacing:-.04em;max-width:900px;margin:0 auto 24px}
+.rr-final p{max-width:660px;margin:0 auto 40px;font-size:19px}
+.rr-final__cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 28px}
+
+/* ===== Landingpage-Bausteine ===== */
+.rr-pains{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+.rr-pain{border-radius:var(--r);padding:30px;background:#fff;border:1px solid var(--line);font-size:16.5px;color:var(--ink)}
+.rr-pain .rr-ic{margin-bottom:18px}
+.rr-timeline{display:grid;gap:16px;margin-top:50px;max-width:900px;margin-left:auto;margin-right:auto}
+.rr-tl{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:start;padding:28px 30px;border-radius:24px;background:#fff;border:1px solid var(--line)}
+.rr-tl__m{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);padding-top:5px}
+.rr-tl h3{font-size:20px;margin-bottom:6px}
+.rr-fit{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:50px}
+.rr-fit__col{border-radius:28px;padding:36px;background:#fff;border:1px solid var(--line)}
+.rr-fit__col--yes{background:linear-gradient(160deg,#fff,#eefaf6);border-color:rgba(75,198,164,.4)}
+.rr-fit__col h3{font-size:22px}
+.rr-fit__col ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.rr-fit__col li{display:flex;gap:12px;font-size:16px;color:var(--ink)}
+.rr-fit__col li svg{width:22px;height:22px;flex:none;margin-top:2px}
+.rr-fit__col--yes li svg{color:var(--teal)}
+.rr-fit__col--no li svg{color:#b5651d}
+.rr-todo{display:inline-block;padding:2px 8px;border-radius:6px;background:#fff3d6;color:#8a5a00;font-family:var(--mono);font-size:12.5px;font-style:normal}
+
+/* ===== Scroll-Fortschritt ===== */
+.rr-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:9999;transform-origin:left;transform:scaleX(0);background:var(--grad);pointer-events:none}
+
+/* ===== Animationen (nur mit JS-Modul aktiv) ===== */
+.rr.rr-js [data-rv]{opacity:0;transform:translateY(36px);filter:blur(6px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1),filter 1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
+.rr.rr-js [data-rv="l"]{transform:translateX(-46px)}
+.rr.rr-js [data-rv="r"]{transform:translateX(46px)}
+.rr.rr-js [data-rv="z"]{transform:scale(.94)}
+.rr.rr-js [data-rv].is-in{opacity:1;transform:none;filter:none}
+.rr.rr-js .rr-line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.rr.rr-js .rr-line>span{display:block;transform:translateY(105%);transition:transform 1.1s cubic-bezier(.16,1,.3,1);transition-delay:var(--d,0s)}
+.rr.rr-js .is-in .rr-line>span,.rr.rr-js .rr-line.is-in>span{transform:none}
+.rr-hero [data-in]{animation:rr-in 1.1s cubic-bezier(.16,1,.3,1) both;animation-delay:var(--d,0s)}
+
+@keyframes rr-in{from{opacity:0;transform:translateY(30px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+@keyframes rr-spin{to{--rr-a:360deg}}
+@keyframes rr-rot{to{transform:rotate(360deg)}}
+@keyframes rr-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes rr-blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes rr-ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+@keyframes rr-drop{to{top:110%}}
+@keyframes rr-a1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-8vw,6vw) scale(1.15)}}
+@keyframes rr-a2{0%,100%{transform:translate(0,0)}50%{transform:translate(-12vw,-6vw)}}
+@keyframes rr-a3{0%,100%{transform:translate(0,0)}50%{transform:translate(10vw,-8vw)}}
+
+@media (prefers-reduced-motion:reduce){
+  .rr *,.rr *::before,.rr *::after{animation:none !important;transition:none !important}
+  .rr.rr-js [data-rv],.rr.rr-js .rr-line>span{opacity:1;transform:none;filter:none}
+}
+
+/* ===== Responsive ===== */
+@media (max-width:1100px){
+  .rr-hero__grid{gap:40px}
+  .rr-split,.rr-eltern__grid,.rr-appro__grid,.rr-faq__grid,.rr-spek__intro,.rr-intro2{gap:50px}
+  .rr-glance{grid-template-columns:1fr 1fr}
+  .rr-tile,.rr-tile--w3,.rr-tile--w4{grid-column:span 3}
+  .rr-extras{grid-column:span 6}
+  .rr-chip--1{left:-4%}.rr-chip--2{right:-3%}.rr-chip--3{left:0}
+}
+@media (max-width:960px){
+  .rr-sec{padding:90px 0}
+  .rr-hero{min-height:auto;padding:60px 0 100px}
+  .rr-hero__grid,.rr-split,.rr-eltern__grid,.rr-appro__grid,.rr-faq__grid,.rr-spek__intro,.rr-intro2,.rr-termin__grid,.rr-costs,.rr-offers,.rr-fit{grid-template-columns:1fr}
+  .rr-photo{max-width:400px;margin:20px auto 0}
+  .rr-split__head,.rr-portrait,.rr-cred,.rr-faq__head{position:static}
+  .rr-portrait{max-width:400px}
+  .rr-cards{grid-template-columns:1fr 1fr}
+  .rr-steps{grid-template-columns:1fr 1fr;gap:36px 22px}
+  .rr-steps::before{display:none}
+  .rr-pay{grid-template-columns:1fr}
+  .rr-pay>div+div{border-left:0;border-top:1px solid var(--line)}
+  .rr-pains{grid-template-columns:1fr}
+  .rr-rev__track{grid-auto-columns:minmax(300px,70%)}
+  .rr-termin{padding:56px 38px}
+}
+@media (max-width:640px){
+  .rr{font-size:16.5px}
+  .rr-wrap{padding:0 18px}
+  .rr-sec{padding:72px 0}
+  .rr-hero__cta .rr-btn{width:100%}
+  .rr-chip{padding:9px 12px;font-size:11.5px}
+  .rr-chip strong{font-size:15px}
+  .rr-chip--1{left:0;top:6%}.rr-chip--2{right:0}.rr-chip--3{left:0;bottom:2%}
+  .rr-glance,.rr-cards,.rr-steps{grid-template-columns:1fr}
+  .rr-tile,.rr-tile--w3,.rr-tile--w4,.rr-extras{grid-column:span 6}
+  .rr-tile,.rr-offer,.rr-cost,.rr-fit__col{padding:28px 22px}
+  .rr-tl{grid-template-columns:1fr;gap:6px;padding:24px 22px}
+  .rr-rev__track{grid-auto-columns:86%;padding:10px 18px 30px;margin:0 -18px}
+  .rr-termin{padding:44px 22px;border-radius:28px}
+  .rr-termin__box{padding:24px}
+  .rr-band{padding:36px 24px}
+  .rr-acc summary{padding:18px 18px;gap:12px}
+  .rr-acc__n{display:none}
+  .rr-acc__body{padding:0 18px 20px}
+  .rr-guide__body{padding:0 22px 26px}
+  .rr-map{height:420px}
+  .rr-map__addr{left:18px;right:18px;bottom:18px}
+  .rr-scroll{display:none}
+}
+</style>
+
+<div class="rr" lang="de" id="rr-top">
+  <div class="rr-progress" id="rr-progress"></div>
+
+  <!-- ================= HERO ================= -->
+  <section class="rr-hero rr-grid-bg">
+    <div class="rr-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="rr-wrap rr-hero__grid">
+      <div>
+        <p class="rr-kicker rr-glass" data-in style="--d:.05s"><span class="rr-kicker__dot"></span>Mehr als Therapie · Für Eltern und Jugendliche</p>
+        <h1 data-in style="--d:.15s"><span class="rr-grad">Vier-Monats-Intensivprozess</span> für Familien</h1>
+        <div class="rr-hero__text" data-in style="--d:.3s">
+          <p>Dieses intensive Programm gibt Eltern und Jugendlichen einen festen Rahmen, um über vier Monate gemeinsam an ihrem Umgang miteinander zu arbeiten – mit Gesprächen, Gruppenformaten und Übungen für den Alltag, um aus Streit, Konflikt und Eskalation in ein positives und wertschätzendes Familienklima zu kommen.</p>
+          <p>Begleitet wird das Programm von Rudolf Ritzinger, approbierter Kinder- und Jugendlichenpsychotherapeut in München, seit 1997 in der Arbeit mit Jugendlichen, Eltern und Familien tätig.</p>
+        </div>
+        <div class="rr-hero__cta" data-in style="--d:.45s">
+          <a href="#anfrage" class="rr-btn rr-btn--p" data-magnet>Platz unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#ablauf" class="rr-btn rr-btn--g" data-magnet>Ablauf ansehen</a>
+        </div>
+        <ul class="rr-trust" data-in style="--d:.6s">
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>4 Monate fester Rahmen</li>
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Gespräche &amp; Gruppenformate</li>
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Übungen für den Alltag</li>
+          <li class="rr-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>In München &amp; online</li>
+        </ul>
+      </div>
+      <div class="rr-photo" id="rr-photo" data-in style="--d:.3s">
+        <span class="rr-photo__ring" aria-hidden="true"></span>
+        <div class="rr-photo__frame">
+          <div class="rr-photo__img">
+            <!-- PRÜFEN: passendes Bild für das Programm wählen -->
+            <img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/Jugendtherapie-Munchen-Gruppencoaching-Ritzinger.jpg" alt="Familien-Intensivprogramm mit Rudolf Ritzinger in München" width="1000" height="1175" fetchpriority="high">
+          </div>
+        </div>
+        <div class="rr-chip rr-chip--1 rr-glass"><span class="rr-chip__k">Dauer</span><strong>4 Monate</strong>Intensivprozess</div>
+        <div class="rr-chip rr-chip--2 rr-glass"><span class="rr-chip__k">Für</span><strong>Eltern &amp; Jugendliche</strong>gemeinsam</div>
+        <div class="rr-chip rr-chip--3 rr-glass"><span class="rr-chip__k">Begleitung</span><strong>seit 1997</strong>Erfahrung mit Familien</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KENNEN SIE DAS? ================= -->
+  <section class="rr-sec rr-sec--white">
+    <div class="rr-wrap">
+      <div class="rr-center" data-rv>
+        <div class="rr-num">Ausgangslage</div>
+        <h2 class="rr-h2" data-split>Wenn Streit den Familienalltag bestimmt</h2>
+        <p class="rr-lead">Viele Familien erleben Phasen, in denen sich Konflikte zwischen Eltern und Jugendlichen festfahren. Das Programm setzt genau dort an.</p>
+      </div>
+      <div class="rr-pains">
+        <div class="rr-pain" data-rv style="--d:0s"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></span>Kleine Anlässe führen immer wieder zu großem Streit, und am Ende fühlen sich alle unverstanden.</div>
+        <div class="rr-pain" data-rv style="--d:.1s"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Gespräche zwischen Eltern und Jugendlichen enden in Vorwürfen, Rückzug oder Schweigen.</div>
+        <div class="rr-pain" data-rv style="--d:.2s"><span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>Sie wünschen sich ein Familienklima, in dem wieder Wertschätzung und Verständnis möglich sind.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WAS DAS PROGRAMM BIETET ================= -->
+  <section class="rr-sec rr-sec--tint">
+    <div class="rr-wrap">
+      <div class="rr-intro2">
+        <div>
+          <div class="rr-num" data-rv>Das Programm</div>
+          <h2 class="rr-h2" data-split>Ein fester Rahmen für vier Monate</h2>
+        </div>
+        <p class="rr-lead" data-rv style="--d:.1s">Statt einzelner Termine arbeiten Eltern und Jugendliche über vier Monate kontinuierlich an ihrem Umgang miteinander. Drei Bausteine greifen dabei ineinander.</p>
+      </div>
+      <div class="rr-glance" style="grid-template-columns:repeat(3,1fr)">
+        <div class="rr-glance__item" data-rv style="--d:0s">
+          <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <h3>Gespräche</h3>
+          <p><span class="rr-todo">[Kurzbeschreibung folgt: Format, Häufigkeit, wer nimmt teil]</span></p>
+        </div>
+        <div class="rr-glance__item" data-rv style="--d:.1s">
+          <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3>Gruppenformate</h3>
+          <p><span class="rr-todo">[Kurzbeschreibung folgt: Elterngruppe, Jugendgruppe, online/vor Ort]</span></p>
+        </div>
+        <div class="rr-glance__item" data-rv style="--d:.2s">
+          <span class="rr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 9.3l-4.8 3.7 1.7 6-4.9-3.6L7.1 19l1.7-6L4 9.3l6.1-.5z"/></svg></span>
+          <h3>Übungen für den Alltag</h3>
+          <p><span class="rr-todo">[Kurzbeschreibung folgt: Art der Übungen, Begleitmaterial]</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABLAUF ================= -->
+  <section class="rr-sec rr-sec--white" id="ablauf">
+    <div class="rr-wrap">
+      <div class="rr-center" data-rv>
+        <div class="rr-num">Ablauf</div>
+        <h2 class="rr-h2" data-split>So verlaufen die vier Monate</h2>
+      </div>
+      <!-- PRÜFEN: Inhalte je Monat aus der Programmstruktur einsetzen -->
+      <div class="rr-timeline">
+        <div class="rr-tl" data-rv><div class="rr-tl__m">Vorgespräch</div><div><h3>Kennenlernen &amp; Klärung</h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl" data-rv><div class="rr-tl__m">Monat 1</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl" data-rv><div class="rr-tl__m">Monat 2</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl" data-rv><div class="rr-tl__m">Monat 3</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+        <div class="rr-tl" data-rv><div class="rr-tl__m">Monat 4</div><div><h3><span class="rr-todo">[Titel folgt]</span></h3><p><span class="rr-todo">[folgt]</span></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FÜR WEN ================= -->
+  <section class="rr-sec rr-sec--mint">
+    <div class="rr-wrap">
+      <div class="rr-center" data-rv>
+        <div class="rr-num">Passt das zu uns?</div>
+        <h2 class="rr-h2" data-split>Für wen das Programm gedacht ist</h2>
+      </div>
+      <div class="rr-fit">
+        <div class="rr-fit__col rr-fit__col--yes" data-rv="l">
+          <h3>Das Programm passt, wenn …</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>Streit, Konflikte und Eskalationen zwischen Eltern und Jugendlichen den Alltag prägen.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>Eltern und Jugendliche bereit sind, über vier Monate gemeinsam daran zu arbeiten.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>Sie sich einen festen, verbindlichen Rahmen statt einzelner Termine wünschen.</li>
+          </ul>
+        </div>
+        <div class="rr-fit__col rr-fit__col--no" data-rv="r">
+          <h3>Eine Psychotherapie ist der richtige Weg, wenn …</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>ein Jugendlicher unter einer psychischen Erkrankung leidet, die behandelt werden muss.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>eine akute Krise besteht. In akuten Notfällen wenden Sie sich bitte an den ärztlichen Bereitschaftsdienst (116 117) oder den Notruf (112).</li>
+          </ul>
+          <p style="margin-top:18px;font-size:15.5px">Das Programm ist kein Ersatz für eine notwendige Psychotherapie. Im Vorgespräch klären wir, welcher Weg für Ihre Familie passt. <a href="/">Zur Psychotherapie</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BEGLEITUNG ================= -->
+  <section class="rr-sec rr-sec--white">
+    <div class="rr-wrap rr-eltern__grid">
+      <figure class="rr-portrait" data-rv="l">
+        <div class="rr-portrait__frame">
+          <div class="rr-portrait__img">
+            <img src="https://www.rudolf-ritzinger.com/incms_files/filebrowser/cache/Rudolf-Ritzinger-Munchen-Kinderpsychologe-und-Jugentherapeut_39aa931c6ba3121ccd953dc7099be0d7.png" alt="Rudolf Ritzinger" loading="lazy" width="600" height="750">
+          </div>
+        </div>
+        <figcaption class="rr-portrait__cap rr-glass"><strong>Dipl. Soz. Päd. Rudolf Ritzinger</strong><span>Approbierter Kinder- und Jugendlichenpsychotherapeut</span></figcaption>
+      </figure>
+      <div data-rv style="--d:.15s">
+        <div class="rr-num">Ihre Begleitung</div>
+        <h2 class="rr-h2" data-split>Erfahrung mit Jugendlichen und Familien seit 1997</h2>
+        <div class="rr-prose">
+          <p>Seit 1997 begleite ich Jugendliche, junge Erwachsene und Eltern dabei, schwierige Situationen besser zu verstehen und neue Wege im Umgang miteinander zu entwickeln.</p>
+          <p>Als approbierter Kinder- und Jugendlichenpsychotherapeut mit familientherapeutischer Erfahrung und Fachpraxis für Feeling Seen® richte ich den Blick nicht nur auf einzelne Konflikte, sondern auf die Beziehungen in der Familie und auf das, was jedes Familienmitglied braucht.</p>
+        </div>
+        <div class="rr-cred rr-glass" style="position:static;margin-top:30px">
+          <dl>
+            <div><dt>Approbation</dt><dd>Regierung von Oberbayern</dd></div>
+            <div><dt>Schwerpunkt</dt><dd>Jugendliche, Eltern &amp; Familien · Feeling Seen®</dd></div>
+            <div><dt>Ort</dt><dd>Rosenstr. 7, 80331 München · und online</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INVESTITION & ANFRAGE ================= -->
+  <section class="rr-sec rr-sec--tint" id="anfrage">
+    <div class="rr-wrap">
+      <div class="rr-termin" data-rv="z">
+        <div class="rr-termin__grid">
+          <div>
+            <div class="rr-num">Teilnahme</div>
+            <h2 class="rr-h2">Platz im Intensivprogramm anfragen</h2>
+            <p>Nach Ihrer Anfrage vereinbaren wir ein Vorgespräch, in dem wir klären, ob das Programm zu Ihrer Familie passt.</p>
+            <!-- PRÜFEN: Preis / Zahlungsmodalitäten / Starttermine -->
+            <p><strong>Investition:</strong> <span class="rr-todo">[Preis folgt]</span> · <strong>Nächster Start:</strong> <span class="rr-todo">[Termin folgt]</span></p>
+          </div>
+          <div class="rr-termin__box">
+            <small>Telefonisch erreichen Sie mich unter:</small>
+            <a href="tel:+491634663072" class="rr-termin__tel">+49 (0) 163 – 466 30 72</a>
+            <!-- PRÜFEN: Ziel für Anfrage (Kontaktseite oder eigenes Formular für Ads-Tracking) -->
+            <a href="https://www.rudolf-ritzinger.com/?uid=72" class="rr-btn rr-btn--p" data-magnet>Jetzt unverbindlich anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="rr-note" data-rv><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>Der Vier-Monats-Intensivprozess ist kein Ersatz für eine notwendige Psychotherapie.</span></div>
+    </div>
+  </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Vier-Monats-Intensivprozess für Familien",
+  "serviceType": "Intensivprogramm für Eltern und Jugendliche",
+  "description": "Ein intensives Programm, das Eltern und Jugendlichen über vier Monate einen festen Rahmen gibt, um gemeinsam an ihrem Umgang miteinander zu arbeiten – mit Gesprächen, Gruppenformaten und Übungen für den Alltag. Kein Ersatz für eine notwendige Psychotherapie.",
+  "provider": {
+    "@id": "https://www.rudolf-ritzinger.com/#praxis"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "München"
+    },
+    {
+      "@type": "Place",
+      "name": "Online"
+    }
+  ]
+}
+</script>
+<script>
+(function () {
+  var root = document.querySelector('.rr');
+  if (!root) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  /* Scroll-Fortschritt */
+  var bar = document.getElementById('rr-progress');
+  function progress() {
+    if (!bar) return;
+    var r = root.getBoundingClientRect();
+    var total = r.height - window.innerHeight;
+    var p = total > 0 ? Math.min(Math.max(-r.top / total, 0), 1) : 0;
+    bar.style.transform = 'scaleX(' + p + ')';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  window.addEventListener('resize', progress);
+  progress();
+
+  /* Spotlight, das dem Mauszeiger folgt */
+  root.querySelectorAll('.rr-spot').forEach(function (el) {
+    el.addEventListener('pointermove', function (e) {
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--x', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    });
+  });
+
+  /* Magnetische Buttons */
+  if (fine && !reduce) {
+    root.querySelectorAll('[data-magnet]').forEach(function (el) {
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', ((e.clientX - r.left - r.width / 2) * 0.18) + 'px');
+        el.style.setProperty('--my', ((e.clientY - r.top - r.height / 2) * 0.25) + 'px');
+      });
+      el.addEventListener('pointerleave', function () {
+        el.style.setProperty('--mx', '0px');
+        el.style.setProperty('--my', '0px');
+      });
+    });
+
+    /* Hero-Bild reagiert leicht auf die Maus */
+    var orb = document.getElementById('rr-photo');
+    var hero = root.querySelector('.rr-hero');
+    if (orb && hero) {
+      hero.addEventListener('pointermove', function (e) {
+        var r = hero.getBoundingClientRect();
+        orb.style.setProperty('--px', ((e.clientX - r.left) / r.width - 0.5) * 2);
+        orb.style.setProperty('--py', ((e.clientY - r.top) / r.height - 0.5) * 2);
+      });
+    }
+  }
+
+  /* Bewertungen: Pfeile + Ziehen mit der Maus */
+  var track = document.getElementById('rr-track');
+  if (track && document.getElementById('rr-prev')) {
+    function step(dir) {
+      var card = track.querySelector('.rr-rev');
+      track.scrollBy({ left: dir * (card ? card.offsetWidth + 22 : 360), behavior: 'smooth' });
+    }
+    document.getElementById('rr-prev').addEventListener('click', function () { step(-1); });
+    document.getElementById('rr-next').addEventListener('click', function () { step(1); });
+    var down = false, startX = 0, startL = 0;
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      down = true; startX = e.clientX; startL = track.scrollLeft;
+      track.classList.add('is-drag');
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (down) track.scrollLeft = startL - (e.clientX - startX);
+    });
+    window.addEventListener('pointerup', function () {
+      if (!down) return;
+      down = false; track.classList.remove('is-drag');
+    });
+  }
+
+  /* Google Maps erst nach Klick laden */
+  var map = document.getElementById('rr-map');
+  var mapBtn = document.getElementById('rr-map-btn');
+  if (map && mapBtn) {
+    mapBtn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = map.getAttribute('data-src');
+      f.title = 'Google Maps: Rosenstr. 7, 80331 München';
+      f.loading = 'lazy';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      f.allowFullscreen = true;
+      map.insertBefore(f, map.firstChild);
+      map.querySelector('.rr-map__veil').remove();
+    });
+  }
+
+  /* FAQ: weiches Auf- und Zuklappen */
+  root.querySelectorAll('.rr-acc details, .rr-guide details').forEach(function (d) {
+    var sum = d.querySelector('summary');
+    var body = d.querySelector('.rr-acc__body, .rr-guide__body');
+    if (!sum || !body) return;
+    sum.addEventListener('click', function (e) {
+      if (reduce || !body.animate) return;
+      e.preventDefault();
+      if (d.open) {
+        var h = body.offsetHeight;
+        body.animate([{ height: h + 'px', opacity: 1 }, { height: '0px', opacity: 0 }], { duration: 380, easing: 'cubic-bezier(.16,1,.3,1)' })
+          .onfinish = function () { d.open = false; };
+      } else {
+        d.open = true;
+        var h2 = body.offsetHeight;
+        body.animate([{ height: '0px', opacity: 0 }, { height: h2 + 'px', opacity: 1 }], { duration: 520, easing: 'cubic-bezier(.16,1,.3,1)' });
+      }
+    });
+  });
+
+  /* Scroll-Animationen */
+  if (reduce || !('IntersectionObserver' in window)) return;
+  root.querySelectorAll('[data-split]').forEach(function (h) {
+    h.innerHTML = '<span class="rr-line"><span>' + h.innerHTML + '</span></span>';
+    h.setAttribute('data-rv', '');
+  });
+  root.classList.add('rr-js');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  root.querySelectorAll('[data-rv]').forEach(function (el) { io.observe(el); });
+})();
+</script></body></html>
