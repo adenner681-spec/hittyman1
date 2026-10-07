@@ -150,3 +150,8 @@ for folder, src, ld, title, desc in PAGES:
 with open(os.path.join(ROOT, "modul-javascript.js"), "w", encoding="utf-8") as f:
     f.write(JS)
 print("ok")
+
+# Klar benannte Kopien der Startseite für das CMS
+import shutil
+shutil.copy(os.path.join(ROOT, "startseite", "modul-sourcecode.html"), os.path.join(ROOT, "STARTSEITE_1_Sourcecode-Modul.html"))
+shutil.copy(os.path.join(ROOT, "modul-javascript.js"), os.path.join(ROOT, "STARTSEITE_2_JavaScript-Modul.js"))
