@@ -123,7 +123,11 @@ def render(page_src, ld, img):
     assert not left, "Unbekannte Platzhalter: %s" % left
     css = open(os.path.join(SRC, "base.css"), encoding="utf-8").read()
     ld_json = json.dumps(ld, ensure_ascii=False, indent=2)
-    return "<style>\n" + css + "</style>\n\n" + s + '\n<script type="application/ld+json">\n' + ld_json + "\n</script>\n"
+    # Animations-Skript direkt im Sourcecode, damit es auch läuft, wenn das CMS
+    # das separate JavaScript-Modul nicht ausführt (doppelter Start ist abgesichert).
+    js = open(os.path.join(SRC, "main.js"), encoding="utf-8").read()
+    return ("<style>\n" + css + "</style>\n\n" + s + '\n<script type="application/ld+json">\n' + ld_json
+            + "\n</script>\n<script>\n" + js + "</script>\n")
 
 FAQ = json.load(open(os.path.join(SRC, "faq_startseite.json"), encoding="utf-8"))
 JS = open(os.path.join(SRC, "main.js"), encoding="utf-8").read()

@@ -5,6 +5,7 @@
     var root = document.querySelector('.rr');
     if (!root || root.getAttribute('data-rr-init')) return;
     root.setAttribute('data-rr-init', '1');
+    if (window.console) console.log('[rr] Animationen aktiv');
 
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
